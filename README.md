@@ -18,6 +18,7 @@ Install a source from the list, then find it under the Search tab → **Sources*
 | --- | --- | --- |
 | MangaDex | English | [MangaDex](https://mangadex.org), through its public API. Only titles rated safe or suggestive. Licensed titles often have no chapters here (MangaDex links to the publisher instead); their page says so. |
 | Shōnen Jump+, Comic Days, Tonari no Young Jump and 16 more | Japanese | Japanese publishers' own readers on GigaViewer: free chapters only (usually the first few and the latest), since Otavue doesn't sign in. Some sites serve pages as shuffled tiles; Otavue puts them back together. Kurage Bunch and Sunday Web Every are marked 18+ (some of their series are). |
+| TakeComic, Young Animal, Champion Cross and 24 more | Japanese | Japanese publishers' readers on Comici: free chapters only. Every page comes as shuffled tiles, which Otavue puts back together. Titles the publisher marks for adults are left out of search; the 8 sites with some adult series are marked 18+. |
 
 ## How it's built
 

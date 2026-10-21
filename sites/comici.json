@@ -1,0 +1,1730 @@
+[
+  {
+    "id": "comici.comicgrowl",
+    "name": "Comic Growl",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://comic-growl.com",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.asacomi",
+    "name": "Asacomi",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://asacomi.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.bibibicomic",
+    "name": "Bibibi Comic",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://bibibi-comic.com",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.bigcomics",
+    "name": "Big Comics",
+    "lang": "ja",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://bigcomics.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.championcross",
+    "name": "Champion Cross",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://championcross.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.comicpash",
+    "name": "Comic Pash",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://comicpash.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.comicride",
+    "name": "Comic Ride",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://comicride.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.comicroombase",
+    "name": "Comic Room Base",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://comic-room-base.com",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.comicryu",
+    "name": "Comic Ryu",
+    "lang": "ja",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://comic-ryu.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.comirela",
+    "name": "Comirela",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://comirela.com",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.gcomi",
+    "name": "G-Comi",
+    "lang": "ja",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://g-comi.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.hanayume",
+    "name": "Hana To Yume+",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://hanayume.com",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.hayacomic",
+    "name": "HAYA Comic",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://hayacomic.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.herosweb",
+    "name": "HERO'S Web",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://heros-web.com",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.jnbooks",
+    "name": "J-N Books",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://comic.j-nbooks.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.kimicomi",
+    "name": "KimiComi",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://kimicomi.com",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.magkan",
+    "name": "MagKan",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://kansai.mag-garden.co.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.mangabu",
+    "name": "MangaBu",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mangabu.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.mangalt",
+    "name": "Mangalt",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mangalt.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.mangaspa",
+    "name": "Manga SPA",
+    "lang": "ja",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mangaspa.nikkan-spa.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.mangazegra",
+    "name": "Manga Zegra",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manga-zegra.com",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.namicomic",
+    "name": "Nami Comic",
+    "lang": "ja",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://namicomic.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.piacomic",
+    "name": "PiaComic",
+    "lang": "ja",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://piacomic.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.rimacomiplus",
+    "name": "RimacomiPlus",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://rimacomiplus.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.takecomic",
+    "name": "TakeComic",
+    "lang": "ja",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://takecomic.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.younganimal",
+    "name": "Young Animal",
+    "lang": "ja",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://younganimal.com",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "comici.youngchampion",
+    "name": "Young Champion",
+    "lang": "ja",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://youngchampion.jp",
+      "categories": [
+        [
+          "ランキング",
+          "/ranking/manga"
+        ],
+        [
+          "更新順",
+          "/series/list/up"
+        ],
+        [
+          "新作順",
+          "/series/list/new"
+        ],
+        [
+          "読み切り",
+          "/category/manga/oneShot"
+        ],
+        [
+          "完結",
+          "/category/manga/complete"
+        ],
+        [
+          "月曜日",
+          "/category/manga/day/1"
+        ],
+        [
+          "火曜日",
+          "/category/manga/day/2"
+        ],
+        [
+          "水曜日",
+          "/category/manga/day/3"
+        ],
+        [
+          "木曜日",
+          "/category/manga/day/4"
+        ],
+        [
+          "金曜日",
+          "/category/manga/day/5"
+        ],
+        [
+          "土曜日",
+          "/category/manga/day/6"
+        ],
+        [
+          "日曜日",
+          "/category/manga/day/7"
+        ],
+        [
+          "その他",
+          "/category/manga/day/8"
+        ]
+      ]
+    }
+  }
+]
