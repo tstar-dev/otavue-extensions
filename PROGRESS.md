@@ -2,6 +2,17 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: Hiper (1 source, 18+)
+
+- **New template** `themes/hiper.js`, ported from Keiyoushi's `lib-multisrc/hiper` and `src/en/hiperdex`: the tRPC API at `/api/trpc` (`?batch=1&input={"0":{"json":…}}`), with `search.query` for Popular (`popular`), Latest (`recent`) and search; `series.bySlugWithGenres`, `series.chapters` and `reader.chapterPages`. Single procedures work, so the `auth.me` batching Keiyoushi sends is left out.
+  - **Two things unlock the API:** the `__st` cookie, which the home page sets (without it: 401, "Invalid or missing API Key"), and the `x-cfg-auth: yceqt7qgu004` header, built in the site's own script (without it, chapter pages answer 403 "Use o aplicativo oficial em hiperdex.tv"). On a 401 the source loads the home page and tries once more. In Otavue the cookie stays in the WebView's cookie store; the source also reads `set-cookie` and sends it back itself, which the live check (Node, no cookie store) needs. Keiyoushi's WebView header capture isn't needed.
+  - Search refuses `null` filters, so unset ones are left out. `maxRating` is `pornographic`; the content rating filter narrows it.
+  - Chapters: published only (drafts and future `releaseAt` left out), one per number. Names as Keiyoushi's: the chapter's title if it has a number in it, otherwise "Chapter N <title>". Links are `/manga/<slug>/<number>#<chapter id>`. Novels are left out of lists and get a note.
+  - Covers and page images (`r2d2storage.com`) answer 403 without the site as `Referer`.
+- **Site:** Hiperdex at hiperdex.tv (Keiyoushi's address, and the one the API's own message names; hiperdex.com serves the same). 4,917 titles: 3,270 pornographic, 532 erotica, 167 suggestive, 948 safe. Keiyoushi marks it MIXED, so it's listed, as 18+.
+- **Tools:** the live check's `fetch` (`tools/smoke.mjs`) now hands sources the response headers with lower-case names, as Otavue's bridge does, and `fakeFetch` in `tests/harness.mjs` takes `headers` in an answer.
+- 178 tests. Live check: 1 of 1 passed. 178 sources, 53 marked 18+.
+
 ## 2026-10-21: GoDa (1 source, 18+)
 
 - **New template** `themes/goda.js`, ported from Keiyoushi's `lib-multisrc/goda`: `/hots/page/<n>` for Popular, `/newss/page/<n>` for Latest, `/s/<query>?page=<n>` for search, a genre and tag filter (`/manga-genre/…`, `/manga-tag/…`, from the site's list), the title page, `/manga/get?mid=<id>&mode=all` for chapters and `/chapter/getcontent?m=<id>&c=<chapter>` for pages.
