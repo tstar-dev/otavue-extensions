@@ -1,0 +1,23 @@
+[
+  {
+    "id": "mangataro.mangataro",
+    "name": "MangaTaro",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mangataro.org"
+    }
+  },
+  {
+    "id": "mangataro.roliascan",
+    "name": "Rolia Scan",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://roliascan.com",
+      "mergePages": 5
+    }
+  }
+]

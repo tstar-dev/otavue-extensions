@@ -27,6 +27,7 @@ Install a source from the list, then find it under the Search tab → **Sources*
 | Guya, Danke fürs Lesen, Hachirumi, Magical Translators | English, Spanish, Polish | Groups' own readers on Guya (a small JSON API). Each chapter is read from the group the site prefers. Magical Translators has Spanish and Polish sources too. Danke and Hachirumi are marked 18+. |
 | Mangabat, Mangakakalot | English | One large aggregator (MangaBox) on two domains; re-hosts, not groups' own sites. Marked 18+, as it carries adult series. |
 | Death Toll Scans, Mangatellers, Menudo-Fansub, NIFTeam, Juin Jutsu | English, Spanish, Italian | Scanlation groups' own FoOlSlide readers (an older PHP reader). |
+| MangaTaro, Rolia Scan | English | Readers on MangaTaro (WordPress with its own JSON API). MangaTaro is an aggregator and is marked 18+. |
 | Lua Scans | English | Lua Scans' own reader (HeanCMS, a JSON API). Free chapters only; paid and scheduled ones are left out. |
 | Read One Piece, Read Berserk, Read Kingdom and 8 more | English | Single-franchise reader sites on MangaCatalog: each lists its series and spin-offs (One Piece, Attack on Titan, Berserk, Fairy Tail, Jujutsu Kaisen, Kingdom, Seven Deadly Sins, One-Punch Man, Solo Leveling, Tokyo Ghoul, Tower of God), with no search of its own, so search filters that list. Novels are left out. |
 | Eris Scans, Siren Scans, Rithar Scans and 10 more | English | Scanlation groups on Keyoapp, in all three of its versions. Coin chapters, upcoming chapters and novels are left out. The 3 sites with adult series are marked 18+. |

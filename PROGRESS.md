@@ -2,6 +2,18 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: MangaTaro (2 sources, 1 18+)
+
+- **New template** `themes/mangataro.js`, ported from Keiyoushi's `lib-multisrc/mangataro`:
+  - Lists: POST `/wp-json/manga/v1/load` (24 rows; its list fields are JSON strings such as `"[\"Manhwa\"]"`). Novels and rows without a link are left out. Rolia Scan's lists mix in chapter entries without a link, so its Latest and filtered lists read five API pages per page, as Keiyoushi does (`mergePages`).
+  - Search: the site's search box, POST `/auth/search` (up to 25 titles). Filters (sort, type, status, year) go through `/load`. Keiyoushi's long tag lists are left out.
+  - Details: WordPress's REST API (`/wp-json/wp/v2/manga/<id>?_embed`): tags, `manga_author` terms, featured image.
+  - **Chapters:** `/auth/manga-chapters` needs `_t` = the first 16 hex digits of md5(`<unix seconds>mng_ch_<yyyyMMddHH UTC>`). The template carries its own md5 (the sandbox has none; checked against Node's). On a 403 it retries once on the server's `Date` header, as Keiyoushi does for skewed clocks. Only the site's language is kept (MangaTaro lists pt-br chapters too).
+  - Pages: `/auth/chapter-content?chapter_id=` (the id at the end of the chapter link).
+  - Title links are `<site>/manga/<slug>#<id>`; the id is what the API needs. Keiyoushi's view counting is left out.
+- **Sites:** MangaTaro (an aggregator, 18+: Keiyoushi marks it MIXED) and Rolia Scan (SAFE).
+- 149 tests. Live check: 2 of 2 passed. 170 sources, 51 marked 18+.
+
 ## 2026-10-21: FoOlSlide (5 sources)
 
 - **New template** `themes/foolslide.js`, ported from Keiyoushi's `lib-multisrc/foolslide`: `/directory/N/` (Popular), `/latest/N/`, search as a form POST to `/search/`, title and chapter pages fetched with the `adult=true` form (as Keiyoushi does, to skip the content warning), and pages from the reader's `var pages = [...]`.
