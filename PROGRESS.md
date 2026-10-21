@@ -2,6 +2,14 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: MonochromeCMS (1 source)
+
+- **New template** `themes/monochrome.js`, ported from Keiyoushi's `lib-multisrc/monochrome`: the API at `api.<site>`, `/manga?limit=10&offset=&title=` for lists and search, `/manga/<id>` and `/manga/<id>/chapters`. There's no Latest.
+  - **Page images are `/media/<series id>/<chapter id>/<n>.jpg`.** Keiyoushi's path without the series id now answers 404 (found from the live site). The chapter link carries the series id, version and page count after `#`, so pages need no request.
+- **Site:** Monochrome Scans (5 series). Monochrome Custom (a demo address you'd replace with your own) is left out.
+- Node's fetch hung once on the API (curl answered); it worked on the next tries.
+- 162 tests. Live check: 1 of 1 passed. 175 sources, 51 marked 18+.
+
 ## 2026-10-21: EZManhwa (2 sources)
 
 - **New template** `themes/ezmanhwa.js`, ported from Keiyoushi's `lib-multisrc/ezmanhwa`: the API on its own host (`apiUrl`; `api.qimanga.com`, `vapi.ezmanga.org`), sent with the site as `Origin`/`Referer`. `/series` (sort, status, type, genre) and `/series/search?q=` (which ignores filters), `/series/<slug>`, `/series/<slug>/chapters` (100 a page, all read) and `/series/<slug>/chapters/<chapter>` for pages (with width and height). Chapters with `requiresPurchase` are left out; novels too.

@@ -1,0 +1,44 @@
+[
+ {
+  "name": "Panic and Shock",
+  "webtoon": true,
+  "volume": null,
+  "number": 24,
+  "scanGroup": "Ethylene Scans & Monochrome Scans",
+  "id": "711bf091-8b44-4abd-8b42-f87da822ef76",
+  "version": 2,
+  "mangaId": "79141782-bc73-44fe-a1b2-eff842ca6123",
+  "length": 99,
+  "uploadTime": "2024-02-06T12:32:17.939540+00:00",
+  "ownerId": "dbaf7d0d-b91b-41d2-bbe9-d638126b174a",
+  "tracking": []
+ },
+ {
+  "name": "Digital Footprint",
+  "webtoon": true,
+  "volume": 3,
+  "number": 23,
+  "scanGroup": "Ethylene Scans & Monochrome Scans",
+  "id": "47f5d75d-d186-485a-b26a-1ab0e2128794",
+  "version": 1,
+  "mangaId": "79141782-bc73-44fe-a1b2-eff842ca6123",
+  "length": 89,
+  "uploadTime": "2024-01-16T00:53:31.326693+00:00",
+  "ownerId": "dbaf7d0d-b91b-41d2-bbe9-d638126b174a",
+  "tracking": []
+ },
+ {
+  "name": "The Miraculous Childhood Friends",
+  "webtoon": true,
+  "volume": null,
+  "number": 1,
+  "scanGroup": "Ethylene Scans",
+  "id": "8176da5d-f19d-413b-85e3-a4626eb9f268",
+  "version": 1,
+  "mangaId": "79141782-bc73-44fe-a1b2-eff842ca6123",
+  "length": 124,
+  "uploadTime": "2023-05-05T00:27:03.448157+00:00",
+  "ownerId": "f5edbf2a-fe2e-40dd-a733-a0f19fd29ba0",
+  "tracking": []
+ }
+]

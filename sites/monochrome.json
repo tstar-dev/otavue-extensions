@@ -1,0 +1,12 @@
+[
+  {
+    "id": "monochrome.monochromescans",
+    "name": "Monochrome Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manga.d34d.one"
+    }
+  }
+]
