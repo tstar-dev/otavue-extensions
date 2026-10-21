@@ -2,6 +2,25 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: Iken (9 sources)
+
+- **New template** `themes/iken.js`, ported from Keiyoushi's `lib-multisrc/iken`: a JSON API at `api.<site>`, sent with the site as `Origin` and `Referer` as HeanCMS is.
+  - Lists come from `/api/query` (`orderBy` totalViews for Popular, lastChapterAddedAt for Latest; filters for sort, direction, status, type and genres from `/api/genres`). Novels are left out of lists and refused on open.
+  - Titles come from `/api/post` (by `postSlug` or `postId`), and **chapters always come from `/api/chapters?postId=`**: on every site checked, the post's own `chapters` was empty. Keiyoushi only switches to that endpoint after noticing the mismatch.
+  - **Locked chapters** are left out: `isAccessible: false` (on every site), `isLocked`, `isTimeLocked`, `isPermanentlyLocked`, `isShortLinkLocked`, a `price` not purchased, or an `unlockAt` still to come. A locked chapter's `/api/chapter` returns no images and `isLockedByCoins`, which `getPages` reports.
+  - Pages come from `/api/chapter?chapterId=` in the API's `order` (by file name for Magus Manga and Sana Scans, as Keiyoushi does), with `width`/`height` when the API knows them.
+  - **Links:** `<site>/series/<slug>#<id>` and `<site>/series/<slug>/<chapter>#<chapterId>`. Orion Scans' slugs run to 226 bytes, past Otavue's 150-byte ids, so a link that's too long becomes `<site>/series/#<id>` (or `/chapter/#<id>`). A plain `/series/<slug>` link still opens.
+  - Left out: Keiyoushi's `analytics/updateViews` calls, which only count views.
+- **Sites (9):** Azora (Arabic), Hijala Scans, Hive Scans, Ken Scans, Magus Manga, Nyx Scans, Orion Scans, Sana Scans and Vortex Scans. Keiyoushi marks every one SAFE. Renascans (522) and Vanilla Scans (521) are down and in `REMOVED.md`.
+- 108 tests. Live check: 9 of 9 passed. 141 sources, 37 marked 18+.
+
+## 2026-10-21: MangaHub held back (no template yet)
+
+- Keiyoushi's `lib-multisrc/mangahub` covers 11 sites (MangaHub, MangaReader.site, MangaFox.fun, MangaNel, 1Manga.co and others). All of them are front ends for one GraphQL API, `api.mghcdn.com`, and their pages are empty app shells, so there's no HTML to read.
+- **That API answers every non-browser request with a Cloudflare challenge** (`cf-mitigated: challenge`, 403), from curl and from Node on a home connection, with or without the site's `mhub_access` key. A real browser gets through with no cookies and even a random key, so it's the client being judged, not the address.
+- A random key is enough for lists, search and chapter lists. Pages need the key the site sets as the `mhub_access` cookie (a random one gets "Chapter encryption unavailable"), and pages can come back AES-GCM encrypted (`enc:v1`, keys from `<site>/api/chapter-crypto`).
+- Otavue's host `fetch` is React Native's native networking with the WebView's cookies, so it's likely challenged too. It might pass after opening `api.mghcdn.com` once in Otavue (as Mihon does it), but that needs a device check. The owner chose to move on to Iken. The 11 sites are in `REMOVED.md`.
+
 ## 2026-10-21: MangaCatalog (11 sources)
 
 - **New template** `themes/mangacatalog.js`, ported from Keiyoushi's `lib-multisrc/mangacatalog`. Each site is one franchise (readonepiece.com, readsnk.com, readberserk.com, …) with a fixed list of series and no list or search of its own:

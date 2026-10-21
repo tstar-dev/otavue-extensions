@@ -1,0 +1,22 @@
+[
+ {
+  "id": 1,
+  "name": "Action",
+  "color": ""
+ },
+ {
+  "id": 2,
+  "name": "Drama",
+  "color": ""
+ },
+ {
+  "id": 3,
+  "name": "Shounen",
+  "color": ""
+ },
+ {
+  "id": 4,
+  "name": "Sports",
+  "color": ""
+ }
+]

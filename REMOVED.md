@@ -4,6 +4,19 @@ Sites taken out of the repository, and why, so they aren't added back. Newest fi
 
 | Date | Source id | Reason |
 | --- | --- | --- |
+| 2026-10-21 | iken.renascans | Not added yet (Renascans): Down (Cloudflare 522; api.renascans.net no longer resolves). |
+| 2026-10-21 | iken.vanillascans | Not added yet (Vanilla Scans): Down (Cloudflare 521, site and API). |
+| 2026-10-21 | mangahub.mangafox | Not added yet (MangaFox.fun): MangaHub template not written. Its API (api.mghcdn.com) answers every non-browser request with a Cloudflare challenge; needs a check on the device first. |
+| 2026-10-21 | mangahub.mangahere | Not added yet (MangaHere.onl): MangaHub template not written. Its API (api.mghcdn.com) answers every non-browser request with a Cloudflare challenge; needs a check on the device first. |
+| 2026-10-21 | mangahub.mangahub | Not added yet (MangaHub): MangaHub template not written. Its API (api.mghcdn.com) answers every non-browser request with a Cloudflare challenge; needs a check on the device first. |
+| 2026-10-21 | mangahub.mangakakalotfun | Not added yet (Mangakakalot.fun): MangaHub template not written. Its API (api.mghcdn.com) answers every non-browser request with a Cloudflare challenge; needs a check on the device first. |
+| 2026-10-21 | mangahub.manganel | Not added yet (MangaNel): MangaHub template not written. Its API (api.mghcdn.com) answers every non-browser request with a Cloudflare challenge; needs a check on the device first. |
+| 2026-10-21 | mangahub.mangaonline | Not added yet (MangaOnline.fun): MangaHub template not written. Its API (api.mghcdn.com) answers every non-browser request with a Cloudflare challenge; needs a check on the device first. |
+| 2026-10-21 | mangahub.mangapanda | Not added yet (MangaPanda.onl): MangaHub template not written. Its API (api.mghcdn.com) answers every non-browser request with a Cloudflare challenge; needs a check on the device first. |
+| 2026-10-21 | mangahub.mangareader | Not added yet (MangaReader.site): MangaHub template not written. Its API (api.mghcdn.com) answers every non-browser request with a Cloudflare challenge; needs a check on the device first. |
+| 2026-10-21 | mangahub.mangatoday | Not added yet (MangaToday): MangaHub template not written. Its API (api.mghcdn.com) answers every non-browser request with a Cloudflare challenge; needs a check on the device first. |
+| 2026-10-21 | mangahub.onemangaco | Not added yet (1Manga.co): MangaHub template not written. Its API (api.mghcdn.com) answers every non-browser request with a Cloudflare challenge; needs a check on the device first. |
+| 2026-10-21 | mangahub.onemangainfo | Not added yet (OneManga.info): MangaHub template not written. Its API (api.mghcdn.com) answers every non-browser request with a Cloudflare challenge; needs a check on the device first. |
 | 2026-10-21 | mangacatalog.readblackclover | Not added yet (Read Black Clover): readblackclover.com is a saved copy of the old site, not a reader: chapter 1 is a 404 and the newest chapters keep a single page. Its old host (ww10) no longer answers. |
 | 2026-10-21 | mangacatalog.readchainsawman | Not added (Read Chainsaw Man): Keiyoushi marks it NSFW. |
 | 2026-10-21 | keyoapp.meitoon | Not added yet (MeiToon): Cloudflare browser check on every request; needs a check on the device first. |

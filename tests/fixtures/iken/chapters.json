@@ -1,0 +1,92 @@
+{
+ "post": {
+  "chapters": [
+   {
+    "id": 34274,
+    "slug": "chapter-24",
+    "number": 24,
+    "title": "",
+    "unlockAt": null,
+    "becameFreeAt": null,
+    "isPermanentlyLocked": true,
+    "isShortLinkLocked": false,
+    "price": 100,
+    "mangaPostId": 583,
+    "createdAt": "2026-10-21T18:53:56.949Z",
+    "updatedAt": "2026-10-21T18:53:56.949Z",
+    "chapterPurchased": false,
+    "isLocked": true,
+    "isAccessible": false
+   },
+   {
+    "id": 34006,
+    "slug": "chapter-23",
+    "number": 23,
+    "title": "",
+    "unlockAt": null,
+    "becameFreeAt": "2026-10-21T18:54:08.492Z",
+    "isPermanentlyLocked": false,
+    "isShortLinkLocked": false,
+    "price": 0,
+    "mangaPostId": 583,
+    "createdAt": "2026-10-14T18:26:13.752Z",
+    "updatedAt": "2026-10-21T18:54:08.492Z",
+    "chapterPurchased": false,
+    "isLocked": false,
+    "isAccessible": true
+   },
+   {
+    "id": 33832,
+    "slug": "chapter-22",
+    "number": 22,
+    "title": "",
+    "unlockAt": null,
+    "becameFreeAt": "2026-10-14T18:26:21.194Z",
+    "isPermanentlyLocked": false,
+    "isShortLinkLocked": false,
+    "price": 0,
+    "mangaPostId": 583,
+    "createdAt": "2026-10-11T15:53:42.107Z",
+    "updatedAt": "2026-10-14T18:26:21.194Z",
+    "chapterPurchased": false,
+    "isLocked": false,
+    "isAccessible": true
+   },
+   {
+    "id": 28102,
+    "slug": "chapter-2",
+    "number": 2,
+    "title": "",
+    "unlockAt": null,
+    "becameFreeAt": null,
+    "isPermanentlyLocked": false,
+    "isShortLinkLocked": false,
+    "price": 0,
+    "mangaPostId": 583,
+    "createdAt": "2026-06-18T16:34:57.067Z",
+    "updatedAt": "2026-06-18T16:34:57.067Z",
+    "chapterPurchased": false,
+    "isLocked": false,
+    "isAccessible": true
+   },
+   {
+    "id": 28080,
+    "slug": "chapter-1",
+    "number": 1,
+    "title": "",
+    "unlockAt": null,
+    "becameFreeAt": null,
+    "isPermanentlyLocked": false,
+    "isShortLinkLocked": false,
+    "price": 0,
+    "mangaPostId": 583,
+    "createdAt": "2026-06-17T20:14:12.220Z",
+    "updatedAt": "2026-06-17T20:14:12.220Z",
+    "chapterPurchased": false,
+    "isLocked": false,
+    "isAccessible": true
+   }
+  ]
+ },
+ "totalChapterCount": 24
+}

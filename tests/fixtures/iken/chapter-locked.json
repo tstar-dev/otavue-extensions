@@ -1,0 +1,25 @@
+{
+ "chapter": {
+  "id": 34274,
+  "slug": "chapter-24",
+  "number": 24,
+  "title": "",
+  "createdAt": "2026-10-21T18:53:56.949Z",
+  "updatedAt": "2026-10-21T18:53:56.949Z",
+  "chapterStatus": "PUBLIC",
+  "featuredImage": "",
+  "price": 100,
+  "becameFreeAt": null,
+  "unlockAt": null,
+  "isPermanentlyLocked": true,
+  "isLockedByCoins": true,
+  "isShortLinkLocked": false,
+  "shortLink": null,
+  "mangaPostId": 583,
+  "team": null,
+  "isPurchased": false,
+  "isLocked": true,
+  "isAccessible": false,
+  "images": []
+ }
+}
