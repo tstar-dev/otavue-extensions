@@ -31,6 +31,7 @@ Install a source from the list, then find it under the Search tab → **Sources*
 | Arc-Relight, Assorted Scans | English | Scanlation groups' own MangAdventure readers (a JSON API). |
 | Qi Scans, EZmanga | English | Readers on EZManhwa (a JSON API on its own host). Chapters that need buying are left out. |
 | Monochrome Scans | English | The group's own MonochromeCMS reader (a JSON API). |
+| Bakkin | English | The group's own Bakkin Reader X (Yuru Yuri and others): the whole library is one JSON file. Covers, bonus chapters and afterwords are kept. |
 | Lua Scans | English | Lua Scans' own reader (HeanCMS, a JSON API). Free chapters only; paid and scheduled ones are left out. |
 | Read One Piece, Read Berserk, Read Kingdom and 8 more | English | Single-franchise reader sites on MangaCatalog: each lists its series and spin-offs (One Piece, Attack on Titan, Berserk, Fairy Tail, Jujutsu Kaisen, Kingdom, Seven Deadly Sins, One-Punch Man, Solo Leveling, Tokyo Ghoul, Tower of God), with no search of its own, so search filters that list. Novels are left out. |
 | Eris Scans, Siren Scans, Rithar Scans and 10 more | English | Scanlation groups on Keyoapp, in all three of its versions. Coin chapters, upcoming chapters and novels are left out. The 3 sites with adult series are marked 18+. |

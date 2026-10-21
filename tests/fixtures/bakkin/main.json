@@ -1,0 +1,123 @@
+{
+ "1_YRYR": {
+  "dir": "1_YRYR",
+  "name": "Yuru Yuri",
+  "author": "Namori",
+  "status": "Ongoing",
+  "buy_from": "Amazon.co.jp",
+  "buy_link": "https://www.amazon.co.jp/s?k=%E3%82%86%E3%82%8B%E3%82%86%E3%82%8A",
+  "thumb": "caches/1_YRYR/v21/cover_thumb.png.jpg",
+  "latest_vol": "v21",
+  "latest_chap": "c173",
+  "latest_name": "Chapter 173: No Hyper JK for Akari!",
+  "latest_time": "2023-04-17",
+  "volumes": [
+   {
+    "dir": "v01",
+    "name": "Volume 1",
+    "download_link": "https://mega.nz/#!Lk9yEQ4Q!fnfzUIXw8TzlTqTcmoll-j974IVT2bIt2FT8RuA_UjE",
+    "thumb": "caches/1_YRYR/v01/cover_thumb.png.jpg",
+    "thumb_large": "caches/1_YRYR/v01/img_thumb.png.jpg",
+    "chapters": [
+     {
+      "dir": "aCover",
+      "name": "Cover",
+      "pages": [
+       "caches/1_YRYR/v01/aCover/img_YRYR_V1_001.jpg.jpg",
+       "caches/1_YRYR/v01/aCover/img_YRYR_V1_002.jpg.jpg"
+      ]
+     },
+     {
+      "dir": "c001",
+      "name": "Chapter 1: Have you given it your all?",
+      "pages": [
+       "caches/1_YRYR/v01/c001/img_YRYR_V1_005.png.jpg",
+       "caches/1_YRYR/v01/c001/img_YRYR_V1_006.png.jpg"
+      ]
+     },
+     {
+      "dir": "c002",
+      "name": "Chapter 2: How about a walk around the house?",
+      "pages": [
+       "caches/1_YRYR/v01/c002/img_YRYR_V1_014.png.jpg",
+       "caches/1_YRYR/v01/c002/img_YRYR_V1_015.png.jpg"
+      ]
+     },
+     {
+      "dir": "zbt001",
+      "name": "Bonus Track 1: Shiritori LOVE Game",
+      "pages": [
+       "caches/1_YRYR/v01/zbt001/img_YRYR_V1_132.png.jpg",
+       "caches/1_YRYR/v01/zbt001/img_YRYR_V1_133.png.jpg"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "3_Misc": {
+  "dir": "3_Misc",
+  "name": "Doujins and One-shots",
+  "author": "",
+  "status": "",
+  "buy_from": "",
+  "buy_link": "",
+  "thumb": "caches/3_Misc/9_DCB/cover_thumb.png.jpg",
+  "latest_vol": "10_Anthology2",
+  "latest_chap": "c016",
+  "latest_name": "A Thrilling Kiss - Kimuru",
+  "latest_time": "2023-11-09",
+  "volumes": [
+   {
+    "dir": "10_Anthology1",
+    "name": "Yuru Yuri Anthology Comic v1",
+    "download_link": "https://mega.nz/file/79cRATBA#dJU2i0v4mMC1HQz2kXOFWLhYQHK5WaIHObt1-b7Ipyw",
+    "thumb": "caches/3_Misc/10_Anthology1/cover_thumb.png.jpg",
+    "thumb_large": "caches/3_Misc/10_Anthology1/img_thumb.png.jpg",
+    "chapters": [
+     {
+      "dir": "c000",
+      "name": "Cover",
+      "pages": [
+       "caches/3_Misc/10_Anthology1/c000/img_001.jpg.jpg",
+       "caches/3_Misc/10_Anthology1/c000/img_002.jpg.jpg"
+      ]
+     },
+     {
+      "dir": "c001",
+      "name": "A Terrorist Attack!? - Mari Manishi",
+      "pages": [
+       "caches/3_Misc/10_Anthology1/c001/img_012.png.jpg",
+       "caches/3_Misc/10_Anthology1/c001/img_013.png.jpg"
+      ]
+     }
+    ]
+   },
+   {
+    "dir": "10_Anthology2",
+    "name": "Yuru Yuri Anthology Comic v2",
+    "download_link": "https://mega.nz/file/jxkFzJDQ#QUvsrK8-hczTByV9FaxGh0xGHgVI4sHkeHPatXm3FFA",
+    "thumb": "caches/3_Misc/10_Anthology2/cover_thumb.png.jpg",
+    "thumb_large": "caches/3_Misc/10_Anthology2/img_thumb.png.jpg",
+    "chapters": [
+     {
+      "dir": "c000",
+      "name": "Cover",
+      "pages": [
+       "caches/3_Misc/10_Anthology2/c000/img_001.png.jpg",
+       "caches/3_Misc/10_Anthology2/c000/img_002.png.jpg"
+      ]
+     },
+     {
+      "dir": "c001",
+      "name": "Ayano's Lucky Day - Mari Manishi",
+      "pages": [
+       "caches/3_Misc/10_Anthology2/c001/img_013.png.jpg",
+       "caches/3_Misc/10_Anthology2/c001/img_014.png.jpg"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
