@@ -1,0 +1,12 @@
+[
+  {
+    "id": "goda.goda",
+    "name": "Goda",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manhuascans.org"
+    }
+  }
+]
