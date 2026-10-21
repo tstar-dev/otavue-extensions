@@ -1,0 +1,98 @@
+{
+ "pageProps": {
+  "series": {
+   "series_id": 165,
+   "title": "30 Years Have Passed Since the Prologue",
+   "altTitles": [
+    "30 Years Since the Prologue"
+   ],
+   "description": "<p class=\"mantine-focus-auto m_b6d8b162 mantine-Text-root\">I 'transmigrated' into a world I've never seen.</p><p class=\"mantine-focus-auto m_b6d8b162 mantine-Text-root\">I spent 30 years, thinking it was a traditional RPG.</p><p class=\"mantine-focus-auto m_b6d8b162 mantine-Text-root\">Having retired after becoming a war hero, I was now waiting to meet the ending.</p><p class=\"mantine-focus-auto m_b6d8b162 mantine-Text-root\">But somehow-</p><p class=\"mantine-focus-auto m_b6d8b162 mantine-Text-root\">The 30 years I've spent till now was just a prologue, and this world was actually an academy genre?</p>",
+   "type": "Manhwa",
+   "tags": [
+    "Academy",
+    "Action",
+    "Adventure",
+    "Comedy",
+    "Fantasy",
+    "Harem",
+    "Mystery",
+    "School Life"
+   ],
+   "author": [
+    "Markellaha"
+   ],
+   "artist": [
+    "Studio GreenKirin"
+   ],
+   "status": "Ongoing",
+   "cover": "thumbnail.webp",
+   "last_edit": 1786358505
+  },
+  "chapters": [
+   {
+    "chapter_id": 2,
+    "series_id": 165,
+    "chapter": "22.00",
+    "title": "There's Always an Attack at the Academy Practical Lesson (3)",
+    "notice": 0,
+    "release_date": 4102444800,
+    "token": "ffffffffffffffff"
+   },
+   {
+    "chapter_id": 3,
+    "series_id": 165,
+    "chapter": "21.50",
+    "title": "Hiatus notice",
+    "notice": 1,
+    "release_date": 1792492987,
+    "token": "eeeeeeeeeeeeeeee"
+   },
+   {
+    "chapter_id": 12353,
+    "series_id": 165,
+    "chapter": "21.00",
+    "title": "There's Always an Attack at the Academy Practical Lesson (3)",
+    "notice": 0,
+    "release_date": 1792492987,
+    "token": "afb39d65a21a97e5"
+   },
+   {
+    "chapter_id": 12342,
+    "series_id": 165,
+    "chapter": "20.00",
+    "title": "There's always an attack at the Academy Practical Lesson (2)",
+    "notice": 0,
+    "release_date": 1792250113,
+    "token": "516063d4023940bd"
+   },
+   {
+    "chapter_id": 12000,
+    "series_id": 165,
+    "chapter": "2.00",
+    "title": "The Retired Soldier Wants to Rest",
+    "notice": 0,
+    "release_date": 1785000658,
+    "token": "57b2812f6da9b0c8"
+   },
+   {
+    "chapter_id": 12002,
+    "series_id": 165,
+    "chapter": "1.00",
+    "title": "Prologue",
+    "notice": 0,
+    "release_date": 1785000643,
+    "token": "9ead4fdb0be9dedf"
+   },
+   {
+    "chapter_id": 1,
+    "series_id": 165,
+    "chapter": "21.00",
+    "title": "There's Always an Attack at the Academy Practical Lesson (3)",
+    "notice": 0,
+    "release_date": 1792492987,
+    "token": "dddddddddddddddd"
+   }
+  ]
+ },
+ "__N_SSG": true
+}

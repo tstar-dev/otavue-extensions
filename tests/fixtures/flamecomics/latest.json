@@ -1,0 +1,87 @@
+{
+ "pageProps": {
+  "allSeries": [
+   {
+    "series_id": null,
+    "title": "No Id",
+    "type": "Manga",
+    "categories": [
+     "Action",
+     "Seinen",
+     "Sci-fi"
+    ],
+    "status": "Completed",
+    "cover": "thumbnail.jpeg",
+    "last_edit": 1733611072,
+    "popularityRank": 100,
+    "altTitles": null
+   },
+   {
+    "series_id": 158,
+    "title": "A Regressor's Tale of Cultivation",
+    "type": "Manhwa",
+    "categories": [
+     "Action",
+     "Adventure",
+     "Cultivation",
+     "Fantasy",
+     "Shounen"
+    ],
+    "status": "Ongoing",
+    "cover": "thumbnail.webp",
+    "last_edit": 1790255995,
+    "popularityRank": null,
+    "altTitles": null
+   },
+   {
+    "series_id": 52,
+    "title": "Battle of the Six Realms",
+    "type": "Manga",
+    "categories": [
+     "Action",
+     "Seinen",
+     "Sci-fi"
+    ],
+    "status": "Completed",
+    "cover": "thumbnail.jpeg",
+    "last_edit": 1733611072,
+    "popularityRank": 3,
+    "altTitles": null
+   },
+   {
+    "series_id": 165,
+    "title": "30 Years Have Passed Since the Prologue",
+    "type": "Manhwa",
+    "categories": [
+     "Academy",
+     "Action",
+     "Adventure",
+     "Comedy",
+     "Fantasy",
+     "Harem",
+     "Mystery",
+     "School Life"
+    ],
+    "status": "Ongoing",
+    "cover": "thumbnail.webp",
+    "last_edit": 1786358505,
+    "popularityRank": 50,
+    "altTitles": null
+   },
+   {
+    "series_id": 999,
+    "title": "A Web Novel",
+    "type": "Web Novel",
+    "categories": [
+     "Fantasy"
+    ],
+    "status": "Ongoing",
+    "cover": "thumbnail.webp",
+    "last_edit": 1,
+    "popularityRank": 1,
+    "altTitles": []
+   }
+  ]
+ },
+ "__N_SSG": true
+}
