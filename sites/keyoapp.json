@@ -1,0 +1,137 @@
+[
+  {
+    "id": "keyoapp.artlapsa",
+    "name": "Art Lapsa",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://artlapsa.com",
+      "variant": "search"
+    }
+  },
+  {
+    "id": "keyoapp.asmotoon",
+    "name": "Asmodeus Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://asmotoon.com",
+      "variant": "v2"
+    }
+  },
+  {
+    "id": "keyoapp.erisscans",
+    "name": "Eris Scans",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://erisscans.com"
+    }
+  },
+  {
+    "id": "keyoapp.suryascans",
+    "name": "Genz Toons",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://genztoons.org"
+    }
+  },
+  {
+    "id": "keyoapp.grimscans",
+    "name": "Grim Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://grimscans.com"
+    }
+  },
+  {
+    "id": "keyoapp.kewnscans",
+    "name": "Kewn Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://kewnscans.org"
+    }
+  },
+  {
+    "id": "keyoapp.lunatoons",
+    "name": "Luna Toons",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://lunatoons.net",
+      "variant": "v2"
+    }
+  },
+  {
+    "id": "keyoapp.mistscans",
+    "name": "Mist Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mistscans.com"
+    }
+  },
+  {
+    "id": "keyoapp.nyanukafe",
+    "name": "Nyanu Kafe",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://nyanukafe.com"
+    }
+  },
+  {
+    "id": "keyoapp.ritharscans",
+    "name": "RitharScans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ritharscans.com",
+      "variant": "search"
+    }
+  },
+  {
+    "id": "keyoapp.sirenscans",
+    "name": "Siren Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://sirenscans.org",
+      "variant": "v2"
+    }
+  },
+  {
+    "id": "keyoapp.timelesstoons",
+    "name": "TimelessToons",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://timelesstoons.org"
+    }
+  },
+  {
+    "id": "keyoapp.writerscans",
+    "name": "Writer Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://writerscans.com"
+    }
+  }
+]

@@ -4,6 +4,8 @@ Sites taken out of the repository, and why, so they aren't added back. Newest fi
 
 | Date | Source id | Reason |
 | --- | --- | --- |
+| 2026-10-21 | keyoapp.meitoon | Not added yet (MeiToon): Cloudflare browser check on every request; needs a check on the device first. |
+| 2026-10-21 | keyoapp.nyrascans | Not added yet (Nyra Scans): Not reachable. |
 | 2026-10-21 | mangathemesia.ragescans | Not added yet (Rage Scans): Cloudflare browser check on every request; needs a check on the device first. |
 | 2026-10-21 | mangathemesia.comicasura | Not added yet (Comic Asura): Its own markup (Tailwind) and search page, not the theme’s. |
 | 2026-10-21 | mangathemesia.culturedworks | Not added yet (CulturedWorks): Down (Cloudflare 526). |
@@ -54,4 +56,4 @@ Sites taken out of the repository, and why, so they aren't added back. Newest fi
 | 2026-10-20 | comici.mangabang | Not added yet: the whole site showed a maintenance page (メンテナンス中). Re-check and add back. |
 | 2026-10-20 | comici.booklistastudio | Not added yet: its page API showed a maintenance page. Re-check and add back. |
 
-Not considered: Keiyoushi's English sites marked NSFW (adult-only): 38 on Madara, 2 on MangaThemesia.
+Not considered: Keiyoushi's English sites marked NSFW (adult-only): 38 on Madara, 2 on MangaThemesia, 2 on Keyoapp.

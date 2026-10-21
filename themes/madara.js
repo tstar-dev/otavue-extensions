@@ -13,7 +13,7 @@
 //   imageReferer  "site" to send the site, not the chapter, as page images' Referer
 //
 // @theme madara
-// @version 1.0.1
+// @version 1.0.2
 // @type manga
 
 var BASE = String(SITE.baseUrl).replace(/\/+$/, '');
