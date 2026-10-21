@@ -2,6 +2,15 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: Liliana (1 source)
+
+- **New template** `themes/liliana.js`, ported from Keiyoushi's `lib-multisrc/liliana`: `/ranking/week/<n>` for Popular (42 a page), `/all-manga/<n>/?sort=last_update&status=0` for Latest, `/search/<n>/?keyword=`, `/filter/<n>/?genres=&notGenres=&chapter_count=&status=&sex=&sort=`, the title page, and pages from `/ajax/image/list/chap/<CHAPTER_ID>` (the id is a `const` in the chapter page's script; sent as XHR with the chapter as Referer).
+  - Filters come live from `/filter`, as in Keiyoushi: genres (as two multi-selects, to include and to leave out, since Otavue has no tri-state), chapter count, status, gender and sort. Chapter count and gender get an "Any" choice; Keiyoushi always sends the first option (">= 10").
+  - **Pages come shuffled**, each with its place in `data-index`; they're sorted back. `.svg` and `loading_comments` images are left out, as in Keiyoushi.
+  - Chapter times are Unix seconds in `time[datetime]`. Images (`cdn.manhuaplus.cc`) and covers need no headers.
+- **Site:** ManhuaPlus at manhuaplus.org, which Keiyoushi calls "ManhuaPlus (Unoriginal)". It's a different site from Manhua Plus (manhuaplus.com), already listed on Madara: about 740 titles against about 240, with some in common. Keiyoushi marks it safe. Its "Adult" genre holds two mainstream martial-arts titles and "Mature"/"Ecchi" are ordinary action manhwa, so it's not marked 18+. This library's other sites (Raw1001, DocTruyen5s) are Japanese and Vietnamese.
+- 201 tests. Live check: 1 of 1 passed. 183 sources, 57 marked 18+.
+
 ## 2026-10-21: MangaReader (1 source, 18+)
 
 - **New template** `themes/mangareader.js`, ported from Keiyoushi's `lib-multisrc/mangareader` and `src/en/manganow`: `/filter/?sort=` for Popular (`most-viewed`) and Latest (`latest-updated`) and for filters (type, status, score, year as `sy`, sort, genres joined by commas, with MangaNow's ids), `/search?keyword=`, the title page (`#ani_detail`), its `#en-chapters` list, and pages from `/ajax/image/list/<reading id>?mode=vertical` (sent as XHR, with the chapter as Referer).
