@@ -1,0 +1,36 @@
+{
+ "data": [
+  {
+   "id": 2165,
+   "slug": "overgeared",
+   "title": "Overgeared",
+   "cover": "https://cdn.asurascans.com/asura-images/covers/overgeared.905990.webp",
+   "status": "ongoing",
+   "type": "manhwa",
+   "public_url": "/comics/overgeared-11fe7da3"
+  },
+  {
+   "id": 2012,
+   "slug": "sss-class-suicide-hunter",
+   "title": "SSS-Class Suicide Hunter",
+   "cover": "https://cdn.asurascans.com/asura-images/covers/sss-class-suicide-hunter.021e06.webp",
+   "status": "ongoing",
+   "type": "manhwa",
+   "public_url": "/comics/sss-class-suicide-hunter-11fe7da3"
+  },
+  {
+   "id": 2111,
+   "slug": "myst-might-mayhem",
+   "title": "Myst, Might, Mayhem",
+   "cover": "https://cdn.asurascans.com/asura-images/covers/myst-might-mayhem.78970c.webp",
+   "status": "ongoing",
+   "type": "manhwa",
+   "public_url": "/comics/myst-might-mayhem-11fe7da3"
+  }
+ ],
+ "meta": {
+  "total": 357,
+  "per_page": 20,
+  "has_more": true
+ }
+}

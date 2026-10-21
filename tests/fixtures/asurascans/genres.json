@@ -1,0 +1,19 @@
+{
+ "data": [
+  {
+   "id": 1,
+   "name": "Action",
+   "slug": "action"
+  },
+  {
+   "id": 4,
+   "name": "Adventure",
+   "slug": "adventure"
+  },
+  {
+   "id": 7,
+   "name": "Comedy",
+   "slug": "comedy"
+  }
+ ]
+}
