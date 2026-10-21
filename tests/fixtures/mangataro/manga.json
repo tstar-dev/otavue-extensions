@@ -1,0 +1,35 @@
+{
+ "id": 47,
+ "slug": "one-piece",
+ "title": {
+  "rendered": "One Piece"
+ },
+ "content": {
+  "rendered": "<p>Gol D. Roger, a man referred to as the &#8220;King of the Pirates,&#8221; is set to be executed by the World Government. But just before his demise, he confirms the existence of a great treasure, One Piece, located somewhere within the vast ocean known as the Grand Line. Announcing that One Piece can be claimed by anyone worthy enough to reach it, the King of the Pirates is executed and the Gre"
+ },
+ "type": "manga",
+ "_embedded": {
+  "wp:featuredmedia": [
+   {
+    "source_url": "https://mangataro.org/content/media/one-piece.jpg"
+   }
+  ],
+  "wp:term": [
+   [
+    {
+     "name": "Action",
+     "taxonomy": "post_tag"
+    },
+    {
+     "name": "Adventure",
+     "taxonomy": "post_tag"
+    },
+    {
+     "name": "Fantasy",
+     "taxonomy": "post_tag"
+    }
+   ],
+   []
+  ]
+ }
+}

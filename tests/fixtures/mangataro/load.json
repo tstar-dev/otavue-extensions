@@ -1,0 +1,38 @@
+[
+ {
+  "id": "47",
+  "title": "One Piece",
+  "url": "https://mangataro.org/manga/one-piece",
+  "cover": "https://mangataro.org/content/media/one-piece.jpg",
+  "status": "Ongoing",
+  "type": "Manga",
+  "description": "Gol D. Roger, a man referred to as the \"King of the Pirates,"
+ },
+ {
+  "id": "14030",
+  "title": "Gachiakuta",
+  "url": "https://mangataro.org/manga/gachiakuta",
+  "cover": "https://mangataro.org/content/media/manga-14030-cover-1766332987.jpg",
+  "status": "Ongoing",
+  "type": "Manga",
+  "description": "Living in the slums of a wealthy town, Rudo and his foster f"
+ },
+ {
+  "id": "19377",
+  "title": "Blue Lock",
+  "url": "https://mangataro.org/manga/blue-lock",
+  "cover": "https://mangataro.org/content/media/blue-lock.jpg",
+  "status": "Ongoing",
+  "type": "Novel",
+  "description": "After reflecting on the current state of Japanese soccer, th"
+ },
+ {
+  "id": "297441",
+  "title": "The Regressed Mercenary Has a Plan",
+  "url": "",
+  "cover": "https://mangataro.org/content/media/the-regressed-mercenary-has-a-plan.jpg",
+  "status": "Ongoing",
+  "type": "Manhwa",
+  "description": "Cecil Perdium, the Mercenary King, was killed in battle befo"
+ }
+]

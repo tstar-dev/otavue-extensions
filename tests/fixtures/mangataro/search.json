@@ -1,0 +1,25 @@
+{
+ "success": true,
+ "query": "one piece",
+ "count": 25,
+ "results": [
+  {
+   "id": 47,
+   "title": "One Piece",
+   "slug": "one-piece",
+   "thumbnail": "https://mangataro.org/content/media/one-piece.jpg",
+   "type": "Manga",
+   "status": "Ongoing",
+   "description": "Gol D. Roger, a man referred to as the \"King of the Pirates,"
+  },
+  {
+   "id": 527253,
+   "title": "One Piece (Color)",
+   "slug": "one-piece-color",
+   "thumbnail": "https://mangataro.org/content/media/ea753c55-8162-457b-825f-fe41e734e58b.png",
+   "type": "Manga",
+   "status": "Ongoing",
+   "description": "Gol D. Roger, a man referred to as the \"Pirate King,\" is set"
+  }
+ ]
+}
