@@ -69,7 +69,12 @@ async function check(entry, code, log) {
     report('pages', `${pages.length} in CH ${chapters[chapters.length - 1].number}, first ${String(pages[0]?.url ?? pages[0]).slice(0, 70)}…`);
     if (pages.length === 0) throw new Error('a chapter with no pages');
     // With the page's own headers (some image hosts check the Referer), as Otavue sends them.
-    const image = await fetch(pages[0]?.url ?? pages[0], { method: 'HEAD', headers: pages[0]?.headers ?? {}, signal: AbortSignal.timeout(20_000) });
+    let image = await fetch(pages[0]?.url ?? pages[0], { method: 'HEAD', headers: pages[0]?.headers ?? {}, signal: AbortSignal.timeout(20_000) });
+    // Some image servers (Danke's) refuse HEAD; the app only ever GETs, so ask for the first byte instead.
+    if (image.status === 405 || image.status === 501) {
+      image = await fetch(pages[0]?.url ?? pages[0], { headers: { ...(pages[0]?.headers ?? {}), Range: 'bytes=0-0' }, signal: AbortSignal.timeout(20_000) });
+      await image.body?.cancel();
+    }
     report('image', `${image.status} ${image.headers.get('content-type')}`);
     if (!image.ok) throw new Error(`page image answered ${image.status}`);
     read = true;

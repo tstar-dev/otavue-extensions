@@ -2,6 +2,17 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: Guya (6 sources, 2 18+)
+
+- **Which template next:** every site's `build.gradle.kts` in Keiyoushi was counted by `theme`, English and not NSFW. After the ones done, the largest left are Guya and MangaBox (3 each by that count), then foolslide, monochrome, mangataro, mangadventure, ezmanhwa and bakkin (2 each); 138 English sites are standalone sources with no template. Guya won the tie: its sites are groups' own readers, and it has a fourth site (Magical Translators) that sets its language in code, which the count missed.
+- **New template** `themes/guya.js`, ported from Keiyoushi's `lib-multisrc/guya`: `/api/get_all_series/` is the whole catalogue in one answer (Danke's is 2.6 MB, under Otavue's 8 MB cap), so lists have no next page and search filters it here. `/api/series/<slug>/` gives the chapters, keyed by number, each with files per group.
+  - **One group per chapter:** the chapter's `preferred_sort`, else the series', else its first group, as Keiyoushi does without a preference. The group goes in the chapter link after `#`; a link without one, or with a group that's gone, falls back the same way.
+  - Pages are `/media/manga/<slug>/chapters/<folder>/<group>/<file>`. Descriptions can be HTML that opens with the author's link blocks; those are dropped.
+  - Keiyoushi's custom User-Agent and scanlator preference screen are left out.
+- **Sites (6):** Guya, Danke fürs Lesen and Hachirumi (both 18+: Keiyoushi marks them MIXED), and Magical Translators in English, Spanish and Polish (split by slug suffix, as Keiyoushi does).
+- **`tools/smoke.mjs`:** Danke's image server refuses HEAD (405, `server: MangaDex`) though GET works, so the image check now falls back to a one-byte GET on 405 or 501. That also applies to the daily health check.
+- 131 tests. Live check: 6 of 6 passed. 161 sources, 48 marked 18+.
+
 ## 2026-10-21: VineTheme (7 sources, 2 18+)
 
 - **New template** `themes/vinetheme.js`, ported from Keiyoushi's `lib-multisrc/vinetheme`, a Next.js reader:

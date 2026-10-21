@@ -1,0 +1,31 @@
+{
+ "slug": "a-story-about-a-senpai-who-wants-to-reject-a-girl",
+ "title": "A story about a senpai who wants to reject a girl at least once.",
+ "description": "<a href=\"https://www.pixiv.net/en/users/1762031\"><img src=\"https://i.imgur.com/oiVINmy.png\" alt=\"\"/> Artist&rsquo;s Pixiv</a>\r\n<a href=\"https://twitter.com/sakamegane\"><img src=\"https://i.imgur.com/dQCXZkU.png\" alt=\"\"/> Artist&rsquo;s Twitter</a>\r\nSupport the artist!\r\n[Fanbox] <a href=\"https://www.pixiv.net/fanbox/creator/1762031\">https://www.pixiv.net/fanbox/creator/1762031</a> \r\n[Fantia] <a href=\"https://fantia.jp/posts/307669\">https://fantia.jp/posts/307669</a>",
+ "author": "Sakamegane",
+ "artist": "Sakamegane",
+ "groups": {
+  "1": "Danke fürs Lesen"
+ },
+ "cover": "/media/manga/a-story-about-a-senpai-who-wants-to-reject-a-girl/volume_covers/0/1.png",
+ "preferred_sort": [],
+ "chapters": {
+  "1": {
+   "volume": "0",
+   "title": "",
+   "folder": "0001_fr6v9cws",
+   "is_public": true,
+   "groups": {
+    "1": [
+     "1.png"
+    ]
+   },
+   "release_date": {
+    "1": 1586467466
+   }
+  }
+ },
+ "next_release_page": false,
+ "next_release_time": null,
+ "next_release_html": null
+}
