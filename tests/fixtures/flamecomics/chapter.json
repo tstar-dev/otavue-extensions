@@ -1,0 +1,23 @@
+{
+ "pageProps": {
+  "chapter": {
+   "series_id": 165,
+   "chapter_id": 12353,
+   "chapter": "21.00",
+   "token": "afb39d65a21a97e5",
+   "release_date": 1792492987,
+   "images": {
+    "2": {
+     "name": "30YRS-21-02.webp"
+    },
+    "0": {
+     "name": "30YRS-21-00.webp"
+    },
+    "1": {
+     "name": "30YRS-21-01.webp"
+    }
+   }
+  }
+ },
+ "__N_SSG": true
+}

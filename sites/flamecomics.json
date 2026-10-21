@@ -1,0 +1,13 @@
+[
+  {
+    "id": "flamecomics.flamecomics",
+    "name": "Flame Comics",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://flamecomics.xyz",
+      "cdnUrl": "https://cdn.flamecomics.xyz/uploads/images/series"
+    }
+  }
+]
