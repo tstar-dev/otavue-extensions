@@ -8,10 +8,12 @@ import { build } from '../build/build.mjs';
 import { fakeFetch, fixture, loadSource } from './harness.mjs';
 
 let code;
+let spanish;
 before(async () => {
   const out = join(tmpdir(), `otavue-extensions-test-${process.pid}`);
   await build(out);
   code = await readFile(join(out, 'sources', 'mangadex.en.js'), 'utf8');
+  spanish = await readFile(join(out, 'sources', 'mangadex.es-la.js'), 'utf8');
 });
 
 const path = (pattern) => (url) => pattern.test(url.pathname);
@@ -125,5 +127,26 @@ describe('MangaDex', () => {
     const down = fakeFetch([[() => true, { status: 503, body: '' }]]);
     await assert.rejects(loadSource(code, down.fetchImpl).popular({ page: 1 }), /maintenance/);
     await assert.rejects(loadSource(code, down.fetchImpl).getDetail('https://example.com/x'), /isn’t a MangaDex title link/);
+  });
+
+  it('asks for its own language on the other language sources, with that language’s titles first', async () => {
+    const popularBody = await fixture('mangadex/popular.json');
+    const { fetchImpl, requests } = fakeFetch([
+      [path(/^\/manga$/), popularBody],
+      [path(/^\/chapter$/), await fixture('mangadex/latest-chapters.json')],
+      [path(/\/feed$/), await fixture('mangadex/feed.json')],
+      [path(/^\/manga\/[0-9a-f-]+$/), await fixture('mangadex/detail.json')],
+    ]);
+    const source = loadSource(spanish, fetchImpl);
+    const page = await source.popular({ page: 1 });
+    await source.latest({ page: 1 });
+    await source.getDetail(`https://mangadex.org/title/${KUMO}`);
+    const sent = requests.map((request) => new URL(request.url));
+    assert.deepEqual(sent[0].searchParams.getAll('availableTranslatedLanguage[]'), ['es-la']);
+    assert.deepEqual(sent.find((url) => url.pathname === '/chapter').searchParams.getAll('translatedLanguage[]'), ['es-la']);
+    assert.deepEqual(sent.find((url) => url.pathname.endsWith('/feed')).searchParams.getAll('translatedLanguage[]'), ['es-la']);
+    // The title's Spanish (Latin America) name where MangaDex has one.
+    const second = popularBody.data[1].attributes.altTitles.find((alt) => alt['es-la'])['es-la'];
+    assert.equal(page.items[1].englishTitle, second);
   });
 });

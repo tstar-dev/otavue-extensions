@@ -1,3 +1,16 @@
 [
-  { "id": "mangadex.en", "name": "MangaDex", "lang": "en", "nsfw": false, "version": 1 }
+  {"id": "mangadex.en", "name": "MangaDex", "lang": "en", "nsfw": false, "version": 1},
+  {"id": "mangadex.es-la", "name": "MangaDex (Español LATAM)", "lang": "es-la", "nsfw": false, "version": 1},
+  {"id": "mangadex.es", "name": "MangaDex (Español)", "lang": "es", "nsfw": false, "version": 1},
+  {"id": "mangadex.pt-br", "name": "MangaDex (Português BR)", "lang": "pt-br", "nsfw": false, "version": 1},
+  {"id": "mangadex.fr", "name": "MangaDex (Français)", "lang": "fr", "nsfw": false, "version": 1},
+  {"id": "mangadex.it", "name": "MangaDex (Italiano)", "lang": "it", "nsfw": false, "version": 1},
+  {"id": "mangadex.de", "name": "MangaDex (Deutsch)", "lang": "de", "nsfw": false, "version": 1},
+  {"id": "mangadex.pl", "name": "MangaDex (Polski)", "lang": "pl", "nsfw": false, "version": 1},
+  {"id": "mangadex.ru", "name": "MangaDex (Русский)", "lang": "ru", "nsfw": false, "version": 1},
+  {"id": "mangadex.tr", "name": "MangaDex (Türkçe)", "lang": "tr", "nsfw": false, "version": 1},
+  {"id": "mangadex.id", "name": "MangaDex (Bahasa Indonesia)", "lang": "id", "nsfw": false, "version": 1},
+  {"id": "mangadex.vi", "name": "MangaDex (Tiếng Việt)", "lang": "vi", "nsfw": false, "version": 1},
+  {"id": "mangadex.th", "name": "MangaDex (ไทย)", "lang": "th", "nsfw": false, "version": 1},
+  {"id": "mangadex.ar", "name": "MangaDex (العربية)", "lang": "ar", "nsfw": false, "version": 1}
 ]
