@@ -1,0 +1,26 @@
+[
+  {
+    "id": "yiimadara.mangadass",
+    "name": "Manga Dass",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mangadass.com",
+      "rawPath": "raw-manhwa"
+    }
+  },
+  {
+    "id": "yiimadara.mangadna",
+    "name": "MangaDNA",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mangadna.com",
+      "completedPath": "",
+      "rawPath": "manhwa-raw",
+      "catalogPaging": "page"
+    }
+  }
+]

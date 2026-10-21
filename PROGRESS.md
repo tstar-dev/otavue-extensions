@@ -2,6 +2,16 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: YiiMadara (2 sources, 18+)
+
+- **New template** `themes/yiimadara.js`, ported from Keiyoushi's `lib-multisrc/yiimadara` (Yii2 sites that copy Madara's markup): `/<catalogue>/<n>?orderby=` lists (trending for Popular, none for Latest), `/search?q=&page=`, genre and category pages, the title page's info rows and chapter list, and `.read-content` images. Genres come live from the home page's `genre/` links. Config: `mangaPath`, `directoryPath`, `completedPath`, `rawPath`, `showRaws`, `catalogPaging`.
+  - **Raws:** untranslated raws (`…-raw`, "… Raw") fill about half of each list. Keiyoushi's library hides them for English and Manga Dass shows them only because it always has, so here both sites hide them. The Raw category keeps them.
+  - **The reader's broken quotes:** image tags quote `alt` with `'` around titles that contain one (`alt='A Returner's Magic…'`), which throws the HTML parser off every other image. Pages are read from the raw HTML instead (5 of 5, not 3).
+  - Search answers 500 to a plain apostrophe, so it's sent as ’, as Keiyoushi does.
+  - MangaDNA's catalogue pages as `/manga/page/<n>` (`/manga/1` falls back to the home page); `catalogPaging: "page"`.
+- **Sites:** Manga Dass and MangaDNA, related aggregators (same popular list, different image hosts), both marked MIXED by Keiyoushi, so 18+ here. Manga18fx, Manga18Me, Manhwa18.cc, ManhwaUS and ReadManga18 are adult-only and not added.
+- 191 tests. Live check: 2 of 2 passed. 181 sources, 56 marked 18+.
+
 ## 2026-10-21: MangaK (1 source, 18+)
 
 - **New template** `themes/mangak.js`, ported from Keiyoushi's `lib-multisrc/mangak`: the API at `api.<site>`. `/titles/search` serves Popular (`sort=popular&window=week`), Latest (`sort=latest`) and search, with the sort, content rating, status, type, demographic and genre filters. The genre list comes live from `/genres`. Search words are cut to letters, digits and spaces, at most 50 characters.
