@@ -37,6 +37,20 @@ function headerOf(code, file) {
 
 const sha256 = (text) => createHash('sha256').update(text, 'utf8').digest('hex');
 
+/** A template with each `// @include lib/<file>.js` line replaced by that file, so templates can share helpers. */
+async function withIncludes(code, file) {
+  let out = '';
+  let last = 0;
+  for (const match of code.matchAll(/^\/\/ @include (lib\/[\w.-]+\.js)\n/gm)) {
+    const included = await readFile(join(ROOT, match[1]), 'utf8').catch(() => {
+      throw new Error(`${file}: can't include ${match[1]}`);
+    });
+    out += code.slice(last, match.index) + included;
+    last = match.index + match[0].length;
+  }
+  return out + code.slice(last);
+}
+
 export async function build(out = OUT) {
   await rm(out, { recursive: true, force: true });
   await mkdir(join(out, 'sources'), { recursive: true });
@@ -45,7 +59,7 @@ export async function build(out = OUT) {
   const seen = new Set();
   const themes = (await readdir(join(ROOT, 'themes'))).filter((file) => file.endsWith('.js')).sort();
   for (const file of themes) {
-    const code = await readFile(join(ROOT, 'themes', file), 'utf8');
+    const code = await withIncludes(await readFile(join(ROOT, 'themes', file), 'utf8'), file);
     const header = headerOf(code, file);
     const sites = JSON.parse(await readFile(join(ROOT, 'sites', `${header.theme}.json`), 'utf8'));
     for (const site of sites) {

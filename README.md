@@ -20,6 +20,7 @@ Install a source from the list, then find it under the Search tab → **Sources*
 | Shōnen Jump+, Comic Days, Tonari no Young Jump and 16 more | Japanese | Japanese publishers' own readers on GigaViewer: free chapters only (usually the first few and the latest), since Otavue doesn't sign in. Some sites serve pages as shuffled tiles; Otavue puts them back together. Kurage Bunch and Sunday Web Every are marked 18+ (some of their series are). |
 | TakeComic, Young Animal, Champion Cross and 24 more | Japanese | Japanese publishers' readers on Comici: free chapters only. Every page comes as shuffled tiles, which Otavue puts back together. Titles the publisher marks for adults are left out of search; the 8 sites with some adult series are marked 18+. |
 | Mangasushi, Gourmet Scans, Sleepy Translations and 24 more | English | Scanlation and reader sites on Madara (WordPress). Locked (coin) chapters and chapters that only link out (Patreon) are left out. On sites not marked 18+, titles the site flags as adult are left out too; the 17 sites with adult series are marked 18+. Sites behind a Cloudflare check on every request, or that were down, are held back in [REMOVED.md](REMOVED.md). |
+| Aster Scans, Lagoon Scans, Violet Scans and 12 more | English | Scanlation groups' sites on MangaThemesia (WordPress). Locked (coin) chapters, early-access links and novels are left out. The 5 sites with adult series are marked 18+. |
 
 ## How it's built
 
@@ -27,6 +28,7 @@ Many manga sites run the same software, so a source is usually a **template** pl
 
 ```
 themes/<template>.js     the code, with a header: // @theme, // @version, // @type
+lib/<helper>.js          code templates share; a `// @include lib/<helper>.js` line pulls it in at build time
 sites/<template>.json    one entry per site: { id, name, lang, nsfw, version, config? }
 build/build.mjs          template × site list → dist/sources/<id>.js and dist/index.json (with SHA-256s)
 tests/                   each template against recorded responses (tests/fixtures)
@@ -50,7 +52,7 @@ Sources are plain scripts whose top-level functions Otavue calls (`popular({ pag
 ## Adding a site
 
 1. If its software already has a template, add an entry to `sites/<template>.json` and run `npm run smoke -- <id>`.
-   Madara sites take options in `config` (path names, date format, selector overrides): see the top of `themes/madara.js`.
+   Madara and MangaThemesia sites take options in `config` (path names, date format, selector overrides): see the top of `themes/madara.js` and `themes/mangathemesia.js`.
 2. Otherwise write a template in `themes/` with recorded fixtures and tests.
 3. Sites must be up, not 18+ unless marked `"nsfw": true` (Otavue hides those until the user turns on 18+), and preferably the site's own scanlation group rather than a re-host. Sites that ask to be removed go in [REMOVED.md](REMOVED.md).
 
