@@ -1,0 +1,625 @@
+[
+  {
+    "id": "mangacatalog.read7deadlysins",
+    "name": "Read Seven Deadly Sins",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ww8.read7deadlysins.com",
+      "layout": "tailwind",
+      "series": [
+        [
+          "Nanatsu no Taizai",
+          "/manga/nanatsu-no-taizai/",
+          "https://i.imgur.com/kgIqH74.png"
+        ],
+        [
+          "Four Horsemen of the Apocalypse",
+          "/manga/four-horsemen-of-the-apocalypse/",
+          "https://i.imgur.com/kgIqH74.png"
+        ],
+        [
+          "Kongou Banchou",
+          "/manga/kongou-banchou/",
+          "https://i.imgur.com/kgIqH74.png"
+        ],
+        [
+          "Mayoe! Nanatsu no Taizai Gakuen!",
+          "/manga/mayoe-nanatsu-no-taizai-gakuen/",
+          "https://i.imgur.com/kgIqH74.png"
+        ],
+        [
+          "Nanatsu no Taizai: Seven Days",
+          "/manga/nanatsu-no-taizai-seven-days/",
+          "https://i.imgur.com/kgIqH74.png"
+        ],
+        [
+          "Nanatsu no Taizai: Nanairo no Tsuioku",
+          "/manga/nanatsu-no-taizai-nanairo-no-tsuioku/",
+          "https://i.imgur.com/OjeMpsM.png"
+        ],
+        [
+          "Nanatsu no Taizai: The Seven Scars Which They Left Behind",
+          "/manga/nanatsu-no-taizai-the-seven-scars-which-they-left-behind/",
+          "https://i.imgur.com/kgIqH74.png"
+        ],
+        [
+          "Nanatsu no Taizai : Vampires of Edinburgh",
+          "/manga/nanatsu-no-taizai-vampires-of-edinburgh/",
+          "https://i.imgur.com/kgIqH74.png"
+        ],
+        [
+          "The Queen of the Altar",
+          "/manga/the-queen-of-the-altar/",
+          "https://i.imgur.com/kgIqH74.png"
+        ],
+        [
+          "Fairy Tail x Nanatsu no Taizai – Christmas Special",
+          "/manga/fairy-tail-x-nanatsu-no-taizai-christmas-special/",
+          "https://i.imgur.com/kgIqH74.png"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mangacatalog.readberserk",
+    "name": "Read Berserk",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://readberserk.com",
+      "layout": "bootstrap",
+      "series": [
+        [
+          "Berserk",
+          "/manga/berserk/",
+          "https://readberserk.com/wp-content/uploads/2017/06/berserk-1-270x300.jpg"
+        ],
+        [
+          "Duranki",
+          "/manga/duranki/",
+          "https://readberserk.com/wp-content/uploads/2017/06/berserk-1-270x300.jpg"
+        ],
+        [
+          "Gigantomakhia",
+          "/manga/gigantomakhia/",
+          "https://readberserk.com/wp-content/uploads/2017/06/berserk-1-270x300.jpg"
+        ],
+        [
+          "Berserk Official Guidebook",
+          "/manga/berserk-official-guidebook/",
+          "https://readberserk.com/wp-content/uploads/2017/06/berserk-1-270x300.jpg"
+        ],
+        [
+          "Berserk Colored",
+          "/manga/berserk-colored/",
+          "https://readberserk.com/wp-content/uploads/2017/06/berserk-1-270x300.jpg"
+        ],
+        [
+          "Futatabi",
+          "/manga/futatabi/",
+          "https://readberserk.com/wp-content/uploads/2017/06/berserk-1-270x300.jpg"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mangacatalog.readfairytail",
+    "name": "Read Fairy Tail & Edens Zero",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ww9.readfairytail.com",
+      "layout": "tailwind",
+      "series": [
+        [
+          "Fairy Tail",
+          "/manga/fairy-tail/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Eden’s Zero",
+          "/manga/edens-zero/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Tail: 100 Years Quest",
+          "/manga/fairy-tail-100-years-quest/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Tail: Happy’s Grand Adventure",
+          "/manga/fairy-tail-happys-grand-adventure/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Tail: City Hero",
+          "/manga/fairy-tail-city-hero/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Rave Master",
+          "/manga/rave-master/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Dead Rock",
+          "/manga/dead-rock/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Monster Hunter Orage",
+          "/manga/monster-hunter-orage/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Girls",
+          "/manga/fairy-girls/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Tail Gaiden – Raigo Issen",
+          "/manga/fairy-tail-gaiden-raigo-issen/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Tail Gaiden – Road Knight",
+          "/manga/fairy-tail-gaiden-road-knight/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Tail - Blue Mistral",
+          "/manga/fairy-tail-blue-mistral/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Tail S",
+          "/manga/fairy-tail-s/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Tail Ice Trail",
+          "/manga/fairy-tail-ice-trail/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Tail Gaiden – Kengami no Souryuu",
+          "/manga/fairy-tail-gaiden-kengami-no-souryuu/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Tail Zero",
+          "/manga/fairy-tail-zero/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Hero’s",
+          "/manga/heros/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Tail x Nanatsu no Taizai – Christmas Special",
+          "/manga/fairy-tail-x-nanatsu-no-taizai-christmas-special/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Parasyte x Fairy Tail",
+          "/manga/parasyte-x-fairy-tail/",
+          "https://i.imgur.com/XUDUoez.png"
+        ],
+        [
+          "Fairy Tail x Rave",
+          "/manga/fairy-tail-x-rave/",
+          "https://i.imgur.com/XUDUoez.png"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mangacatalog.readjujutsukaisen",
+    "name": "Read Jujutsu Kaisen",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ww6.readjujutsukaisen.com",
+      "layout": "tailwind",
+      "series": [
+        [
+          "Jujutsu Kaisen",
+          "/manga/jujutsu-kaisen/",
+          "https://i.imgur.com/AHz5hzf.png"
+        ],
+        [
+          "Jujutsu Kaisen Fan Scan",
+          "/manga/jujutsu-kaisen-fan-scan/",
+          "https://i.imgur.com/AHz5hzf.png"
+        ],
+        [
+          "Jujutsu Kaisen Colored",
+          "/manga/jujutsu-kaisen-colored/",
+          "https://i.imgur.com/AHz5hzf.png"
+        ],
+        [
+          "Jujutsu Kaisen Modulo (JJK Sequel)",
+          "/manga/jujutsu-kaisen-modulo/",
+          "https://i.imgur.com/AHz5hzf.png"
+        ],
+        [
+          "Jujutsu Kaisen 0: Tokyo Toritsu Jujutsu Koutou Senmon Gakkou",
+          "/manga/jujutsu-kaisen-0/",
+          "https://i.imgur.com/AHz5hzf.png"
+        ],
+        [
+          "Jujutsu Kaisen Official Fanbook",
+          "/manga/jujutsu-kaisen-official-fanbook/",
+          "https://i.imgur.com/AHz5hzf.png"
+        ],
+        [
+          "No.9",
+          "/manga/no-9/",
+          "https://i.imgur.com/AHz5hzf.png"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mangacatalog.readkingdom",
+    "name": "Read Kingdom",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ww6.readkingdom.com",
+      "layout": "tailwind",
+      "series": [
+        [
+          "Kingdom",
+          "/manga/kingdom/",
+          "https://i.imgur.com/hCbdZKu.png"
+        ],
+        [
+          "Kingdom Official Japanese Version",
+          "/manga/kingdom-official-japanese-version/",
+          "https://i.imgur.com/hCbdZKu.png"
+        ],
+        [
+          "Kingdom Official Version",
+          "/manga/kingdom-official-version/",
+          "https://i.imgur.com/hCbdZKu.png"
+        ],
+        [
+          "Li Mu",
+          "/manga/li-mu/",
+          "https://i.imgur.com/hCbdZKu.png"
+        ],
+        [
+          "Meng Wu and Chu Zi",
+          "/manga/meng-wu-and-chu-zi-one-shot/",
+          "https://i.imgur.com/hCbdZKu.png"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mangacatalog.readonepiece",
+    "name": "Read One Piece",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ww13.readonepiece.com",
+      "layout": "tailwind",
+      "series": [
+        [
+          "One Piece",
+          "/manga/one-piece/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "One Piece – Digital Colored Comics",
+          "/manga/one-piece-digital-colored-comics/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "One Piece Omake",
+          "/manga/one-piece-omake/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "One Piece in Love",
+          "/manga/one-piece-in-love/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "Vivre Card Databook",
+          "/manga/vivre-card-databook/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "Shokugeki no Sanji",
+          "/manga/shokugeki-no-sanji-one-shot/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "One Piece Pirate Recipes",
+          "/manga/one-piece-pirate-recipes/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "ONE PIECE: Ace'Story Manga",
+          "/manga/one-piece-ace-story-manga/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "One Piece Academy",
+          "/manga/one-piece-academy/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "Wanted! (One Piece)",
+          "/manga/wanted-one-piece/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "One Piece Party",
+          "/manga/one-piece-party/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "One Piece Databook",
+          "/manga/one-piece-databook/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "One Piece x Toriko",
+          "/manga/one-piece-x-toriko/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "Dragon Ball X One Piece",
+          "/manga/dragon-ball-x-one-piece/",
+          "https://i.imgur.com/NKmkkq1.png"
+        ],
+        [
+          "MONSTERS",
+          "/manga/monsters/",
+          "https://i.imgur.com/DMNQDBG.png"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mangacatalog.readopm",
+    "name": "Read One-Punch Man",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ww7.readopm.com",
+      "layout": "bootstrap",
+      "series": [
+        [
+          "One Punch Man",
+          "/manga/one-punch-man/",
+          "https://ww7.readopm.com/wp-content/uploads/2017/11/Read-One-Punch-Man-Manga-1-270x300.png"
+        ],
+        [
+          "Eyeshield 21",
+          "/manga/eyeshield-21/",
+          "https://ww7.readopm.com/wp-content/uploads/2017/11/Read-One-Punch-Man-Manga-1-270x300.png"
+        ],
+        [
+          "One Punch Man Official",
+          "/manga/one-punch-man-official/",
+          "https://ww7.readopm.com/wp-content/uploads/2017/11/Read-One-Punch-Man-Manga-1-270x300.png"
+        ],
+        [
+          "Onepunch-Man (ONE)",
+          "/manga/onepunch-man-one/",
+          "https://ww7.readopm.com/wp-content/uploads/2017/11/Read-One-Punch-Man-Manga-1-270x300.png"
+        ],
+        [
+          "Mob Psycho 100",
+          "/manga/mob-psycho-100/",
+          "https://ww7.readopm.com/wp-content/uploads/2017/11/Read-One-Punch-Man-Manga-1-270x300.png"
+        ],
+        [
+          "Versus",
+          "/manga/versus/",
+          "https://ww7.readopm.com/wp-content/uploads/2017/11/Read-One-Punch-Man-Manga-1-270x300.png"
+        ],
+        [
+          "One Punch Man Colored",
+          "/manga/one-punch-man-colored/",
+          "https://ww7.readopm.com/wp-content/uploads/2017/11/Read-One-Punch-Man-Manga-1-270x300.png"
+        ],
+        [
+          "Bug Ego",
+          "/manga/bug-ego/",
+          "https://ww7.readopm.com/wp-content/uploads/2017/11/Read-One-Punch-Man-Manga-1-270x300.png"
+        ],
+        [
+          "Reigen",
+          "/manga/reigen/",
+          "https://ww7.readopm.com/wp-content/uploads/2017/11/Read-One-Punch-Man-Manga-1-270x300.png"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mangacatalog.readsnk",
+    "name": "Read Attack on Titan",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ww12.readsnk.com",
+      "layout": "tailwind",
+      "series": [
+        [
+          "Shingeki No Kyojin",
+          "/manga/shingeki-no-kyojin/",
+          "https://i.imgur.com/XDcjemc.png"
+        ],
+        [
+          "Attack on Titan: Junior High",
+          "/manga/attack-on-titan-junior-high/",
+          "https://i.imgur.com/XDcjemc.png"
+        ],
+        [
+          "Shingeki no Kyojin – Before the Fall",
+          "/manga/shingeki-no-kyojin-before-the-fall/",
+          "https://i.imgur.com/XDcjemc.png"
+        ],
+        [
+          "Shingeki No Kyojin Colored",
+          "/manga/shingeki-no-kyojin-colored/",
+          "https://i.imgur.com/XDcjemc.png"
+        ],
+        [
+          "Attack on Titan Anthology",
+          "/manga/attack-on-titan-anthology/",
+          "https://i.imgur.com/XDcjemc.png"
+        ],
+        [
+          "Spoof on Titan",
+          "/manga/spoof-on-titan/",
+          "https://i.imgur.com/XDcjemc.png"
+        ],
+        [
+          "The Best of Attack on Titan - In Color",
+          "/manga/the-best-of-attack-on-titan-in-color/",
+          "https://i.imgur.com/XDcjemc.png"
+        ],
+        [
+          "Shingeki no Kyojin – Lost Girls",
+          "/manga/shingeki-no-kyojin-lost-girls/",
+          "https://i.imgur.com/XDcjemc.png"
+        ],
+        [
+          "Attack on Titan: No Regrets",
+          "/manga/attack-on-titan-no-regrets/",
+          "https://i.imgur.com/XDcjemc.png"
+        ],
+        [
+          "Attack on Titan: No Regrets Colored",
+          "/manga/attack-on-titan-no-regrets-colored/",
+          "https://i.imgur.com/XDcjemc.png"
+        ],
+        [
+          "Attack on Titan Guidebook: INSIDE & OUTSIDE",
+          "/manga/attack-on-titan-guidebook-inside-outside/",
+          "https://i.imgur.com/XDcjemc.png"
+        ],
+        [
+          "Attack on Titan: Harsh Mistress of the City",
+          "/manga/attack-on-titan-harsh-mistress-of-the-city/",
+          "https://i.imgur.com/XDcjemc.png"
+        ],
+        [
+          "Attack on Titan Exclusive Art Book",
+          "/manga/attack-on-titan-exclusive-art-book/",
+          "https://i.imgur.com/XDcjemc.png"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mangacatalog.readsololeveling",
+    "name": "Read Solo Leveling",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ww4.readsololeveling.org",
+      "layout": "tailwind",
+      "series": [
+        [
+          "Solo Leveling",
+          "/manga/solo-leveling/",
+          "https://i.imgur.com/leTtc1A.jpg"
+        ],
+        [
+          "Solo Leveling: Ragnarok",
+          "/manga/solo-leveling-ragnarok/",
+          "https://i.imgur.com/leTtc1A.jpg"
+        ]
+      ],
+      "checkNewest": true
+    }
+  },
+  {
+    "id": "mangacatalog.thetowerofgod",
+    "name": "Tower of God Manga Online",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://w82.thetowerofgod.com",
+      "layout": "single",
+      "series": [
+        [
+          "Tower of God",
+          "/",
+          "https://w31.thetowerofgod.com/wp-content/uploads/2023/08/Pic-1-min-725x1024.png"
+        ]
+      ],
+      "chapterLinks": "a[href*='/manga/tower-of-god-chapter-']",
+      "pageImages": "img",
+      "imageHosts": "^https://(?:blogger\\.googleusercontent\\.com|\\d+\\.bp\\.blogspot\\.com)/",
+      "checkNewest": true
+    }
+  },
+  {
+    "id": "mangacatalog.tokyoghoulre",
+    "name": "Read Tokyo Ghoul",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ww12.tokyoghoulre.com",
+      "layout": "tailwind",
+      "series": [
+        [
+          "Tokyo Ghoul:re",
+          "/manga/tokyo-ghoulre/",
+          "https://i.imgur.com/LGjBype.png"
+        ],
+        [
+          "Tokyo Ghoul",
+          "/manga/tokyo-ghoul/",
+          "https://i.imgur.com/LGjBype.png"
+        ],
+        [
+          "Choujin X",
+          "/manga/choujin-x/",
+          "https://i.imgur.com/LGjBype.png"
+        ],
+        [
+          "Tokyo Ghoul:re Colored",
+          "/manga/tokyo-ghoulre-colored/",
+          "https://i.imgur.com/LGjBype.png"
+        ],
+        [
+          "Tokyo Ghoul: Jack",
+          "/manga/tokyo-ghoul-jack/",
+          "https://i.imgur.com/LGjBype.png"
+        ],
+        [
+          "Tokyo Ghoul: zakki",
+          "/manga/tokyo-ghoul-zakki/",
+          "https://i.imgur.com/LGjBype.png"
+        ],
+        [
+          "This Gorilla Will Die In 1 Day",
+          "/manga/this-gorilla-will-die-in-1-day/",
+          "https://i.imgur.com/LGjBype.png"
+        ]
+      ]
+    }
+  }
+]

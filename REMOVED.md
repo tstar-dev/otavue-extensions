@@ -4,6 +4,8 @@ Sites taken out of the repository, and why, so they aren't added back. Newest fi
 
 | Date | Source id | Reason |
 | --- | --- | --- |
+| 2026-10-21 | mangacatalog.readblackclover | Not added yet (Read Black Clover): readblackclover.com is a saved copy of the old site, not a reader: chapter 1 is a 404 and the newest chapters keep a single page. Its old host (ww10) no longer answers. |
+| 2026-10-21 | mangacatalog.readchainsawman | Not added (Read Chainsaw Man): Keiyoushi marks it NSFW. |
 | 2026-10-21 | keyoapp.meitoon | Not added yet (MeiToon): Cloudflare browser check on every request; needs a check on the device first. |
 | 2026-10-21 | keyoapp.nyrascans | Not added yet (Nyra Scans): Not reachable. |
 | 2026-10-21 | mangathemesia.ragescans | Not added yet (Rage Scans): Cloudflare browser check on every request; needs a check on the device first. |

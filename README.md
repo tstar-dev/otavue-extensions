@@ -22,6 +22,7 @@ Install a source from the list, then find it under the Search tab → **Sources*
 | Mangasushi, Gourmet Scans, Sleepy Translations and 27 more | English | Scanlation and reader sites on Madara (WordPress). Locked (coin) chapters and chapters that only link out (Patreon) are left out. On sites not marked 18+, titles the site flags as adult are left out too; the 19 sites with adult series are marked 18+. Zazamanga, Zinmanga.net and Kun Manga are mirrors of one aggregator. Sites behind a Cloudflare check on every request, or that were down, are held back in [REMOVED.md](REMOVED.md). |
 | Aster Scans, Lagoon Scans, Comic Asura, Rizz Comic and 13 more | English | Scanlation groups' sites on MangaThemesia (WordPress). Locked (coin) chapters, early-access links and novels are left out. The 5 sites with adult series are marked 18+. |
 | Lua Scans | English | Lua Scans' own reader (HeanCMS, a JSON API). Free chapters only; paid and scheduled ones are left out. |
+| Read One Piece, Read Berserk, Read Kingdom and 8 more | English | Single-franchise reader sites on MangaCatalog: each lists its series and spin-offs (One Piece, Attack on Titan, Berserk, Fairy Tail, Jujutsu Kaisen, Kingdom, Seven Deadly Sins, One-Punch Man, Solo Leveling, Tokyo Ghoul, Tower of God), with no search of its own, so search filters that list. Novels are left out. |
 | Eris Scans, Siren Scans, Rithar Scans and 10 more | English | Scanlation groups on Keyoapp, in all three of its versions. Coin chapters, upcoming chapters and novels are left out. The 3 sites with adult series are marked 18+. |
 
 ## How it's built
@@ -58,7 +59,7 @@ Sources are plain scripts whose top-level functions Otavue calls (`popular({ pag
 ## Adding a site
 
 1. If its software already has a template, add an entry to `sites/<template>.json` and run `npm run smoke -- <id>`.
-   Madara, MangaThemesia and Keyoapp sites take options in `config` (path names, date format, selector overrides, Keyoapp's `variant`): see the top of each template.
+   Madara, MangaThemesia, Keyoapp and MangaCatalog sites take options in `config` (path names, date format, selector overrides, Keyoapp's `variant`): see the top of each template.
 2. Otherwise write a template in `themes/` with recorded fixtures and tests.
 3. Sites must be up, not 18+ unless marked `"nsfw": true` (Otavue hides those until the user turns on 18+), and preferably the site's own scanlation group rather than a re-host. Sites that ask to be removed go in [REMOVED.md](REMOVED.md).
 
