@@ -2,6 +2,13 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: MangaDex in 13 more languages (13 sources)
+
+- `sites/mangadex.json` gained es-la, es, pt-br, fr, it, de, pl, ru, tr, id, vi, th and ar. The template already reads `SITE.lang`, so nothing else changed. `tests/mangadex.test.mjs` covers a second language.
+- These waited in a stash while MangaDex was down for maintenance. Its API answered again on the evening of 2026-10-21, and all 13 passed the live check (`--jobs 3 --retry`).
+- **Still held back:** MangaBang and Hades Scans still show maintenance pages, and Booklista Studio's lists load but its page API still answers with one.
+- 90 tests. 121 sources, 37 marked 18+.
+
 ## 2026-10-21: Lua Scans, three Madara mirrors, Comic Asura and Rizz Comic (6 sources)
 
 - **Lua Scans** (`themes/heancms.js`, new; ported from Keiyoushi's `lib-multisrc/heancms`):
