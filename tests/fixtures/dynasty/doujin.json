@@ -1,0 +1,58 @@
+{
+ "name": "Uma Musume: Pretty Derby",
+ "type": "Doujin",
+ "permalink": "uma_musume_pretty_derby",
+ "cover": null,
+ "description": null,
+ "aliases": [
+  "Umamusume"
+ ],
+ "tags": [],
+ "taggings": [
+  {
+   "title": "GoruMeno Development",
+   "permalink": "gorumeno_development",
+   "released_on": "2026-10-13",
+   "tags": [
+    {
+     "type": "Author",
+     "name": "Coconuts",
+     "permalink": "coconuts"
+    },
+    {
+     "type": "Scanlator",
+     "name": "MMAG Translations",
+     "permalink": "mmag_translations"
+    },
+    {
+     "type": "General",
+     "name": "Yuri",
+     "permalink": "yuri"
+    }
+   ]
+  },
+  {
+   "title": "Special Week Kiss Meter",
+   "permalink": "special_week_kiss_meter",
+   "released_on": "2026-09-17",
+   "tags": [
+    {
+     "type": "Author",
+     "name": "One of Agnes Digital",
+     "permalink": "one_of_agnes_digital"
+    },
+    {
+     "type": "Scanlator",
+     "name": "Indie",
+     "permalink": "indie"
+    },
+    {
+     "type": "General",
+     "name": "Yuri",
+     "permalink": "yuri"
+    }
+   ]
+  }
+ ],
+ "total_pages": 2
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "dynasty.dynasty",
+    "name": "Dynasty Scans",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://dynasty-scans.com"
+    }
+  }
+]

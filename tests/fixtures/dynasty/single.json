@@ -1,0 +1,67 @@
+{
+ "title": "poketaki date",
+ "long_title": "poketaki date",
+ "permalink": "poketaki_date",
+ "tags": [
+  {
+   "type": "Author",
+   "name": "boro^2",
+   "permalink": "boro2"
+  },
+  {
+   "type": "Author",
+   "name": "Calamity Brezze",
+   "permalink": "calamity_brezze"
+  },
+  {
+   "type": "Scanlator",
+   "name": "Indie",
+   "permalink": "indie"
+  },
+  {
+   "type": "Pairing",
+   "name": "Agnes Tachyon x Jungle Pocket",
+   "permalink": "agnes_tachyon_x_jungle_pocket"
+  },
+  {
+   "type": "Doujin",
+   "name": "Uma Musume: Pretty Derby",
+   "permalink": "uma_musume_pretty_derby"
+  },
+  {
+   "type": "General",
+   "name": "Read left to right",
+   "permalink": "read_left_to_right"
+  },
+  {
+   "type": "General",
+   "name": "Yuri",
+   "permalink": "yuri"
+  },
+  {
+   "type": "General",
+   "name": "Full color",
+   "permalink": "full_color"
+  }
+ ],
+ "pages": [
+  {
+   "name": "01",
+   "url": "/system/releases/000/048/616/01.webp"
+  },
+  {
+   "name": "02",
+   "url": "/system/releases/000/048/616/02.webp"
+  },
+  {
+   "name": "03",
+   "url": "/system/releases/000/048/616/03.webp"
+  },
+  {
+   "name": "04",
+   "url": "/system/releases/000/048/616/04.webp"
+  }
+ ],
+ "released_on": "2026-09-04",
+ "added_on": "2026-10-21T15:28:25-04:00"
+}

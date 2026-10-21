@@ -1,0 +1,36 @@
+{
+ "name": "Uma Musume: Pretty Derby",
+ "type": "Doujin",
+ "permalink": "uma_musume_pretty_derby",
+ "cover": null,
+ "description": null,
+ "aliases": [
+  "Umamusume"
+ ],
+ "tags": [],
+ "taggings": [
+  {
+   "title": "Gold Ship and McQueen",
+   "permalink": "gold_ship_and_mcqueen",
+   "released_on": "2021-07-22",
+   "tags": [
+    {
+     "type": "Author",
+     "name": "Yomesuke",
+     "permalink": "yomesuke"
+    },
+    {
+     "type": "Scanlator",
+     "name": "We Still Don't Have A Name Scanlations",
+     "permalink": "we_still_dont_have_a_name_scanlations"
+    },
+    {
+     "type": "General",
+     "name": "Comedy",
+     "permalink": "comedy"
+    }
+   ]
+  }
+ ],
+ "total_pages": 2
+}
