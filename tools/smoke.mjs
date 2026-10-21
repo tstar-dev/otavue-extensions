@@ -15,9 +15,21 @@ import { loadSource } from '../tests/harness.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
+const REFUSED = new Set(['ECONNRESET', 'ECONNREFUSED', 'UND_ERR_SOCKET', 'EPIPE']);
+
+/**
+ * Answers that say more about where the check runs than about the site: Cloudflare's browser check, a plain 403
+ * (a firewall turning away datacenter addresses, like CI runners) and refused or reset connections.
+ */
+const BLOCKED = /wants a browser check|(?<!image) answered 403\.|connection refused or reset/;
+
 /** Node's fetch in the shape Otavue's bridge hands sources. */
 async function bridgeFetch(url, opts = {}) {
-  const res = await fetch(url, { method: opts.method ?? 'GET', headers: opts.headers, body: opts.body, signal: AbortSignal.timeout(20_000) });
+  const res = await fetch(url, { method: opts.method ?? 'GET', headers: opts.headers, body: opts.body, signal: AbortSignal.timeout(20_000) }).catch((error) => {
+    // Say why: a domain that's gone (ENOTFOUND) is a real failure; a refused or reset connection is often a block on this machine.
+    const code = error.cause?.code ?? '';
+    throw new Error(REFUSED.has(code) ? `connection refused or reset (${code})` : `${error.message}${code ? ` (${code})` : ''}`);
+  });
   const text = await res.text();
   return { ok: res.ok, status: res.status, url: res.url, body: text, text: async () => text, json: async () => JSON.parse(text) };
 }
@@ -70,9 +82,9 @@ async function run(entry, code, retry) {
       await check(entry, code, (line) => lines.push(line));
       return { entry, ok: true, lines };
     } catch (error) {
-      // Cloudflare checks datacenter addresses (like CI runners) far more often than phones, so a browser
-      // check here says little about the site; it's listed apart and doesn't fail the run.
-      const blocked = /wants a browser check/.test(error.message);
+      // Sites turn away datacenter addresses (like CI runners) far more often than phones, so a block here
+      // says little about the site; it's listed apart and doesn't fail the run.
+      const blocked = BLOCKED.test(error.message);
       lines.push(`  ${blocked ? 'BLOCKED ' : 'FAILED  '} ${error.message}`);
       if (!retry || attempt > 1) return { entry, ok: false, blocked, error: error.message, lines };
       console.log(lines.join('\n'));
@@ -122,9 +134,9 @@ const byId = (a, b) => a.entry.id.localeCompare(b.entry.id);
 const failures = results.filter((result) => !result.ok && !result.blocked).sort(byId);
 const blocked = results.filter((result) => result.blocked).sort(byId);
 const passed = results.length - failures.length - blocked.length;
-console.log(`\n${passed}/${results.length} passed${blocked.length ? `, ${blocked.length} blocked by a browser check` : ''}`);
+console.log(`\n${passed}/${results.length} passed${blocked.length ? `, ${blocked.length} turned this machine away` : ''}`);
 for (const failure of failures) console.log(`FAILED ${failure.entry.id}: ${failure.error}`);
-for (const result of blocked) console.log(`BLOCKED ${result.entry.id}`);
+for (const result of blocked) console.log(`BLOCKED ${result.entry.id}: ${result.error}`);
 if (summary) {
   const row = (result) => `| ${result.entry.name} | \`${result.entry.id}\` | ${result.error.replace(/\|/g, '\\|')} |`;
   await appendFile(summary, [
@@ -135,9 +147,9 @@ if (summary) {
         'Check each by hand before removing it (sites go down for a day). Removed sites go in REMOVED.md.', '']
       : ['Every source that could be reached loaded a list, a title, a chapter and a page image.', '']),
     ...(blocked.length
-      ? ['### Couldn’t check (browser check)', '',
-        'These answered with a Cloudflare browser check, which sites show to servers like this one far more often than to phones. They don’t fail the run.', '',
-        ...blocked.map((result) => `- ${result.entry.name} (\`${result.entry.id}\`)`), '']
+      ? ['### Couldn’t check from here', '',
+        'These turned this server away (a Cloudflare browser check, a plain 403, or a refused connection), which sites do to servers like this one far more often than to phones. They don’t fail the run; a site that stays here for weeks is worth a look from a phone.', '',
+        ...blocked.map((result) => `- ${result.entry.name} (\`${result.entry.id}\`): ${result.error}`), '']
       : []),
   ].join('\n'));
 }

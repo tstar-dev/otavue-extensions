@@ -46,7 +46,7 @@ npm run build     # dist/ only
 npm run check-versions   # build, then fail if a source's file changed but its version didn't (vs the published index)
 ```
 
-A daily workflow (`.github/workflows/health.yml`, also runnable by hand from the Actions tab) checks every source against its live site and lists what broke in the run's summary; a failing run is GitHub's email to the owner. Sites that answer GitHub's servers with a Cloudflare browser check are listed apart and don't fail it (Cloudflare checks servers far more often than phones). It never removes anything: check a failing site by hand first.
+A daily workflow (`.github/workflows/health.yml`, also runnable by hand from the Actions tab) checks every source against its live site and lists what broke in the run's summary; a failing run is GitHub's email to the owner. Sites that turn GitHub's servers away (a Cloudflare browser check, a plain 403, a refused connection) are listed apart and don't fail it: sites do that to servers far more often than to phones. It never removes anything: check a failing site by hand first.
 
 Pushing to `main` tests, builds, checks versions against the published index, and publishes `dist/` to GitHub Pages (`.github/workflows/publish.yml`). A source whose built file changed needs a higher version (the template's `// @version` or the site entry's `version`), or the publish stops: installs only update when the version does.
 
