@@ -1,0 +1,72 @@
+[
+  {
+    "id": "vinetheme.divascans",
+    "name": "Diva Scans",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://divascans.org"
+    }
+  },
+  {
+    "id": "vinetheme.drakescans",
+    "name": "Drake Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://drakecomic.net"
+    }
+  },
+  {
+    "id": "vinetheme.elftoon",
+    "name": "Elf Toon",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://elftoon.net"
+    }
+  },
+  {
+    "id": "vinetheme.kaynscans",
+    "name": "Kayn Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://kaynscans.com"
+    }
+  },
+  {
+    "id": "vinetheme.keroscans",
+    "name": "KeroScans",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://keroscans.net"
+    }
+  },
+  {
+    "id": "vinetheme.valirscans",
+    "name": "Valir Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://valirscans.org"
+    }
+  },
+  {
+    "id": "vinetheme.witchscans",
+    "name": "WitchScans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://witchtoons.net"
+    }
+  }
+]

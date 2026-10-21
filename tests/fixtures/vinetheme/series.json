@@ -1,0 +1,39 @@
+{
+ "data": [
+  {
+   "id": "drake-s-disastrous-necromancer",
+   "title": "Disastrous Necromancer",
+   "slug": "disastrous-necromancer",
+   "urlSlug": "disastrous-necromancer",
+   "coverImage": "/uploads/series/disastrous-necromancer/cover.webp",
+   "status": "ONGOING",
+   "type": "MANHUA"
+  },
+  {
+   "id": "drake-s-sss-grade-saint-knight",
+   "title": "SSS Grade Saint Knight",
+   "slug": "sss-grade-saint-knight",
+   "urlSlug": "sss-grade-saint-knight",
+   "coverImage": "/uploads/series/sss-grade-saint-knight/cover.jpg",
+   "status": "ONGOING",
+   "type": "MANHUA"
+  },
+  {
+   "id": "drake-s-from-goblin-to-goblin-god",
+   "title": "From Goblin to Goblin God",
+   "slug": "from-goblin-to-goblin-god",
+   "urlSlug": "from-goblin-to-goblin-god",
+   "coverImage": "/uploads/series/from-goblin-to-goblin-god/cover.png",
+   "status": "ONGOING",
+   "type": "MANHUA"
+  }
+ ],
+ "meta": {
+  "total": 60,
+  "page": 1,
+  "limit": 24,
+  "totalPages": 3,
+  "hasMore": true,
+  "crossModeTotal": null
+ }
+}
