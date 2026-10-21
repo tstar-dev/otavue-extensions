@@ -1,0 +1,47 @@
+{
+ "chapter": {
+  "id": 34006,
+  "slug": "chapter-23",
+  "number": 23,
+  "title": "",
+  "createdAt": "2026-10-14T18:26:13.752Z",
+  "updatedAt": "2026-10-21T18:54:08.492Z",
+  "chapterStatus": "PUBLIC",
+  "featuredImage": null,
+  "price": 0,
+  "becameFreeAt": "2026-10-21T18:54:08.492Z",
+  "unlockAt": null,
+  "isPermanentlyLocked": false,
+  "isLockedByCoins": false,
+  "isShortLinkLocked": false,
+  "shortLink": null,
+  "mangaPostId": 583,
+  "team": null,
+  "isPurchased": false,
+  "isLocked": false,
+  "isAccessible": true,
+  "images": [
+   {
+    "id": 2121459,
+    "url": "https://storage.vortexscans.org/upload/series/crimson-yaksha/451b6020-9866-4bc7-ab09-0c9bb178fb8a/page-0003_01_1792002325072-708438.webp",
+    "width": 0,
+    "height": 0,
+    "order": 2
+   },
+   {
+    "id": 2121458,
+    "url": "https://storage.vortexscans.org/upload/series/crimson-yaksha/451b6020-9866-4bc7-ab09-0c9bb178fb8a/page-0002_01_1792002323189-149205.webp",
+    "width": 0,
+    "height": 0,
+    "order": 1
+   },
+   {
+    "id": 2121457,
+    "url": "https://storage.vortexscans.org/upload/series/crimson-yaksha/451b6020-9866-4bc7-ab09-0c9bb178fb8a/page-0001_01_1792002323189-335326.webp",
+    "width": 0,
+    "height": 0,
+    "order": 0
+   }
+  ]
+ }
+}

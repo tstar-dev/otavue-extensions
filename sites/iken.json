@@ -1,0 +1,95 @@
+[
+  {
+    "id": "iken.azora",
+    "name": "Azora",
+    "lang": "ar",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://azorafly.com"
+    }
+  },
+  {
+    "id": "iken.hijalascans",
+    "name": "Hijala Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://en-hijala.com"
+    }
+  },
+  {
+    "id": "iken.hivescans",
+    "name": "Hive Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://hivetoons.org"
+    }
+  },
+  {
+    "id": "iken.kenscans",
+    "name": "Ken Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://kencomics.com"
+    }
+  },
+  {
+    "id": "iken.magusmanga",
+    "name": "Magus Manga",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://magustoon.org",
+      "sortPagesByFilename": true
+    }
+  },
+  {
+    "id": "iken.nyxscans",
+    "name": "Nyx Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://nyxscans.com"
+    }
+  },
+  {
+    "id": "iken.orionscans",
+    "name": "Orion Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://orion-scans.com"
+    }
+  },
+  {
+    "id": "iken.sanascans",
+    "name": "Sana Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://sanascans.com",
+      "perPage": 30,
+      "sortPagesByFilename": true
+    }
+  },
+  {
+    "id": "iken.vortexscans",
+    "name": "Vortex Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://vortexscans.org"
+    }
+  }
+]

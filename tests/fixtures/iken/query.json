@@ -1,0 +1,253 @@
+{
+ "posts": [
+  {
+   "id": 94,
+   "slug": "reality-quest-2",
+   "postTitle": "Reality Quest",
+   "featuredImage": "https://storage.vortexscans.org/upload/2026/02/18/b215b6b4-bc58-454b-a824-7df1e17e47e3.webp",
+   "seriesType": "MANHWA",
+   "seriesStatus": "ONGOING",
+   "genres": [
+    {
+     "id": 3,
+     "name": "Shounen",
+     "color": ""
+    },
+    {
+     "id": 7,
+     "name": "Comedy",
+     "color": ""
+    },
+    {
+     "id": 13,
+     "name": "Adventure",
+     "color": ""
+    },
+    {
+     "id": 33,
+     "name": "Webtoon",
+     "color": ""
+    },
+    {
+     "id": 34,
+     "name": "+100 Chapter",
+     "color": ""
+    },
+    {
+     "id": 36,
+     "name": "Legendary ",
+     "color": ""
+    }
+   ],
+   "chapters": [
+    {
+     "id": 34271,
+     "number": 227,
+     "title": "",
+     "slug": "chapter-227",
+     "createdAt": "2026-10-21T17:40:22.515Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": false,
+     "isAccessible": true
+    },
+    {
+     "id": 34032,
+     "number": 226,
+     "title": "",
+     "slug": "chapter-226",
+     "createdAt": "2026-10-14T20:28:47.000Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": false,
+     "isAccessible": true
+    }
+   ]
+  },
+  {
+   "id": 274,
+   "slug": "regressing-as-the-reincarnated-bastard",
+   "postTitle": "Regressing as the Reincarnated Bastard of the Sword Clan",
+   "featuredImage": "https://storage.vortexscans.org/upload/series/featured/4/6ac6d148-66b4-464a-8287-90bdd1d09256.png",
+   "seriesType": "MANHWA",
+   "seriesStatus": "ONGOING",
+   "genres": [
+    {
+     "id": 1,
+     "name": "Action",
+     "color": ""
+    },
+    {
+     "id": 2,
+     "name": "Drama",
+     "color": ""
+    },
+    {
+     "id": 3,
+     "name": "Shounen",
+     "color": ""
+    },
+    {
+     "id": 8,
+     "name": "Fantasy",
+     "color": ""
+    },
+    {
+     "id": 13,
+     "name": "Adventure",
+     "color": ""
+    }
+   ],
+   "chapters": [
+    {
+     "id": 34226,
+     "number": 117,
+     "title": "",
+     "slug": "chapter-117",
+     "createdAt": "2026-10-20T14:41:35.372Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": false,
+     "isAccessible": true
+    },
+    {
+     "id": 33910,
+     "number": 116,
+     "title": "",
+     "slug": "chapter-116",
+     "createdAt": "2026-10-13T16:07:05.755Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": false,
+     "isAccessible": true
+    }
+   ]
+  },
+  {
+   "id": 318,
+   "slug": "the-legendary-hero-is-an-academy-honors-student",
+   "postTitle": "The Legendary Hero is an Academy Honors Student",
+   "featuredImage": "https://storage.vortexscans.org/upload/series/featured/4/eab9a3ca-f485-46b4-956e-5cfbdff80eff.png",
+   "seriesType": "MANHWA",
+   "seriesStatus": "ONGOING",
+   "genres": [
+    {
+     "id": 16,
+     "name": "Reincarnation",
+     "color": ""
+    },
+    {
+     "id": 47,
+     "name": "academy",
+     "color": ""
+    },
+    {
+     "id": 49,
+     "name": "Harem",
+     "color": ""
+    },
+    {
+     "id": 50,
+     "name": "Myth",
+     "color": ""
+    }
+   ],
+   "chapters": [
+    {
+     "id": 34147,
+     "number": 109,
+     "title": "",
+     "slug": "chapter-109",
+     "createdAt": "2026-10-17T15:56:25.102Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": false,
+     "isAccessible": true
+    },
+    {
+     "id": 33814,
+     "number": 108,
+     "title": "",
+     "slug": "chapter-108",
+     "createdAt": "2026-10-10T16:18:09.962Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": false,
+     "isAccessible": true
+    }
+   ]
+  },
+  {
+   "id": 685,
+   "slug": "the-forgotten-field-novel",
+   "postTitle": "The Forgotten Field [Novel]",
+   "featuredImage": "https://storage.nyxscans.com/public/upload/series/featured/cm5s17yg80002hv2aobjbqlse/ce68b6b0-c233-41b1-b35e-11f64fd9f108.webp",
+   "seriesType": "NOVEL",
+   "seriesStatus": "ONGOING",
+   "genres": [
+    {
+     "id": 2,
+     "name": "shoujo ",
+     "color": ""
+    },
+    {
+     "id": 4,
+     "name": "romance",
+     "color": ""
+    },
+    {
+     "id": 5,
+     "name": "Slice of Life",
+     "color": ""
+    }
+   ],
+   "chapters": [
+    {
+     "id": 51307,
+     "number": 304,
+     "title": "Chapter 304",
+     "slug": "chapter-304",
+     "createdAt": "2026-10-08T14:15:13.102Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": true,
+     "isAccessible": false
+    },
+    {
+     "id": 51306,
+     "number": 303,
+     "title": "Chapter 303",
+     "slug": "chapter-303",
+     "createdAt": "2026-10-08T14:15:13.102Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": true,
+     "isAccessible": false
+    },
+    {
+     "id": 40771,
+     "number": 246.5,
+     "title": "",
+     "slug": "chapter-246.5",
+     "createdAt": "2026-05-22T12:12:37.687Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": false,
+     "isAccessible": true
+    },
+    {
+     "id": 38474,
+     "number": 240,
+     "title": "Ch#240",
+     "slug": "chapter-240",
+     "createdAt": "2026-05-10T06:32:55.712Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": false,
+     "isAccessible": true
+    }
+   ]
+  }
+ ],
+ "totalCount": 479
+}

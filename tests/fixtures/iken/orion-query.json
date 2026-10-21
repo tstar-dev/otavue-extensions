@@ -1,0 +1,86 @@
+{
+ "posts": [
+  {
+   "id": 33,
+   "slug": "i-want-to-live-in-luxury!:-even-though-i-was-reincarnated-i-can't-accept-being-poor.-that's-why-i'll-reform-the-territory-with-magic.",
+   "postTitle": "I Want to Live in Luxury!: Even Though I was Reincarnated, I can't Accept Being Poor. That's Why I'll Reform the Territory with Magic.",
+   "featuredImage": "https://storage.orion-scans.com/public/upload/series/featured/cmku6vkt70000wk63l7an48fr/49853684-1718-4bce-81a5-c26b43eebd4d.png",
+   "seriesType": "MANGA",
+   "seriesStatus": "ONGOING",
+   "genres": [
+    {
+     "id": 47,
+     "name": "Seinen",
+     "color": ""
+    },
+    {
+     "id": 16,
+     "name": "fantasy ",
+     "color": ""
+    },
+    {
+     "id": 17,
+     "name": "romance",
+     "color": ""
+    },
+    {
+     "id": 15,
+     "name": "comedy",
+     "color": ""
+    },
+    {
+     "id": 40,
+     "name": "Slice of Life",
+     "color": ""
+    }
+   ],
+   "chapters": [
+    {
+     "id": 2817,
+     "number": 40,
+     "title": null,
+     "slug": "chapter-40",
+     "createdAt": "2026-09-28T14:02:09.397Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": true,
+     "isAccessible": false
+    },
+    {
+     "id": 2816,
+     "number": 39,
+     "title": null,
+     "slug": "chapter-39",
+     "createdAt": "2026-09-28T14:02:09.196Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": true,
+     "isAccessible": false
+    },
+    {
+     "id": 2030,
+     "number": 35,
+     "title": null,
+     "slug": "chapter-35",
+     "createdAt": "2026-08-14T14:39:44.595Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": false,
+     "isAccessible": true
+    },
+    {
+     "id": 2029,
+     "number": 34,
+     "title": null,
+     "slug": "chapter-34",
+     "createdAt": "2026-08-14T14:39:44.393Z",
+     "isPurchased": false,
+     "hasPurchased": false,
+     "isLocked": false,
+     "isAccessible": true
+    }
+   ]
+  }
+ ],
+ "totalCount": 1
+}
