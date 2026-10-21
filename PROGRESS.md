@@ -2,6 +2,14 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: EZManhwa (2 sources)
+
+- **New template** `themes/ezmanhwa.js`, ported from Keiyoushi's `lib-multisrc/ezmanhwa`: the API on its own host (`apiUrl`; `api.qimanga.com`, `vapi.ezmanga.org`), sent with the site as `Origin`/`Referer`. `/series` (sort, status, type, genre) and `/series/search?q=` (which ignores filters), `/series/<slug>`, `/series/<slug>/chapters` (100 a page, all read) and `/series/<slug>/chapters/<chapter>` for pages (with width and height). Chapters with `requiresPurchase` are left out; novels too.
+  - The site's chapter link is `/series/<series>/<chapter>`; the API's adds `/chapters/`.
+  - Each site's genre list is in its config, from Keiyoushi's.
+- **Sites:** Qi Scans and EZmanga. EZmanga's website shows this machine a Cloudflare block page, but its API answers, and that's all the source uses.
+- 158 tests. Live check: 2 of 2 passed. 174 sources, 51 marked 18+.
+
 ## 2026-10-21: MangAdventure (2 sources)
 
 - **New template** `themes/mangadventure.js`, ported from Keiyoushi's `lib-multisrc/mangadventure`: `/api/v2/series` (sort `-views` for Popular, `-latest_upload` for Latest; search and filters by title, author, artist, status, sort and categories), `/api/v2/series/<slug>` and `/chapters`, and `/api/v2/chapters/<id>/pages`. The chapter's API id rides after `#` on its reader link.

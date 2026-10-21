@@ -1,0 +1,34 @@
+{
+ "data": [
+  {
+   "slug": "chapter-999",
+   "number": 999,
+   "title": null,
+   "requiresPurchase": true,
+   "createdAt": "2026-10-20T15:07:20.259Z"
+  },
+  {
+   "slug": "chapter-423",
+   "number": 423,
+   "title": null,
+   "requiresPurchase": false,
+   "createdAt": "2026-10-20T15:07:20.259Z"
+  },
+  {
+   "slug": "chapter-422",
+   "number": 422,
+   "title": "Chapter 422: The Reunion",
+   "requiresPurchase": false,
+   "createdAt": "2026-10-13T15:17:54.977Z"
+  },
+  {
+   "slug": "eleceed-chapter-324",
+   "number": 324,
+   "title": "Eleceed Chapter 324",
+   "requiresPurchase": false,
+   "createdAt": "2024-11-12T14:51:47.000Z"
+  }
+ ],
+ "totalPages": 1,
+ "current": 1
+}

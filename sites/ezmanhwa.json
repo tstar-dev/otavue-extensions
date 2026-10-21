@@ -1,0 +1,400 @@
+[
+  {
+    "id": "ezmanhwa.ezmanga",
+    "name": "EZmanga",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ezmanga.org",
+      "apiUrl": "https://vapi.ezmanga.org/api/v1",
+      "genres": [
+        [
+          "Isekai",
+          "isekai"
+        ],
+        [
+          "Action",
+          "action"
+        ],
+        [
+          "Adventure",
+          "adventure"
+        ],
+        [
+          "All Ages",
+          "all-ages"
+        ],
+        [
+          "Comedy",
+          "comedy"
+        ],
+        [
+          "Drama",
+          "drama"
+        ],
+        [
+          "Fantasy",
+          "fantasy"
+        ],
+        [
+          "GORE",
+          "gore"
+        ],
+        [
+          "Game World",
+          "game-world"
+        ],
+        [
+          "Gender Bender",
+          "gender-bender"
+        ],
+        [
+          "Historical",
+          "historical"
+        ],
+        [
+          "Horror",
+          "horror"
+        ],
+        [
+          "Josei",
+          "josei"
+        ],
+        [
+          "Magic",
+          "magic"
+        ],
+        [
+          "Martial Arts",
+          "martial-arts"
+        ],
+        [
+          "Modern",
+          "modern"
+        ],
+        [
+          "Mystery",
+          "mystery"
+        ],
+        [
+          "Psychological",
+          "psychological"
+        ],
+        [
+          "Regression",
+          "regression"
+        ],
+        [
+          "Romance",
+          "romance"
+        ],
+        [
+          "Royalty",
+          "royalty"
+        ],
+        [
+          "School Life",
+          "school-life"
+        ],
+        [
+          "Science Fiction",
+          "science-fiction"
+        ],
+        [
+          "Slice of Life",
+          "slice-of-life"
+        ],
+        [
+          "Sports",
+          "sports"
+        ],
+        [
+          "Supernatural",
+          "supernatural"
+        ],
+        [
+          "Thriller",
+          "thriller"
+        ],
+        [
+          "Webtoon",
+          "webtoon"
+        ],
+        [
+          "Another World",
+          "another-world"
+        ],
+        [
+          "Crossdressing",
+          "crossdressing"
+        ],
+        [
+          "Dr",
+          "dr"
+        ],
+        [
+          "Elf",
+          "elf"
+        ],
+        [
+          "Female Cartoon",
+          "emale-cartoon"
+        ],
+        [
+          "Full Color",
+          "full-color"
+        ],
+        [
+          "Love Affair",
+          "love-affair"
+        ],
+        [
+          "Manhwa",
+          "manhwa"
+        ],
+        [
+          "Pure",
+          "pure"
+        ],
+        [
+          "Revenge",
+          "revenge"
+        ],
+        [
+          "Shoujo",
+          "shoujo"
+        ],
+        [
+          "White Cat",
+          "white-cat"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "ezmanhwa.qiscans",
+    "name": "Qi Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://qimanga.com",
+      "apiUrl": "https://api.qimanga.com/api/v1",
+      "genres": [
+        [
+          "Acting",
+          "acting"
+        ],
+        [
+          "Action",
+          "action"
+        ],
+        [
+          "Action (Alt)",
+          "action-582"
+        ],
+        [
+          "Adventure",
+          "adventure"
+        ],
+        [
+          "Adventure (Alt)",
+          "adventure-589"
+        ],
+        [
+          "Apocalypse",
+          "apocalypce"
+        ],
+        [
+          "Comedy",
+          "comedy"
+        ],
+        [
+          "Cooking",
+          "cooking"
+        ],
+        [
+          "Crazy MC",
+          "crazy-mc"
+        ],
+        [
+          "Cultivation",
+          "cultivation"
+        ],
+        [
+          "Drama",
+          "drama"
+        ],
+        [
+          "Ecchi",
+          "ecchi"
+        ],
+        [
+          "Fantasy",
+          "fantasy"
+        ],
+        [
+          "Fantasy (Alt)",
+          "fantasy-747"
+        ],
+        [
+          "Fight",
+          "fight"
+        ],
+        [
+          "Gender Bender",
+          "gender-bender"
+        ],
+        [
+          "Harem",
+          "harem"
+        ],
+        [
+          "Hidden",
+          "hidden"
+        ],
+        [
+          "Historical",
+          "historical"
+        ],
+        [
+          "Horror",
+          "horror"
+        ],
+        [
+          "Josei",
+          "josei"
+        ],
+        [
+          "Live",
+          "live"
+        ],
+        [
+          "Magic",
+          "magic"
+        ],
+        [
+          "Manhua",
+          "manhua"
+        ],
+        [
+          "Martial Arts",
+          "martial-arts"
+        ],
+        [
+          "Mature",
+          "mature"
+        ],
+        [
+          "Mecha",
+          "mecha"
+        ],
+        [
+          "Medieval Area",
+          "medieval-area"
+        ],
+        [
+          "Munchkin",
+          "munchkin"
+        ],
+        [
+          "Murim",
+          "murim"
+        ],
+        [
+          "Mystery",
+          "mystery"
+        ],
+        [
+          "Myth",
+          "myth"
+        ],
+        [
+          "Politics",
+          "politics"
+        ],
+        [
+          "Psychological",
+          "psychological"
+        ],
+        [
+          "Reincarnation",
+          "reincarnation"
+        ],
+        [
+          "Revenge",
+          "revenge"
+        ],
+        [
+          "Romance",
+          "romance"
+        ],
+        [
+          "School Life",
+          "school-life"
+        ],
+        [
+          "Sci-Fi",
+          "sci-fi"
+        ],
+        [
+          "Seinen",
+          "seinen"
+        ],
+        [
+          "Shounen",
+          "shounen"
+        ],
+        [
+          "Slice of Life",
+          "slice-of-life"
+        ],
+        [
+          "Sports",
+          "sports"
+        ],
+        [
+          "Supernatural",
+          "supernatural"
+        ],
+        [
+          "Superpower",
+          "superpower"
+        ],
+        [
+          "System",
+          "system"
+        ],
+        [
+          "Taming",
+          "taming"
+        ],
+        [
+          "Tower",
+          "tower"
+        ],
+        [
+          "Tragedy",
+          "tragedy"
+        ],
+        [
+          "Urban",
+          "urban"
+        ],
+        [
+          "Vampires",
+          "vampiers"
+        ],
+        [
+          "Virtual Reality",
+          "virtual-reality"
+        ],
+        [
+          "Wuxia",
+          "wuxia"
+        ]
+      ]
+    }
+  }
+]
