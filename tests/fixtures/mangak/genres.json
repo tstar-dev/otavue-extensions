@@ -1,0 +1,22 @@
+{
+ "success": true,
+ "data": {
+  "items": [
+   {
+    "id": "X08AX2po",
+    "name": "Action",
+    "slug": "action"
+   },
+   {
+    "id": "9j81e68X",
+    "name": "Adaptation",
+    "slug": "adaptation"
+   },
+   {
+    "id": "vkDLa2qj",
+    "name": "Adult",
+    "slug": "adult"
+   }
+  ]
+ }
+}
