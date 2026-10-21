@@ -1,0 +1,165 @@
+[
+  {
+    "id": "mangathemesia.akazascans",
+    "name": "Akaza Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://akazascans.org"
+    }
+  },
+  {
+    "id": "mangathemesia.arenascans",
+    "name": "Arena Scans",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://arenascan.com",
+      "adult": true
+    }
+  },
+  {
+    "id": "mangathemesia.asterscans",
+    "name": "Aster Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://asterscans.com"
+    }
+  },
+  {
+    "id": "mangathemesia.athreascans",
+    "name": "Athrea Scans",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://athreascans.com",
+      "adult": true
+    }
+  },
+  {
+    "id": "mangathemesia.evascans",
+    "name": "Eva Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://evascans.net",
+      "mangaPath": "series"
+    }
+  },
+  {
+    "id": "mangathemesia.kingofshojo",
+    "name": "King of Shojo",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://kingofshojo.com",
+      "adult": true
+    }
+  },
+  {
+    "id": "mangathemesia.lagoonscans",
+    "name": "Lagoon Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://lagoonscans.com"
+    }
+  },
+  {
+    "id": "mangathemesia.madarascans",
+    "name": "Madara Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://madarascans.net",
+      "mangaPath": "series"
+    }
+  },
+  {
+    "id": "mangathemesia.mangatrend",
+    "name": "Manga Trend",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mangatrend.org"
+    }
+  },
+  {
+    "id": "mangathemesia.rackus",
+    "name": "Rackus",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://rackusreads.com"
+    }
+  },
+  {
+    "id": "mangathemesia.ravenscans",
+    "name": "Raven Scans",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ravenscans.org",
+      "adult": true
+    }
+  },
+  {
+    "id": "mangathemesia.rokaricomics",
+    "name": "RokariComics",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://rokaricomics.com",
+      "randomSlug": true
+    }
+  },
+  {
+    "id": "mangathemesia.erosscans",
+    "name": "Scythe Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://scythescans.com"
+    }
+  },
+  {
+    "id": "mangathemesia.thunderscans",
+    "name": "Thunder Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://en-thunderscans.com",
+      "mangaPath": "comics",
+      "randomSlug": true
+    }
+  },
+  {
+    "id": "mangathemesia.violetscans",
+    "name": "Violet Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://violetmanga.com",
+      "mangaPath": "comics",
+      "selectors": {
+        "chapter": "#chapterlist li:not(:has(svg))"
+      }
+    }
+  }
+]
