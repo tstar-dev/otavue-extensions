@@ -1,0 +1,89 @@
+[
+  {
+    "id": "yiimanga.manhwa18tx",
+    "name": "Manhwa18TX",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manhwa18tx.com",
+      "mangaPath": "manhwa",
+      "searchParam": "q",
+      "genrePath": "bare"
+    }
+  },
+  {
+    "id": "yiimanga.manhwabuddy",
+    "name": "ManhwaBuddy",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manhwabuddy.com",
+      "mangaPath": "manhwa",
+      "popular": "home"
+    }
+  },
+  {
+    "id": "yiimanga.manhwaddict",
+    "name": "Manhwaddict",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manhwaddict.com",
+      "mangaPath": "manga",
+      "searchParam": "q"
+    }
+  },
+  {
+    "id": "yiimanga.manhwagalaxy",
+    "name": "ManhwaGalaxy",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manhwagalaxy.com",
+      "mangaPath": "manhwa",
+      "searchParam": "q"
+    }
+  },
+  {
+    "id": "yiimanga.manhwaonline",
+    "name": "ManhwaOnline",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manhwaonline.org",
+      "mangaPath": "manga",
+      "popularPath": "webtoons",
+      "genrePath": "bare"
+    }
+  },
+  {
+    "id": "yiimanga.toongodcc",
+    "name": "ToonGod (toongod.cc)",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://toongod.cc",
+      "mangaPath": "webtoon",
+      "popularPath": "webtoons",
+      "genrePath": "bare"
+    }
+  },
+  {
+    "id": "yiimanga.yaoiscanme",
+    "name": "YaoiScan (yaoiscan.me)",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://yaoiscan.me",
+      "mangaPath": "read",
+      "searchParam": "q"
+    }
+  }
+]
