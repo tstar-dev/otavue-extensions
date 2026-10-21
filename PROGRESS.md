@@ -13,7 +13,8 @@ Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION
   - all MangaDex sources: MangaDex was down for maintenance (503 on both the API and the website);
   - Comici's Champion Cross and Young Champion: maintenance pages.
 
-  Re-check those before removing anything.
+  Re-check those before removing anything. Comic Pash, which failed on GitHub, passed again within the hour.
+- **First run on GitHub:** 10 sites that pass from a home connection got Cloudflare browser checks from GitHub's servers. Cloudflare challenges datacenter addresses far more often than phones. Those 10 were Eris Scans, Cocomic, Gourmet Scans, LHTranslation, LinkManga, Manhua Plus, S2Manga, WuxiaWorld, Athrea Scans and Scythe Scans, plus Lagoon Scans. So a browser check now counts as "couldn't check": it's listed in its own section of the summary and doesn't fail the run. Only real failures (errors, empty lists, missing pages, broken images, maintenance) fail it.
 
 ## 2026-10-21: Version check in CI
 
