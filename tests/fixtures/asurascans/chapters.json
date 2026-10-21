@@ -1,0 +1,100 @@
+{
+ "data": [
+  {
+   "id": 1,
+   "series_id": 2165,
+   "number": 346,
+   "title": null,
+   "slug": "chapter-344",
+   "is_premium": true,
+   "early_access_until": null,
+   "published_at": "2026-10-16T20:05:29.882866Z",
+   "created_at": "2026-10-16T20:05:32.146488Z",
+   "series_slug": "overgeared"
+  },
+  {
+   "id": 2,
+   "series_id": 2165,
+   "number": 345,
+   "title": "Soon",
+   "slug": "chapter-344",
+   "is_premium": false,
+   "early_access_until": "2099-01-01T00:00:00Z",
+   "published_at": "2026-10-16T20:05:29.882866Z",
+   "created_at": "2026-10-16T20:05:32.146488Z",
+   "series_slug": "overgeared"
+  },
+  {
+   "id": 262280,
+   "series_id": 2165,
+   "number": 344,
+   "title": "Saharan vs. Valhalla",
+   "slug": "chapter-344",
+   "is_premium": false,
+   "early_access_until": "2026-10-17T02:05:29.882866Z",
+   "published_at": "2026-10-16T20:05:29.882866Z",
+   "created_at": "2026-10-16T20:05:32.146488Z",
+   "series_slug": "overgeared"
+  },
+  {
+   "id": 3,
+   "series_id": 2165,
+   "number": 344,
+   "title": "Saharan vs. Valhalla",
+   "slug": "chapter-344",
+   "is_premium": false,
+   "early_access_until": "2026-10-17T02:05:29.882866Z",
+   "published_at": "2026-10-16T20:05:29.882866Z",
+   "created_at": "2026-10-16T20:05:32.146488Z",
+   "series_slug": "overgeared"
+  },
+  {
+   "id": 262073,
+   "series_id": 2165,
+   "number": 343,
+   "title": "Declaration of War",
+   "slug": "chapter-343",
+   "is_premium": false,
+   "early_access_until": "2026-10-10T09:32:17.38055Z",
+   "published_at": "2026-10-10T03:32:17.38055Z",
+   "created_at": "2026-10-10T03:32:18.388261Z",
+   "series_slug": "overgeared"
+  },
+  {
+   "id": 162418,
+   "series_id": 2165,
+   "number": 1,
+   "title": "Overgeared",
+   "slug": "chapter-1",
+   "is_premium": false,
+   "early_access_until": null,
+   "published_at": "2025-05-10T15:39:02Z",
+   "created_at": "2025-05-10T15:38:19Z",
+   "series_slug": "overgeared"
+  },
+  {
+   "id": 162417,
+   "series_id": 2165,
+   "number": 0,
+   "title": "Prologue",
+   "slug": "9f283008-b932-4b9a-9356-2feec8d6a770",
+   "is_premium": false,
+   "early_access_until": null,
+   "published_at": "2025-05-10T15:37:58Z",
+   "created_at": "2025-05-10T15:37:11Z",
+   "series_slug": "overgeared"
+  },
+  {
+   "id": 4,
+   "series_id": 2165,
+   "number": 0.5,
+   "title": "Extra",
+   "slug": "9f283008-b932-4b9a-9356-2feec8d6a770",
+   "is_premium": false,
+   "early_access_until": null,
+   "published_at": "2025-05-10T15:37:58Z",
+   "created_at": "2025-05-10T15:37:11Z",
+   "series_slug": "overgeared"
+  }
+ ]
+}

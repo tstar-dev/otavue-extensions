@@ -1,0 +1,43 @@
+{
+ "series": {
+  "id": 2165,
+  "slug": "overgeared",
+  "title": "Overgeared",
+  "alternative_titles": "템빨 • Overgeared • Grid's Item Peak • Item Overgeared • Over Geared • Over Power • Temppal • テムパル • 装备之神 • Во всеоружии • مجهز بالكامل • Trâm Anh Thế Phiệt • Suréquipé • Equipado Hasta Los Dientes • O Super Equipado • Terlalu Banyak Diperlengkapi",
+  "description": "Shin Youngwoo (a.k.a. Greed), an unlucky man in life and a low-level player in the popular VR game “Satisfy,” finds a powerful item that earns him a rare legendary class title: “Pagma’s Successor.” He’s now a skilled blacksmith who can forge unique weapons and equip the game’s most powerful gear. Grid resolves to use his new abilities to achieve fame and fortune, but as his very existence begins to stir up trouble in Satisfy, he realizes that life as a legend may be more than he bargained for….</p>",
+  "cover": "https://cdn.asurascans.com/asura-images/covers/overgeared.905990.webp",
+  "status": "ongoing",
+  "type": "manhwa",
+  "author": "LEE Dong Wook/ PARK Saenal",
+  "artist": "REDICE Studio",
+  "genres": [
+   {
+    "id": 1,
+    "name": "Action",
+    "slug": "action"
+   },
+   {
+    "id": 4,
+    "name": "Adventure",
+    "slug": "adventure"
+   },
+   {
+    "id": 7,
+    "name": "Comedy",
+    "slug": "comedy"
+   },
+   {
+    "id": 16,
+    "name": "Fantasy",
+    "slug": "fantasy"
+   },
+   {
+    "id": 18,
+    "name": "Game",
+    "slug": "game"
+   }
+  ],
+  "public_url": "/comics/overgeared-11fe7da3"
+ },
+ "recommended_series": []
+}

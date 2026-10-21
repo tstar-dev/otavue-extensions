@@ -1,0 +1,13 @@
+[
+  {
+    "id": "asurascans.asurascans",
+    "name": "Asura Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://asurascans.com",
+      "apiUrl": "https://api.asurascans.com/api"
+    }
+  }
+]

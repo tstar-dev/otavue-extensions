@@ -2,13 +2,23 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: Asura Scans (1 source)
+
+- **New source** `themes/asurascans.js`, ported from Keiyoushi's `src/en/asurascans`: `/api/series` (offset paging, 20 at a time) for Popular (`sort=popular`), Latest (`sort=latest`), search and filters (sort and order, status, type, genres, `min_chapters`), with genres from `/api/genres`.
+  - **Details, chapters and pages come from the API** (`/api/series/<slug>`, `/chapters`, `/chapters/<number>`, pages with width and height), where Keiyoushi reads the site's Astro props. No sign-in is needed for free chapters.
+  - **Links:** the site's own links end in a random suffix that changes (`/comics/overgeared-11fe7da3`). Titles are kept as the bare slug (`/comics/overgeared`), which the API takes, and a suffix on a link is dropped.
+  - **Locked chapters:** `is_premium`, or `early_access_until` still ahead, are left out (premium chapters answer with no pages anyway). Keiyoushi shows them with a lock unless hidden.
+  - **Tiled pages:** a page with `tiles` (default 4 × 5) is handed to Otavue as a scramble map. Keiyoushi draws source tile `w` at place `tiles[w]`; Otavue's map lists the tile drawn at each place, so `map[tiles[w]] = w`. No free chapter in the 20 most recently updated series uses tiles today, so this is tested on a recorded shape only. A tile list that doesn't cover the grid is refused rather than shown jumbled.
+- **Site:** Asura Scans (asurascans.com, 357 series), marked safe by Keiyoushi; its genres have nothing adult. Not the same site as Comic Asura (comicasura.net, on MangaThemesia).
+- 212 tests. Live check: 1 of 1 passed. 185 sources, 57 marked 18+.
+
 ## 2026-10-21: TCB Scans (1 source), and the standalone sources ranked
 
 - **New source** `themes/tcbscans.js` (a one-site template), ported from Keiyoushi's `src/en/tcbscans`: `/projects` (the whole catalogue, about 20 titles; search filters it), title pages (`div.order-1`, chapters as `div.grid a`), and `picture img` pages. Images and covers need no headers.
   - **Latest is new here** (Keiyoushi has none): the home page's "Latest Chapters", each matched to its project by name, longest name first ("Black Clover Gaiden: Quartet Knights" isn't "Black Clover").
   - Chapter names are "Chapter <n>: <title>". All 19 projects' chapter names parse, with no repeats (One Piece: 1,200). Only the home page has dates, so chapters are undated. The site gives no genres, authors or status.
 - **Standalone English sources, ranked (2026-10-21).** Keiyoushi has 139 that aren't adult-only (83 safe, 56 mixed). Probed from here: 112 answer, 10 are behind a Cloudflare check (Vision Haze, Digital Comic Museum, ComicHubFree, XoManga, Team Shadowi, Kodansha, WebNovel, BatCave, Mangago, Toonkotsu), 12 are down or in maintenance, and 5 have no fixed address. Order to port, groups' own sites first (the owner's preference), then creators' own webcomic sites, then aggregators, with publishers' stores and novel sites last:
-  1. **Scanlation groups:** ~~TCB Scans~~ (done), Asura Scans, Flame Comics, Dynasty Scans (mixed), Manga Demon (demonicscans.org), Luminare Translations, Philia Scans, Hyakuro Translations (mixed), InfinityScans (mixed), Webdex Scans, Rinko Comics, StoneScape, SilentQuill (mixed), ScansGG (mixed), Kappa Beast (mixed), Nuvia Toon, Nux Scans.
+  1. **Scanlation groups:** ~~TCB Scans~~ (done), ~~Asura Scans~~ (done), Flame Comics, Dynasty Scans (mixed), Manga Demon (demonicscans.org), Luminare Translations, Philia Scans, Hyakuro Translations (mixed), InfinityScans (mixed), Webdex Scans, Rinko Comics, StoneScape, SilentQuill (mixed), ScansGG (mixed), Kappa Beast (mixed), Nuvia Toon, Nux Scans.
   2. **Creators' own webcomics** (small, one site each): Gunnerkrigg Court, xkcd, Saturday Morning Breakfast Cereal, Questionable Content, Cyanide & Happiness, El Goonish Shive, Schlock Mercenary, Twokinds (keenspot), Kill Six Billion Demons, Aurora, Grrl Power, Dresden Codak, Existential Comics, Loading Artist, Megatokyo, Darths & Droids, Elan School, Swords, and about 15 more.
   3. **Aggregators:** Weeb Central, MangaPill, MangaKatana, MangaFox / Mangahere / Mangatown (one family), Comivex, MangaGeko, and about 25 more.
   4. **Last:** publishers' stores and apps (VIZ, K Manga, Manga UP!, Mangamo, BookWalker, INKR, Tapas, Omoi, Voyce.Me, Coolmic; mostly paid or sign-in), novel sites (J-Novel, LoLoBun), single-series re-host sites ("Read X Manga Online").
