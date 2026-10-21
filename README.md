@@ -17,6 +17,7 @@ Install a source from the list, then find it under the Search tab → **Sources*
 | Source | Language | What it is |
 | --- | --- | --- |
 | MangaDex | English | [MangaDex](https://mangadex.org), through its public API. Only titles rated safe or suggestive. Licensed titles often have no chapters here (MangaDex links to the publisher instead); their page says so. |
+| Shōnen Jump+, Comic Days, Tonari no Young Jump and 16 more | Japanese | Japanese publishers' own readers on GigaViewer: free chapters only (usually the first few and the latest), since Otavue doesn't sign in. Some sites serve pages as shuffled tiles; Otavue puts them back together. Kurage Bunch and Sunday Web Every are marked 18+ (some of their series are). |
 
 ## How it's built
 
@@ -52,4 +53,4 @@ Sources are plain scripts whose top-level functions Otavue calls (`popular({ pag
 
 ## License
 
-Apache-2.0. Templates ported from other projects say so at the top and keep that project's notice.
+Apache-2.0. Templates ported from other projects say so at the top and keep that project's notice; see [NOTICE](NOTICE).
