@@ -2,6 +2,19 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: VineTheme (7 sources, 2 18+)
+
+- **New template** `themes/vinetheme.js`, ported from Keiyoushi's `lib-multisrc/vinetheme`, a Next.js reader:
+  - Lists and search come from JSON at `/api/series` (`sort` popular/updated/…, `q`, `type`, `status`, `origin`, `genre`, `contentMode=comics`). Genres for the filter come from the `/series` page.
+  - **Titles, chapters and pages only come as React Server Components data:** the page fetched with `rsc: 1` answers with rows, and the objects wanted are found by shape (`series` + `chapters`; `chapter.pages`; `tagTotal`), as Keiyoushi's `extractNextJs` does.
+  - **Two RSC details Keiyoushi's parser handles and a naive one doesn't:** text rows (`id:T<hex byte length>,<text>`, used for long descriptions) have no newline after them, so the next row is glued onto the text; and long values are outlined to their own row and referenced as `"$<id>"`. Rows are read by byte length, and references inside the object found are filled in. Without that, a KeroScans title with a long description couldn't be opened at all.
+  - Chapters come 100 to a page (`?sort=desc&page=N`, all pages read). `isLocked` or `hasAccess: false` (coins, early access) leaves a chapter out.
+  - **Pages flagged `isEncrypted` with `tiles`/`strips` (most recent chapters on six of the seven sites) still have a plain, readable image at `imageUrl`**, checked by eye; `protectionConfig` says protection is off. Redacted pages and pages without an image are left out. Width and height are passed on.
+  - **Long slugs:** KeroScans, Kayn Scans and WitchScans have slugs up to 234 characters, past Otavue's 150-byte ids, and the site has no route by id. Those links are cut short at a word and carry the series id after `#`; opening one searches `/api/series?q=` with the slug's first three words, then two, then its longest word, matching on the id.
+- **Sites (7):** Diva Scans and KeroScans (18+: Keiyoushi marks them MIXED), Drake Scans, Elf Toon, Kayn Scans, Valir Scans and WitchScans. Live check: 7 of 7 passed. One Valir run failed while a chapter's images were still being uploaded (404 an hour after posting, 200 later).
+- The `.rsc` fixtures hold real site data in a cut-down RSC frame with both quirks above.
+- 125 tests. 155 sources, 46 marked 18+.
+
 ## 2026-10-21: YiiManga (7 sources, all 18+)
 
 - **New template** `themes/yiimanga.js`, ported from Keiyoushi's `lib-multisrc/yiimanga`: HTML pages in three layouts (the `latest-item` and `list-item` lists; `main-info-list`, `post-content_item` and `manga-detail` title pages).
