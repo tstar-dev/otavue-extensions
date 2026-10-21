@@ -1,8 +1,8 @@
 Otavue Extensions
 
-themes/gigaviewer.js, themes/comici.js and their sites/*.json lists are ported
+themes/gigaviewer.js, themes/comici.js, themes/madara.js and their sites/*.json lists are ported
 from Keiyoushi's extensions (https://github.com/keiyoushi/extensions-source:
-lib-multisrc/gigaviewer, lib-multisrc/comiciviewer and the sources built on them), licensed under the Apache License 2.0,
+lib-multisrc/gigaviewer, lib-multisrc/comiciviewer, lib-multisrc/madara and the sources built on them), licensed under the Apache License 2.0,
 which in turn continue the Tachiyomi and Mihon projects' extensions.
 
 themes/mangadex.js is written from MangaDex's public API documentation

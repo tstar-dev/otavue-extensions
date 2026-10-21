@@ -37,6 +37,7 @@ async function check(entry) {
     popular.unshift(...latest.slice(0, 3));
   }
 
+  let read = false;
   for (const item of popular.slice(0, 6)) {
     const detail = await source.getDetail(item.url, {});
     const chapters = detail.chapters?.length ? detail.chapters : await source.getChapters(item.url);
@@ -49,8 +50,10 @@ async function check(entry) {
     const image = await fetch(pages[0]?.url ?? pages[0], { method: 'HEAD', headers: pages[0]?.headers ?? {}, signal: AbortSignal.timeout(20_000) });
     report('image', `${image.status} ${image.headers.get('content-type')}`);
     if (!image.ok) throw new Error(`page image answered ${image.status}`);
+    read = true;
     break;
   }
+  if (!read) throw new Error('none of the first titles has a chapter to read');
 
   const found = itemsOf(await source.search(popular[0].englishTitle ?? popular[0].title, 1, {}));
   report('search', `${found.length} results`);
