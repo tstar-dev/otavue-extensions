@@ -1,0 +1,109 @@
+{
+ "meta": {
+  "total": 674,
+  "per_page": 12,
+  "current_page": 1,
+  "last_page": 57,
+  "first_page": 1,
+  "first_page_url": "/?page=1",
+  "last_page_url": "/?page=57",
+  "next_page_url": "/?page=2",
+  "previous_page_url": null
+ },
+ "data": [
+  {
+   "id": 77,
+   "title": "I Need to Raise My Sister Properly",
+   "description": "Transported into a novel as the villain's half-sister, she vows to change their tragic fate. But her plans derail when she catches the attention of the terrifying \"Blood Duke,\" who denies having feelings yet acts like a jealous boyfriend.",
+   "alternative_names": "언니는 여동생을 바르게 키워야 합니다",
+   "series_type": "Comic",
+   "series_slug": "i-need-to-raise-my-sister-properly",
+   "thumbnail": "https://media.luacomic.org/file/V4IKlhs/oysh4jdz78cza3mqd08i6pih.webp",
+   "total_views": 274652,
+   "status": "Ongoing",
+   "created_at": "2024-12-14T00:53:57.274Z",
+   "updated_at": "2026-10-17T14:30:13.591Z",
+   "badge": "Comic",
+   "rating": 5,
+   "release_schedule": {
+    "sat": true
+   },
+   "nu_link": null,
+   "is_coming_soon": false,
+   "is_pinned": false,
+   "paid_chapters": [
+    {
+     "id": 48032,
+     "chapter_name": "Chapter 169",
+     "chapter_slug": "chapter-169",
+     "created_at": "2026-10-17T14:29:06.902Z",
+     "series_id": 77,
+     "chapters_to_be_freed": [],
+     "meta": {
+      "adonis_group_limit_counter": "1"
+     }
+    }
+   ],
+   "free_chapters": [
+    {
+     "id": 46786,
+     "chapter_name": "Chapter 168",
+     "chapter_slug": "chapter-168",
+     "created_at": "2026-10-10T14:14:16.302Z",
+     "series_id": 77,
+     "index": "168.0",
+     "chapters_to_be_freed": [],
+     "meta": {
+      "adonis_group_limit_counter": "1"
+     }
+    }
+   ],
+   "latest_chapter": null,
+   "meta": {
+    "metadata": {},
+    "chapters_count": "169"
+   }
+  },
+  {
+   "id": 69,
+   "title": "The Male Lead’s Little Lion Daughter",
+   "description": "A powerful lord adopts a mysterious child with a unique personality, obsessed with muscles and oddly mature for her age. Despite her eccentricities, he proudly believes she’s a genius, even if she’s a bit of a weirdo.",
+   "alternative_names": "남주의 입양딸이 되었습니다",
+   "series_type": "Comic",
+   "series_slug": "the-male-leads-little-lion-daughter",
+   "thumbnail": "https://media.luacomic.org/file/V4IKlhs/plggnutci5numsgmtp7eegxj.webp",
+   "total_views": 265853,
+   "status": "Hiatus",
+   "created_at": "2024-12-14T00:46:53.639Z",
+   "updated_at": "2026-08-26T09:04:17.475Z",
+   "badge": "Comic",
+   "rating": 5,
+   "release_schedule": {
+    "fri": true
+   },
+   "nu_link": null,
+   "is_coming_soon": false,
+   "is_pinned": false,
+   "paid_chapters": [],
+   "free_chapters": [
+    {
+     "id": 37196,
+     "chapter_name": "Chapter 175",
+     "chapter_slug": "chapter-175",
+     "created_at": "2026-08-21T13:35:06.464Z",
+     "series_id": 69,
+     "index": "175.0",
+     "chapters_to_be_freed": [],
+     "meta": {
+      "adonis_group_limit_counter": "1"
+     }
+    }
+   ],
+   "latest_chapter": null,
+   "meta": {
+    "metadata": {},
+    "chapters_count": "175"
+   }
+  }
+ ]
+}

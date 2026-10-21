@@ -7,13 +7,13 @@
 //   mangaPath     where titles live ("manga")           genrePath   genre archive path ("manga-genre")
 //   browse        "ajax" (madara_load_more) or "archive" (plain list pages)
 //   ajaxTemplate  madara_load_more's template           mangaOnly   only list "manga"-type posts (true)
-//   chapters      "auto", "page", "ajax", "admin" or "paged"
+//   chapters      "auto", "page", "ajax", "admin", "paged" or "api" (/api/comics/<slug>/chapters)
 //   dateFormat    e.g. "MMMM d, yyyy", "MM/dd/yyyy"     adult       keep titles the site marks 18+ (false)
 //   selectors     overrides for SELECTORS below         cookie      a Cookie header some sites need
 //   imageReferer  "site" to send the site, not the chapter, as page images' Referer
 //
 // @theme madara
-// @version 1.0.2
+// @version 1.0.3
 // @type manga
 
 var BASE = String(SITE.baseUrl).replace(/\/+$/, '');
@@ -417,7 +417,7 @@ function numbered(entries) {
   var seen = {};
   var out = [];
   entries.slice().reverse().forEach(function (entry) {
-    var number = numberOf(entry.title || '', entry.url);
+    var number = typeof entry.number === 'number' && entry.number >= 0 ? entry.number : numberOf(entry.title || '', entry.url);
     if (number === null || seen[number]) return;
     seen[number] = true;
     out.push({ url: entry.url, title: entry.title, number: number, date: entry.date });
@@ -440,6 +440,23 @@ function canonicalOf(doc) {
   return /\/$/.test(url) ? url : url + '/';
 }
 
+/** `chapters: "api"` sites (Zinmanga.net, Kun Manga): `/api/comics/<slug>/chapters`, JSON, 100 a page. */
+async function apiChapters(titleLink) {
+  var slug = (/\/([^\/?#]+)\/?$/.exec(titleLink) || [])[1];
+  if (!slug) return [];
+  var rows = [];
+  for (var pageNumber = 1; pageNumber <= 30; pageNumber++) {
+    var res = await request(BASE + '/api/comics/' + encodeURIComponent(slug) + '/chapters?page=' + pageNumber + '&per_page=100&order=desc', { headers: { Accept: 'application/json' } });
+    var data = ((await res.json()) || {}).data || {};
+    rows = rows.concat(data.chapters || []);
+    if (!(pageNumber < Number(data.last_page))) break;
+  }
+  var base = titleLink.replace(/\/+$/, '');
+  return numbered(rows.map(function (row) {
+    return { url: base + '/' + row.chapter_slug, title: row.chapter_name || null, date: row.updated_at || null, number: row.chapter_num };
+  }));
+}
+
 /**
  * The chapter list. Madara sites put it in the title page, or load it from
  * `<title>/ajax/chapters/` (newer) or `admin-ajax.php` (older); "auto" tries them in that order.
@@ -451,6 +468,7 @@ async function chaptersOf(doc) {
     if (inPage.length || mode === 'page') return numbered(inPage);
   }
   var titleLink = canonicalOf(doc);
+  if (mode === 'api') return apiChapters(titleLink);
   if (mode === 'paged') {
     var entries = [];
     for (var t = 1; t <= 50; t++) {

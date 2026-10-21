@@ -42,6 +42,36 @@
     }
   },
   {
+    "id": "mangathemesia.comicasura",
+    "name": "Comic Asura",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://comicasura.net",
+      "list": "asura",
+      "dateFormat": "MMMM d yyyy",
+      "selectors": {
+        "item": ".grid > a[href*=manga], .flex-wrap.flex a[href*=manga]",
+        "next": "a:has(img[alt=Next])",
+        "details": "body",
+        "title": ".comic-title-content",
+        "cover": "img[alt=poster]",
+        "description": ".comic-content.mobile",
+        "alt": ".no-alt-names",
+        "genre": "a[href*='/manga-list/']",
+        "status": "div.text-sm:containsOwn(Status) + div",
+        "type": "div.text-sm:containsOwn(Type) + div",
+        "chapter": ".chapter-items",
+        "chapterName": ".text-sm.text-white",
+        "chapterDate": ".text-xs:not(:has(span))",
+        "pages": "div > img.object-cover.mx-auto",
+        "genreList": ".filter-dropdown-container label:has(input[name*=genres])"
+      },
+      "adult": true
+    }
+  },
+  {
     "id": "mangathemesia.evascans",
     "name": "Eva Scans",
     "lang": "en",
@@ -113,6 +143,140 @@
     "config": {
       "baseUrl": "https://ravenscans.org",
       "adult": true
+    }
+  },
+  {
+    "id": "mangathemesia.rizzcomic",
+    "name": "Rizz Comic",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://rizzfables.com",
+      "mangaPath": "series",
+      "list": "rizz",
+      "randomSlug": true,
+      "randomPrefix": "^r\\d+-",
+      "randomListPath": "/series",
+      "dateFormat": "dd MMM yyyy",
+      "genres": [
+        [
+          "Abilities",
+          "2"
+        ],
+        [
+          "Action",
+          "3"
+        ],
+        [
+          "Adaptation",
+          "4"
+        ],
+        [
+          "Adventure",
+          "5"
+        ],
+        [
+          "Another Chance",
+          "6"
+        ],
+        [
+          "Apocalypse",
+          "7"
+        ],
+        [
+          "Based On A Novel",
+          "8"
+        ],
+        [
+          "Cheat",
+          "9"
+        ],
+        [
+          "Comedy",
+          "10"
+        ],
+        [
+          "Conspiracy",
+          "11"
+        ],
+        [
+          "Cultivation",
+          "12"
+        ],
+        [
+          "Demon",
+          "13"
+        ],
+        [
+          "Demon King",
+          "14"
+        ],
+        [
+          "Dragon",
+          "15"
+        ],
+        [
+          "Drama",
+          "16"
+        ],
+        [
+          "Drop",
+          "17"
+        ],
+        [
+          "Dungeon",
+          "18"
+        ],
+        [
+          "Dungeons",
+          "19"
+        ],
+        [
+          "Fantasy",
+          "20"
+        ],
+        [
+          "Game",
+          "21"
+        ],
+        [
+          "Genius",
+          "22"
+        ],
+        [
+          "Ghosts",
+          "23"
+        ],
+        [
+          "Harem",
+          "24"
+        ],
+        [
+          "Hero",
+          "25"
+        ],
+        [
+          "Hidden Identity",
+          "26"
+        ],
+        [
+          "HighFantasy",
+          "27"
+        ],
+        [
+          "Historical",
+          "28"
+        ],
+        [
+          "Horror",
+          "29"
+        ]
+      ],
+      "selectors": {
+        "pages": "div#readerarea > img",
+        "randomList": "div.bsx a"
+      }
     }
   },
   {

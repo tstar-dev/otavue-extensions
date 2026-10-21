@@ -9,7 +9,7 @@
 //   dateFormat e.g. "MMM d, yyyy" (the default)          selectors  overrides for the variant's SELECTORS
 //
 // @theme keyoapp
-// @version 1.0.0
+// @version 1.0.1
 // @type manga
 
 var BASE = String(SITE.baseUrl).replace(/\/+$/, '');

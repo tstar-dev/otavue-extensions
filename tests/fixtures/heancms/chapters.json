@@ -1,0 +1,91 @@
+{
+ "meta": {
+  "total": 4,
+  "per_page": 1000,
+  "current_page": 1,
+  "last_page": 1,
+  "first_page": 1,
+  "first_page_url": "/?page=1",
+  "last_page_url": "/?page=1",
+  "next_page_url": null,
+  "previous_page_url": null
+ },
+ "data": [
+  {
+   "id": 48032,
+   "chapter_name": "Chapter 169",
+   "chapter_title": null,
+   "chapter_thumbnail": "https://media.luacomic.org/file/V4IKlhs/tt8zvxm28j8nenxmsl5nu8ql.webp",
+   "chapter_slug": "chapter-169",
+   "price": 10,
+   "created_at": "2026-10-17T14:29:06.902Z",
+   "series": {
+    "series_slug": "i-need-to-raise-my-sister-properly",
+    "id": 77,
+    "latest_chapter": null,
+    "meta": {}
+   },
+   "meta": {
+    "continuation": null,
+    "who_bought_count": "13"
+   }
+  },
+  {
+   "id": 46786,
+   "chapter_name": "Chapter 168",
+   "chapter_title": null,
+   "chapter_thumbnail": "https://media.luacomic.org/file/V4IKlhs/agqoq667er34xcateqx5ckqm.webp",
+   "chapter_slug": "chapter-168",
+   "price": 0,
+   "created_at": "2026-10-10T14:14:16.302Z",
+   "series": {
+    "series_slug": "i-need-to-raise-my-sister-properly",
+    "id": 77,
+    "latest_chapter": null,
+    "meta": {}
+   },
+   "meta": {
+    "continuation": null,
+    "who_bought_count": "20"
+   }
+  },
+  {
+   "id": 4753,
+   "chapter_name": "Chapter 2",
+   "chapter_title": null,
+   "chapter_thumbnail": "https://media.luacomic.org/file/V4IKlhs/t26segayfm79jzuxdhraaj6u.webp",
+   "chapter_slug": "chapter-2",
+   "price": 0,
+   "created_at": "2024-12-19T11:16:04.024Z",
+   "series": {
+    "series_slug": "i-need-to-raise-my-sister-properly",
+    "id": 77,
+    "latest_chapter": null,
+    "meta": {}
+   },
+   "meta": {
+    "continuation": null,
+    "who_bought_count": "0"
+   }
+  },
+  {
+   "id": 4752,
+   "chapter_name": "Chapter 1",
+   "chapter_title": null,
+   "chapter_thumbnail": "https://media.luacomic.org/file/V4IKlhs/jy9x5cc1kkvl90tan7zvpoz7.webp",
+   "chapter_slug": "chapter-1",
+   "price": 0,
+   "created_at": "2024-12-19T11:15:40.703Z",
+   "series": {
+    "series_slug": "i-need-to-raise-my-sister-properly",
+    "id": 77,
+    "latest_chapter": null,
+    "meta": {}
+   },
+   "meta": {
+    "continuation": null,
+    "who_bought_count": "0"
+   }
+  }
+ ]
+}
