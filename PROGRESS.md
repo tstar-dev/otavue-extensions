@@ -2,6 +2,19 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: MangaCatalog (11 sources)
+
+- **New template** `themes/mangacatalog.js`, ported from Keiyoushi's `lib-multisrc/mangacatalog`. Each site is one franchise (readonepiece.com, readsnk.com, readberserk.com, …) with a fixed list of series and no list or search of its own:
+  - `popular` is the site's series list from `config.series` (`[title, path, cover]`) and `search` filters it by name. There's no `latest` or `getFilters`; both are optional in the app and the smoke tool.
+  - Three page layouts (`layout`): `tailwind` (most sites), `bootstrap` (Berserk, One-Punch Man: a card and a dated table) and `single` (Tower of God: one series on the home page, chapters as links, pages on Blogger, `imageHosts` filters the rest).
+  - **Pages:** `img.js-page, img.pages__img`, using `data-src` before `src`, skipping `data:` placeholders and repeats. Keiyoushi's `img[data-src]` misses page 1, which is never lazy. The `<noscript>` copies and a line break inside the links are handled.
+  - **Hosts move** (ww12.readsnk.com → ww13…): any link on one of a site's numbered hosts is read on the current `baseUrl`, so saved titles survive a move, and redirects off the site are refused.
+  - `checkNewest` leaves out newest chapters without pages: Tower of God's 653 is only a cover (the site stopped at December 2024), and Solo Leveling lists a "Ragnarok announcement" as 200.5.
+  - Series with no chapter numbers at all (an art book) are numbered in the site's order.
+- **Site list:** Keiyoushi's series lists plus each home page's nav (it has newer ones, such as Jujutsu Kaisen Modulo, Fairy Tail S and Blue Mistral, and Kingdom's official versions). Names and covers come from each series' own page, and the series with the most chapters is listed first. Left out: novels (Ace's Story Novel, a Jujutsu Kaisen light novel, the Solo Leveling and Attack on Titan novels), Solo Leveling's audiobook, Kingdom's PDF spoilers, Berserk's motion comic, Berserk's "Spoilers & RAW", and nav links to other sites.
+- **Held back:** Read Black Clover (a saved static copy, broken chapters) and Read Chainsaw Man (NSFW in Keiyoushi). Both are in `REMOVED.md`.
+- 100 tests. Live check: 11 of 11 passed. 132 sources, 37 marked 18+.
+
 ## 2026-10-21: MangaDex in 13 more languages (13 sources)
 
 - `sites/mangadex.json` gained es-la, es, pt-br, fr, it, de, pl, ru, tr, id, vi, th and ar. The template already reads `SITE.lang`, so nothing else changed. `tests/mangadex.test.mjs` covers a second language.
