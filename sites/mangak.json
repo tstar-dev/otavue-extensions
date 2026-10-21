@@ -1,0 +1,12 @@
+[
+  {
+    "id": "mangak.mangak",
+    "name": "MangaK",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mangak.io"
+    }
+  }
+]

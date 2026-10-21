@@ -1,0 +1,35 @@
+{
+ "success": true,
+ "data": {
+  "items": [
+   {
+    "id": "VYPXzEYz",
+    "url": "/solo-leveling",
+    "name": "Solo Leveling",
+    "slug": "solo-leveling",
+    "cover": "https://rx.resmk.org/covers/c8ccb9d017d6.webp",
+    "status": "completed"
+   },
+   {
+    "id": "KY5ZW9lD",
+    "url": "/solo-leveling-arise",
+    "name": "Solo Leveling: Arise",
+    "slug": "solo-leveling-arise",
+    "cover": "https://rx.resmk.org/covers/bfe43978bf4f.webp",
+    "status": "ongoing"
+   },
+   {
+    "id": "9YrJMVYM",
+    "url": "/solo-leveling-ragnarok",
+    "name": "Solo Leveling: Ragnarok",
+    "slug": "solo-leveling-ragnarok",
+    "cover": "https://rx.resmk.org/covers/391dc7f9fa27.webp",
+    "status": "ongoing"
+   }
+  ],
+  "pagination": {
+   "page": 1,
+   "has_next": true
+  }
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "success": true,
+ "data": {
+  "chapters": [
+   {
+    "id": "PDm90OnD",
+    "url": "/solo-leveling/chapter-202",
+    "name": "Chapter 202",
+    "slug": "chapter-202",
+    "updated_at": "2025-01-09T14:03:52.000Z",
+    "number": 270
+   },
+   {
+    "id": "Dup00001",
+    "url": "/solo-leveling/chapter-202",
+    "name": "Chapter 202 (repost)",
+    "slug": "chapter-202",
+    "updated_at": "2025-01-09T14:03:52.000Z",
+    "number": 270
+   },
+   {
+    "id": "KY50zeG8",
+    "url": "/solo-leveling/chapter-201",
+    "name": "Chapter 201",
+    "slug": "chapter-201",
+    "updated_at": "2025-01-09T14:03:52.000Z",
+    "number": 269
+   },
+   {
+    "id": "w80N9aaD",
+    "url": "/solo-leveling/chapter-notice-official-translation",
+    "name": "Chapter : Notice (official translation)",
+    "slug": "chapter-notice-official-translation",
+    "updated_at": "2023-01-26T19:39:15.000Z",
+    "number": 268
+   },
+   {
+    "id": "5249Vry8",
+    "url": "/solo-leveling/notice",
+    "name": "Notice.",
+    "slug": "notice",
+    "updated_at": "2022-08-19T05:33:00.000Z",
+    "number": 263
+   },
+   {
+    "id": "6YlaBOvD",
+    "url": "/solo-leveling/chapter-0-prologue",
+    "name": "Chapter 0: Prologue",
+    "slug": "chapter-0-prologue",
+    "updated_at": "2019-12-19T00:12:00.000Z",
+    "number": 2
+   },
+   {
+    "id": "DVM9kXwY",
+    "url": "/solo-leveling/chapter-0-1",
+    "name": "Chapter 0.1",
+    "slug": "chapter-0-1",
+    "updated_at": "2026-06-24T12:02:39.000Z",
+    "number": 1
+   }
+  ]
+ }
+}

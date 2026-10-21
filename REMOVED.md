@@ -4,6 +4,7 @@ Sites taken out of the repository, and why, so they aren't added back. Newest fi
 
 | Date | Source id | Reason |
 | --- | --- | --- |
+| 2026-10-21 | mangak.toonilyme | Not added (Toonily.me, toontop.io): adult-only (Keiyoushi marks it NSFW). |
 | 2026-10-21 | mangabox.manganato | Not added yet (Manganato): search (its quick-search JSON, and /search/story/) is behind a Cloudflare browser check on manganato.gg, and its other domains (natomanga.com, nelomanga.net) challenge every request. Same catalogue as Mangabat and Mangakakalot. |
 | 2026-10-21 | yiimanga.fourporncomic | Not added (4PornComic): adult-only (Keiyoushi marks it NSFW). |
 | 2026-10-21 | yiimanga.hentai20lol | Not added (Hentai20 (Unoriginal)): adult-only (Keiyoushi marks it NSFW). |

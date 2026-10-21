@@ -2,6 +2,15 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: MangaK (1 source, 18+)
+
+- **New template** `themes/mangak.js`, ported from Keiyoushi's `lib-multisrc/mangak`: the API at `api.<site>`. `/titles/search` serves Popular (`sort=popular&window=week`), Latest (`sort=latest`) and search, with the sort, content rating, status, type, demographic and genre filters. The genre list comes live from `/genres`. Search words are cut to letters, digits and spaces, at most 50 characters.
+  - **Details and pages come from the API**, where Keiyoushi reads the Next.js pages: `/titles/<id>` (its `chapters` holds only the latest 50, so the list comes from `/titles/<id>/chapters`) and `/titles/<id>/chapters/<chapter id>`, which gives pages with width and height. Title links are `<site>/<slug>#<id>` and chapter links `…#<title id>/<chapter id>`. A link without them is read from the site's `__NEXT_DATA__`.
+  - **The API's chapter `number` is only a position** (Solo Leveling's Chapter 202 is 270), so numbers come from the names. Entries without one ("Notice.", "Chapter announcement", "Hitaus.156", "Chapter side-story-1") are left out: 257 of Solo Leveling's 265.
+  - Covers (`rx.resmk.org`) and pages (`rx.qvzr?.org`) answer 403 without the site as `Referer`. Keiyoushi retries failed page images on `rx.rzyn.net`. Otavue has no per-image fallback, so that's left out (the fallback host works too, with the Referer).
+- **Site:** MangaK (mangak.io), an aggregator. Keiyoushi marks it MIXED: 10,000 or more safe (the API stops counting there), 4,525 suggestive, 5,796 erotica and 2,592 pornographic titles. Listed, as 18+. Toonily.me (toontop.io), the template's other site, is adult-only and not added.
+- 184 tests. Live check: 1 of 1 passed. 179 sources, 54 marked 18+.
+
 ## 2026-10-21: Hiper (1 source, 18+)
 
 - **New template** `themes/hiper.js`, ported from Keiyoushi's `lib-multisrc/hiper` and `src/en/hiperdex`: the tRPC API at `/api/trpc` (`?batch=1&input={"0":{"json":…}}`), with `search.query` for Popular (`popular`), Latest (`recent`) and search; `series.bySlugWithGenres`, `series.chapters` and `reader.chapterPages`. Single procedures work, so the `auth.me` batching Keiyoushi sends is left out.

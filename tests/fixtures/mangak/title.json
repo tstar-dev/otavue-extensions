@@ -1,0 +1,131 @@
+{
+ "success": true,
+ "data": {
+  "title": {
+   "id": "VYPXzEYz",
+   "url": "/solo-leveling",
+   "name": "Solo Leveling",
+   "alt_names": [
+    {
+     "name": "Na Honjaman Level-Up"
+    },
+    {
+     "name": "나 혼자만 레벨업"
+    }
+   ],
+   "slug": "solo-leveling",
+   "cover": "https://rx.resmk.org/covers/c8ccb9d017d6.webp",
+   "summary": "10 years ago, after “the Gate” that connected the real world with the monster world opened, some of the ordinary, everyday people received the power to hunt monsters within the Gate. They are known as “Hunters”. However, not all Hunters are powerful. My name is Sung Jin-Woo, an E-rank Hunter. I’m someone who has to risk his life in the lowliest of dungeons, the “World’s Weakest”. Having no skills whatsoever to display, I barely earned the required money by fighting in low-leveled dungeons… at least until I found a hidden dungeon with the hardest difficulty within the D-rank dungeons! In the end, as I was accepting death, I suddenly received a strange power, a quest log that only I could see, a secret to leveling up that only I know about! If I trained in accordance with my quests and hunted monsters, my level would rise. Changing from the weakest Hunter to the strongest S-rank Hunter!\r\n\r\n---\r\n**Links:**\r\n\r\n- Official English Translation [<Pocket Comics>](https://www.pocketcomics.com/comic/320) | [<WebNovel>](https://www.webnovel.com/comic/only-i-level-up-(solo-leveling)_15227640605485101) | [<Tapas>](https://tapas.io/series/solo-leveling-comic/info)\r\n- Alternate Official Raw - [Kakao Webtoon](https://webtoon.kakao.com/content/나-혼자만-레벨업/2320)",
+   "status": "Completed",
+   "content_rating": "safe",
+   "genres": [
+    {
+     "name": "Action",
+     "slug": "action",
+     "titles_count": 15473
+    },
+    {
+     "name": "Adventure",
+     "slug": "adventure",
+     "titles_count": 9543
+    },
+    {
+     "name": "Fantasy",
+     "slug": "fantasy",
+     "titles_count": 21881
+    },
+    {
+     "name": "Drama",
+     "slug": "drama",
+     "titles_count": 22531
+    },
+    {
+     "name": "Shounen",
+     "slug": "shounen",
+     "titles_count": 8535
+    },
+    {
+     "name": "Webtoons",
+     "slug": "webtoons",
+     "titles_count": 9083
+    },
+    {
+     "name": "Manhua",
+     "slug": "manhua",
+     "titles_count": 2497
+    }
+   ],
+   "authors": [
+    {
+     "name": "h-goon (현군)",
+     "slug": "h-goon"
+    },
+    {
+     "name": "추공 (Chugong)",
+     "slug": "chugong"
+    },
+    {
+     "name": "Gi So-Ryeong (기소령)",
+     "slug": "gi-so-ryeong"
+    },
+    {
+     "name": "Jang Sung-Lak",
+     "slug": "jang-sung-lak"
+    },
+    {
+     "name": "Gee So-Lyung",
+     "slug": "gee-so-lyung"
+    }
+   ],
+   "artists": [
+    {
+     "name": "REDICE Studio (레드아이스 스튜디오)",
+     "slug": "redice-studio"
+    },
+    {
+     "name": "Jang Sung-Rak (장성락)",
+     "slug": "jang-sung-rak"
+    }
+   ],
+   "themes": [],
+   "demographics": [
+    {
+     "name": "Shounen",
+     "slug": "shounen",
+     "titles_count": 0
+    }
+   ],
+   "formats": [
+    {
+     "name": "Adaptation",
+     "slug": "adaptation",
+     "titles_count": 0
+    },
+    {
+     "name": "Web Comic",
+     "slug": "web-comic",
+     "titles_count": 0
+    },
+    {
+     "name": "Award Winning",
+     "slug": "award-winning",
+     "titles_count": 0
+    },
+    {
+     "name": "Long Strip",
+     "slug": "long-strip",
+     "titles_count": 0
+    },
+    {
+     "name": "Full Color",
+     "slug": "full-color",
+     "titles_count": 0
+    }
+   ],
+   "type": {
+    "name": "manhwa",
+    "slug": "manhwa"
+   }
+  }
+ }
+}
