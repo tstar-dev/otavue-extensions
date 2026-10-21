@@ -70,8 +70,11 @@ async function run(entry, code, retry) {
       await check(entry, code, (line) => lines.push(line));
       return { entry, ok: true, lines };
     } catch (error) {
-      lines.push(`  FAILED   ${error.message}`);
-      if (!retry || attempt > 1) return { entry, ok: false, error: error.message, lines };
+      // Cloudflare checks datacenter addresses (like CI runners) far more often than phones, so a browser
+      // check here says little about the site; it's listed apart and doesn't fail the run.
+      const blocked = /wants a browser check/.test(error.message);
+      lines.push(`  ${blocked ? 'BLOCKED ' : 'FAILED  '} ${error.message}`);
+      if (!retry || attempt > 1) return { entry, ok: false, blocked, error: error.message, lines };
       console.log(lines.join('\n'));
     }
   }
@@ -115,18 +118,27 @@ async function worker() {
 }
 await Promise.all(Array.from({ length: jobs }, worker));
 
-const failures = results.filter((result) => !result.ok).sort((a, b) => a.entry.id.localeCompare(b.entry.id));
-console.log(`\n${results.length - failures.length}/${results.length} passed`);
+const byId = (a, b) => a.entry.id.localeCompare(b.entry.id);
+const failures = results.filter((result) => !result.ok && !result.blocked).sort(byId);
+const blocked = results.filter((result) => result.blocked).sort(byId);
+const passed = results.length - failures.length - blocked.length;
+console.log(`\n${passed}/${results.length} passed${blocked.length ? `, ${blocked.length} blocked by a browser check` : ''}`);
 for (const failure of failures) console.log(`FAILED ${failure.entry.id}: ${failure.error}`);
+for (const result of blocked) console.log(`BLOCKED ${result.entry.id}`);
 if (summary) {
-  const rows = failures.map((failure) => `| ${failure.entry.name} | \`${failure.entry.id}\` | ${failure.error.replace(/\|/g, '\\|')} |`);
+  const row = (result) => `| ${result.entry.name} | \`${result.entry.id}\` | ${result.error.replace(/\|/g, '\\|')} |`;
   await appendFile(summary, [
-    `## Source health: ${results.length - failures.length}/${results.length} passed`,
+    `## Source health: ${passed}/${results.length} passed`,
     '',
     ...(failures.length
-      ? ['| Source | Id | Failure |', '| --- | --- | --- |', ...rows, '', 'Check each by hand before removing it (sites go down for a day; Cloudflare checks come and go). Removed sites go in REMOVED.md.']
-      : ['Every source loaded a list, a title, a chapter and a page image.']),
-    '',
+      ? ['### Failed', '', '| Source | Id | Failure |', '| --- | --- | --- |', ...failures.map(row), '',
+        'Check each by hand before removing it (sites go down for a day). Removed sites go in REMOVED.md.', '']
+      : ['Every source that could be reached loaded a list, a title, a chapter and a page image.', '']),
+    ...(blocked.length
+      ? ['### Couldn’t check (browser check)', '',
+        'These answered with a Cloudflare browser check, which sites show to servers like this one far more often than to phones. They don’t fail the run.', '',
+        ...blocked.map((result) => `- ${result.entry.name} (\`${result.entry.id}\`)`), '']
+      : []),
   ].join('\n'));
 }
 process.exitCode = failures.length ? 1 : 0;
