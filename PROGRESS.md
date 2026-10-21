@@ -2,6 +2,14 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: Version check in CI
+
+- `tools/check-versions.mjs` (`npm run check-versions`; a step after the build in `publish.yml`) compares `dist/index.json` with the published index. It fails when a source's SHA-256 changed but its version didn't, or when a version went down. New and removed sources pass.
+  - A query string gets past GitHub Pages' cache, so a second push soon after a first is compared with the first.
+  - A 404 (nothing published yet) passes. Any other failure to read the index fails, so nothing ships unchecked.
+- Checked against the live index: the current build passes (102 sources, nothing changed). Touching `themes/comici.js` without a bump failed all 27 Comici sources with exit 1. With `@version` bumped, it passed.
+- Limit: if a push lands while the previous deploy is still running (the workflow cancels in-progress runs), the comparison is with the index before that one.
+
 ## 2026-10-21: Keyoapp (13 English sites)
 
 - **Template:** `themes/keyoapp.js`, ported from Keiyoushi's `lib-multisrc/keyoapp` (Apache-2.0, credited in `NOTICE`). It covers the three versions of the site software in use, chosen per site with `variant`:

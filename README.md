@@ -43,9 +43,10 @@ The build writes `var SITE = { id, name, lang, ...config };` above the template,
 npm test          # recorded responses, no network
 npm run smoke     # build, then try every source against the live site
 npm run build     # dist/ only
+npm run check-versions   # build, then fail if a source's file changed but its version didn't (vs the published index)
 ```
 
-Pushing to `main` tests, builds and publishes `dist/` to GitHub Pages (`.github/workflows/publish.yml`).
+Pushing to `main` tests, builds, checks versions against the published index, and publishes `dist/` to GitHub Pages (`.github/workflows/publish.yml`). A source whose built file changed needs a higher version (the template's `// @version` or the site entry's `version`), or the publish stops: installs only update when the version does.
 
 ## The source contract
 
