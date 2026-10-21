@@ -1,0 +1,47 @@
+{
+ "success": true,
+ "data": {
+  "chapters": [
+   {
+    "chapter_name": "Chapter 200",
+    "chapter_slug": "chapter-200",
+    "chapter_num": 200,
+    "updated_at": "2025-09-20T14:03:09.000000Z",
+    "view": 951638
+   },
+   {
+    "chapter_name": "Chapter 199",
+    "chapter_slug": "chapter-199",
+    "chapter_num": 199,
+    "updated_at": "2025-09-20T14:02:55.000000Z",
+    "view": 552379
+   },
+   {
+    "chapter_name": "Chapter 198",
+    "chapter_slug": "chapter-198",
+    "chapter_num": 198,
+    "updated_at": "2025-09-20T14:02:37.000000Z",
+    "view": 494968
+   },
+   {
+    "chapter_name": "Chapter 198",
+    "chapter_slug": "chapter-198-1",
+    "chapter_num": 198,
+    "updated_at": "2025-09-20T14:02:37.000000Z",
+    "view": 494968
+   },
+   {
+    "chapter_name": "Chapter 0",
+    "chapter_slug": "chapter-0",
+    "chapter_num": 0,
+    "updated_at": "2025-09-20T13:16:07.000000Z",
+    "view": 2254990
+   }
+  ],
+  "pagination": {
+   "total": 258,
+   "limit": -1,
+   "offset": 0
+  }
+ }
+}
