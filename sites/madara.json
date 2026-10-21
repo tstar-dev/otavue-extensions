@@ -1,0 +1,329 @@
+[
+  {
+    "id": "madara.anisascans",
+    "name": "Anisa Scans",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://anisascans.in",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.cocomic",
+    "name": "Cocomic",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://cocomic.co",
+      "adult": true,
+      "selectors": {
+        "chapter": "li.wp-manga-chapter:not(.premium)"
+      }
+    }
+  },
+  {
+    "id": "madara.decadencescans",
+    "name": "Decadence Scans",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://reader.decadencescans.com",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.galaxydegenscans",
+    "name": "GalaxyDegenScans",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://gdscans.com",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.gourmetscans",
+    "name": "Gourmet Scans",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://gourmetsupremacy.com",
+      "mangaPath": "project",
+      "genrePath": "genre",
+      "ajaxTemplate": "wp-manga/content/content-archive",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.hunlightcomics",
+    "name": "Hunlight Comics",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://hunlightcomics.com",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.jinmangas",
+    "name": "Jinmangas",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mangafree.info",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.wearehunger",
+    "name": "KokoMangas",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://kokomangas.com",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.ksgroupscans",
+    "name": "KSGroupScans",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://ksgroupscans.com",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.lhtranslation",
+    "name": "LHTranslation",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://lhtranslation.net"
+    }
+  },
+  {
+    "id": "madara.lilymanga",
+    "name": "Lily Manga",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://lilymanga.net",
+      "mangaPath": "gl",
+      "genrePath": "gl-genre",
+      "browse": "archive",
+      "dateFormat": "dd.MM.yyyy",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.linkmanga",
+    "name": "LinkManga",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://linkmanga.com",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.lovesjanescans",
+    "name": "Lovesjane Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://lovesjane.site",
+      "chapters": "paged"
+    }
+  },
+  {
+    "id": "madara.mangadistrict",
+    "name": "Manga District",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mangadistrict.com",
+      "mangaPath": "series",
+      "genrePath": "publication-genre",
+      "browse": "archive",
+      "adult": true,
+      "selectors": {
+        "next": ".wp-pagenavi a.last",
+        "chapterDate": ".chapter-release-date .timediff",
+        "pages": "div.page-break img:not(noscript img):not(#image-99999)"
+      }
+    }
+  },
+  {
+    "id": "madara.mangaeclipse",
+    "name": "Manga Eclipse",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mangaeclipse.com"
+    }
+  },
+  {
+    "id": "madara.mangareadorg",
+    "name": "MangaRead.org",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://www.mangaread.org",
+      "dateFormat": "dd.MM.yyy",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.mangasushi",
+    "name": "Mangasushi",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mangasushi.org"
+    }
+  },
+  {
+    "id": "madara.manhuaplus",
+    "name": "Manhua Plus",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manhuaplus.com",
+      "mangaOnly": false,
+      "selectors": {
+        "pages": ".read-container img"
+      }
+    }
+  },
+  {
+    "id": "madara.manhuanext",
+    "name": "Manhuanext",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manhuanext.com",
+      "selectors": {
+        "chapter": "li.wp-manga-chapter:not(.premium-block)"
+      }
+    }
+  },
+  {
+    "id": "madara.manhwareads",
+    "name": "Manhwa Reads",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manhwareads.com",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.manhwanex",
+    "name": "ManhwaNex",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manhwanex.com"
+    }
+  },
+  {
+    "id": "madara.s2manga",
+    "name": "S2Manga",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://s2read.com",
+      "adult": true
+    }
+  },
+  {
+    "id": "madara.sleepytranslations",
+    "name": "Sleepy Translations",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://sleepytranslations.com"
+    }
+  },
+  {
+    "id": "madara.toonizy",
+    "name": "Toonizy",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://toonizy.com",
+      "mangaPath": "webtoon",
+      "dateFormat": "MMM d, yy",
+      "adult": true,
+      "selectors": {
+        "title": ".post-content h3"
+      }
+    }
+  },
+  {
+    "id": "madara.topmanhuafan",
+    "name": "TopManhua.fan",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://www.topmanhua.fan",
+      "mangaPath": "manhua",
+      "browse": "archive",
+      "dateFormat": "MM/dd/yyyy",
+      "adult": true,
+      "imageReferer": "site",
+      "selectors": {
+        "chapter": "div.wp-manga-chapter"
+      }
+    }
+  },
+  {
+    "id": "madara.tritiniascans",
+    "name": "TritiniaScans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://tritinia.org"
+    }
+  },
+  {
+    "id": "madara.wuxiaworld",
+    "name": "WuxiaWorld",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://wuxiaworld.site",
+      "mangaPath": "novel"
+    }
+  }
+]

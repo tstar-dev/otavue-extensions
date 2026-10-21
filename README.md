@@ -19,6 +19,7 @@ Install a source from the list, then find it under the Search tab → **Sources*
 | MangaDex | English | [MangaDex](https://mangadex.org), through its public API. Only titles rated safe or suggestive. Licensed titles often have no chapters here (MangaDex links to the publisher instead); their page says so. |
 | Shōnen Jump+, Comic Days, Tonari no Young Jump and 16 more | Japanese | Japanese publishers' own readers on GigaViewer: free chapters only (usually the first few and the latest), since Otavue doesn't sign in. Some sites serve pages as shuffled tiles; Otavue puts them back together. Kurage Bunch and Sunday Web Every are marked 18+ (some of their series are). |
 | TakeComic, Young Animal, Champion Cross and 24 more | Japanese | Japanese publishers' readers on Comici: free chapters only. Every page comes as shuffled tiles, which Otavue puts back together. Titles the publisher marks for adults are left out of search; the 8 sites with some adult series are marked 18+. |
+| Mangasushi, Gourmet Scans, Sleepy Translations and 24 more | English | Scanlation and reader sites on Madara (WordPress). Locked (coin) chapters and chapters that only link out (Patreon) are left out. On sites not marked 18+, titles the site flags as adult are left out too; the 17 sites with adult series are marked 18+. Sites behind a Cloudflare check on every request, or that were down, are held back in [REMOVED.md](REMOVED.md). |
 
 ## How it's built
 
@@ -49,6 +50,7 @@ Sources are plain scripts whose top-level functions Otavue calls (`popular({ pag
 ## Adding a site
 
 1. If its software already has a template, add an entry to `sites/<template>.json` and run `npm run smoke -- <id>`.
+   Madara sites take options in `config` (path names, date format, selector overrides): see the top of `themes/madara.js`.
 2. Otherwise write a template in `themes/` with recorded fixtures and tests.
 3. Sites must be up, not 18+ unless marked `"nsfw": true` (Otavue hides those until the user turns on 18+), and preferably the site's own scanlation group rather than a re-host. Sites that ask to be removed go in [REMOVED.md](REMOVED.md).
 
