@@ -1,10 +1,10 @@
 Otavue Extensions
 
-themes/gigaviewer.js, themes/comici.js, themes/madara.js, themes/mangathemesia.js, themes/keyoapp.js, themes/heancms.js, themes/mangacatalog.js, themes/iken.js, themes/yiimanga.js, themes/vinetheme.js, themes/guya.js, themes/mangabox.js, themes/foolslide.js, themes/mangataro.js (with the helpers
+themes/gigaviewer.js, themes/comici.js, themes/madara.js, themes/mangathemesia.js, themes/keyoapp.js, themes/heancms.js, themes/mangacatalog.js, themes/iken.js, themes/yiimanga.js, themes/vinetheme.js, themes/guya.js, themes/mangabox.js, themes/foolslide.js, themes/mangataro.js, themes/mangadventure.js (with the helpers
 they share in lib/html.js) and their sites/*.json lists are ported from Keiyoushi's extensions (https://github.com/keiyoushi/extensions-source:
 lib-multisrc/gigaviewer, lib-multisrc/comiciviewer, lib-multisrc/madara,
 lib-multisrc/mangathemesia, lib-multisrc/keyoapp,
-lib-multisrc/heancms, lib-multisrc/mangacatalog, lib-multisrc/iken, lib-multisrc/yiimanga, lib-multisrc/vinetheme, lib-multisrc/guya, lib-multisrc/mangabox, lib-multisrc/foolslide, lib-multisrc/mangataro and the sources built on them), licensed under the Apache License 2.0,
+lib-multisrc/heancms, lib-multisrc/mangacatalog, lib-multisrc/iken, lib-multisrc/yiimanga, lib-multisrc/vinetheme, lib-multisrc/guya, lib-multisrc/mangabox, lib-multisrc/foolslide, lib-multisrc/mangataro, lib-multisrc/mangadventure and the sources built on them), licensed under the Apache License 2.0,
 which in turn continue the Tachiyomi and Mihon projects' extensions.
 
 themes/mangadex.js is written from MangaDex's public API documentation

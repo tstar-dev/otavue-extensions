@@ -2,6 +2,15 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: MangAdventure (2 sources)
+
+- **New template** `themes/mangadventure.js`, ported from Keiyoushi's `lib-multisrc/mangadventure`: `/api/v2/series` (sort `-views` for Popular, `-latest_upload` for Latest; search and filters by title, author, artist, status, sort and categories), `/api/v2/series/<slug>` and `/chapters`, and `/api/v2/chapters/<id>/pages`. The chapter's API id rides after `#` on its reader link.
+  - Licensed series get a note at the start of the description. Final chapters are marked "[END]", as Keiyoushi does.
+  - Left out: `?track=true` on the pages request, which only counts views.
+- **Sites:** Arc-Relight (with its own category list) and Assorted Scans.
+- **Test quirk met again:** a series has its own `status` field, so its fixture is wrapped as `{ status: 200, body }` for `fakeFetch`.
+- 153 tests. Live check: 2 of 2 passed. 172 sources, 51 marked 18+.
+
 ## 2026-10-21: MangaTaro (2 sources, 1 18+)
 
 - **New template** `themes/mangataro.js`, ported from Keiyoushi's `lib-multisrc/mangataro`:

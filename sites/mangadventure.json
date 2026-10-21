@@ -1,0 +1,40 @@
+[
+  {
+    "id": "mangadventure.arcrelight",
+    "name": "Arc-Relight",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://arc-relight.com",
+      "categories": [
+        "4-Koma",
+        "Chaos;Head",
+        "Collection",
+        "Comedy",
+        "Drama",
+        "Jubilee",
+        "Mystery",
+        "Psychological",
+        "Robotics;Notes",
+        "Romance",
+        "Sci-Fi",
+        "Seinen",
+        "Shounen",
+        "Steins;Gate",
+        "Supernatural",
+        "Tragedy"
+      ]
+    }
+  },
+  {
+    "id": "mangadventure.assortedscans",
+    "name": "Assorted Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://assortedscans.com"
+    }
+  }
+]
