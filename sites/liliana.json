@@ -1,0 +1,12 @@
+[
+  {
+    "id": "liliana.manhuaplusorg",
+    "name": "ManhuaPlus (manhuaplus.org)",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manhuaplus.org"
+    }
+  }
+]
