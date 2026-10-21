@@ -1,0 +1,13 @@
+{
+  "name": "otavue-extensions",
+  "private": true,
+  "description": "Sources for Otavue, built from shared site templates.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node build/build.mjs",
+    "test": "node --test 'tests/*.test.mjs'",
+    "smoke": "node build/build.mjs && node tools/smoke.mjs"
+  }
+}
