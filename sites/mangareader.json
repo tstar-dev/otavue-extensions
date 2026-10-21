@@ -1,0 +1,12 @@
+[
+  {
+    "id": "mangareader.manganow",
+    "name": "MangaNow",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://manganow.to"
+    }
+  }
+]

@@ -2,6 +2,16 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: MangaReader (1 source, 18+)
+
+- **New template** `themes/mangareader.js`, ported from Keiyoushi's `lib-multisrc/mangareader` and `src/en/manganow`: `/filter/?sort=` for Popular (`most-viewed`) and Latest (`latest-updated`) and for filters (type, status, score, year as `sy`, sort, genres joined by commas, with MangaNow's ids), `/search?keyword=`, the title page (`#ani_detail`), its `#en-chapters` list, and pages from `/ajax/image/list/<reading id>?mode=vertical` (sent as XHR, with the chapter as Referer).
+  - **The chapter list has no ids or dates**, only `data-number`. The reading id comes from the chapter page's `div[data-reading-id]`, one extra request per chapter read. A link that already carries `#<id>` skips it.
+  - **Pages are hot-linked from mangaread.org**, which answers 403 to MangaNow as Referer but takes its own address (or none). Each page is sent with its image host's origin as Referer. Keiyoushi sends the image's own URL; Otavue uses the first page's headers for all of them, so the origin is the safe choice. The first card is MangaNow's banner (`manganow.jpg`) and is left out.
+  - The image list answers 202 with JSON that has its own `status` field (wrapped in the test, as before).
+  - Descriptions lose the site's "A brief description of the manga X:" prefix.
+- **Site:** MangaNow (manganow.to), an aggregator, marked MIXED by Keiyoushi (its genres include Smut and Mature), so 18+ here. This library's other Keiyoushi sites (Jmanga, KL Raw, Manga Mura, Raw Otaku) are Japanese raws, outside the English pass.
+- 196 tests. Live check: 1 of 1 passed. 182 sources, 57 marked 18+.
+
 ## 2026-10-21: YiiMadara (2 sources, 18+)
 
 - **New template** `themes/yiimadara.js`, ported from Keiyoushi's `lib-multisrc/yiimadara` (Yii2 sites that copy Madara's markup): `/<catalogue>/<n>?orderby=` lists (trending for Popular, none for Latest), `/search?q=&page=`, genre and category pages, the title page's info rows and chapter list, and `.read-content` images. Genres come live from the home page's `genre/` links. Config: `mangaPath`, `directoryPath`, `completedPath`, `rawPath`, `showRaws`, `catalogPaging`.
