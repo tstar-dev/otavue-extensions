@@ -27,6 +27,8 @@ jobs:
           node-version: 22
       - run: npm test
       - run: npm run build
+      # A built file that differs from the published one needs a new version, or installs won't update.
+      - run: node tools/check-versions.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
