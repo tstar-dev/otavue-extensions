@@ -2,6 +2,19 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: GoDa (1 source, 18+)
+
+- **New template** `themes/goda.js`, ported from Keiyoushi's `lib-multisrc/goda`: `/hots/page/<n>` for Popular, `/newss/page/<n>` for Latest, `/s/<query>?page=<n>` for search, a genre and tag filter (`/manga-genre/…`, `/manga-tag/…`, from the site's list), the title page, `/manga/get?mid=<id>&mode=all` for chapters and `/chapter/getcontent?m=<id>&c=<chapter>` for pages.
+  - **Cloudflare blocks `/manga/get` ("Attention Required") unless the site is the `Referer`**, and the image host (`chapt.top`) answers 403 without it. Every request sends it.
+  - Chapter links carry `#<series id>/<chapter id>`. A link without them reads the ids from the reader page.
+  - The reader's first image is often the site's "read it at mgsearcher" banner (`/offer/`); it's left out.
+  - Chapter dates have no year ("Sep 12"): this year, or last year if that's still ahead. Older chapters all carry the day the site imported them.
+  - A few slugs are too long for Otavue's 150 bytes. Those are cut at a word, with the full slug's length after `#`, and search finds the whole slug again (checked live on one 183-character slug).
+  - An empty page past the end still shows a NEXT button, so "more" also needs titles on the page.
+- **Site:** Goda (manhuascans.org), a re-host. Keiyoushi marks it safe, but it has ecchi and "mature" series, so it's 18+ here.
+- **The single-site templates, recounted** (English sites in Keiyoushi): Goda, Hiperdex (its own code), MangaK, Manga Dass (YiiMadara), MangaNow (MangaReader), ManhuaPlus (Liliana) and XOXO Comics (WPComics) are up. ManhwaHub (ManhwaZ) doesn't answer, and Read Comics Online (MMRCMS) is behind a Cloudflare check.
+- 172 tests. Live check: 1 of 1 passed. 177 sources, 52 marked 18+.
+
 ## 2026-10-21: Bakkin Reader X (1 source)
 
 - **New template** `themes/bakkin.js`, ported from Keiyoushi's `lib-multisrc/bakkin`: the whole library is `main.php` (series → volumes → chapters → page paths), compressed images as Keiyoushi's default. Reader links are `<site>#m=<series>&v=<volume>&c=<chapter>`. There's no Latest or next page.
