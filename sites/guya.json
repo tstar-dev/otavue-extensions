@@ -1,0 +1,68 @@
+[
+  {
+    "id": "guya.guya",
+    "name": "Guya",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://guya.cubari.moe"
+    }
+  },
+  {
+    "id": "guya.dankefurslesen",
+    "name": "Danke fürs Lesen",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://danke.moe"
+    }
+  },
+  {
+    "id": "guya.hachirumi",
+    "name": "Hachirumi",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://hachirumi.com"
+    }
+  },
+  {
+    "id": "guya.magicaltranslators",
+    "name": "Magical Translators",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mahoushoujobu.com",
+      "skipSuffixes": [
+        "-ES",
+        "-PL"
+      ]
+    }
+  },
+  {
+    "id": "guya.magicaltranslators.es",
+    "name": "Magical Translators (Español)",
+    "lang": "es",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mahoushoujobu.com",
+      "onlySuffix": "-ES"
+    }
+  },
+  {
+    "id": "guya.magicaltranslators.pl",
+    "name": "Magical Translators (Polski)",
+    "lang": "pl",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://mahoushoujobu.com",
+      "onlySuffix": "-PL"
+    }
+  }
+]
