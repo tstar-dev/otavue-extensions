@@ -1,0 +1,30 @@
+{
+ "data": [
+  {
+   "id": 498,
+   "slug": "4190634673-eleceed",
+   "title": "Eleceed",
+   "cover": "https://media.qimanhwa.com/file/qiscans/upload/2026/04/28/1777389617457-l8Rwb5-19274.webp",
+   "type": "MANHWA",
+   "status": "ONGOING"
+  },
+  {
+   "id": 482,
+   "slug": "4190634673-cong-da-shu-kaishi-de-jinhuatrashed",
+   "title": "Evolution From a Tree",
+   "cover": "https://media.qimanhwa.com/file/qiscans/upload/upload/2025/08/25/79151139-556b-4927-a85e-079ddb4aa398.webp",
+   "type": "MANHUA",
+   "status": "ONGOING"
+  },
+  {
+   "id": 122,
+   "slug": "unrivaled-spear-demon",
+   "title": "Unrivaled Spear Demon",
+   "cover": "https://media.qimanga.com/file/qiscans/upload/2026/10/04/1791127323805-ebihQa-93777.webp",
+   "type": "NOVEL",
+   "status": "ONGOING"
+  }
+ ],
+ "totalPages": 51,
+ "current": 1
+}

@@ -1,0 +1,24 @@
+{
+ "images": [
+  {
+   "url": "https://media.qimanga.com/file/qiscans/upload/series/4190634673-eleceed/h9bw2BAoFq/oArPmR/02.webp",
+   "order": 2,
+   "width": 800,
+   "height": 13010
+  },
+  {
+   "url": "https://media.qimanga.com/file/qiscans/upload/series/4190634673-eleceed/QS78RHw_T0/IDkWi9/01.webp",
+   "order": 1,
+   "width": 800,
+   "height": 14435
+  },
+  {
+   "url": "https://media.qimanga.com/file/qiscans/upload/series/4190634673-eleceed/GuHwGl0KGi/PXXiFK/00.webp",
+   "order": 0,
+   "width": 800,
+   "height": 14375
+  }
+ ],
+ "requiresPurchase": false,
+ "totalImages": 3
+}
