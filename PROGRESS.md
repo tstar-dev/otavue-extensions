@@ -2,6 +2,13 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: XOXO Comics held back; the single-site templates are done
+
+- **XOXO Comics (WPComics) is not added: broken images.** Lists (`/hot-comic`, `/comic-update`, `/search-comic`), title pages and issue lists (50 a page, `?page=`) all work. But most issues' page images (`/comic/<series>/issue-<n>/<id>/<page>.jpg`, from the `/all` reader) answer with the site's "404 Not Found" HTML page, with status 200. In 18 sampled issues across old and new series, 3 had images (older uploads such as Justice League: Darkseid War: Batman #1, Batman (2016) #50, The Amazing Spider-Man (2018) #1). Checked in the built-in browser too, with the site's own cookies: same answers, so it isn't a block on scripts. Keiyoushi's note that "404 is returned even when the image is found" no longer matches what the site does. Notes for a later port: issues are "Issue #N" (the shared `numberOf` doesn't read that), annuals and specials sit among them, `?page=1` redirects to the bare address, and reader attributes are single-quoted (read images from the raw HTML, as in YiiMadara). A missing title answers a 404 page with status 200.
+- **Also held back:** Read Comics Online (MMRCMS; Cloudflare check on every request) and ManhwaHub (ManhwaZ; the TLS connection is dropped).
+- **The single-site templates with English sites are done:** GoDa, Hiper, MangaK, YiiMadara (2 sites), MangaReader and Liliana (7 sources). What's left in Keiyoushi for English is the ~138 standalone sources, one site each.
+- No change to the published sources: 183, 57 marked 18+.
+
 ## 2026-10-21: Liliana (1 source)
 
 - **New template** `themes/liliana.js`, ported from Keiyoushi's `lib-multisrc/liliana`: `/ranking/week/<n>` for Popular (42 a page), `/all-manga/<n>/?sort=last_update&status=0` for Latest, `/search/<n>/?keyword=`, `/filter/<n>/?genres=&notGenres=&chapter_count=&status=&sex=&sort=`, the title page, and pages from `/ajax/image/list/chap/<CHAPTER_ID>` (the id is a `const` in the chapter page's script; sent as XHR with the chapter as Referer).
