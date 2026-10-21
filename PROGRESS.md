@@ -2,6 +2,26 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: Keyoapp (13 English sites)
+
+- **Template:** `themes/keyoapp.js`, ported from Keiyoushi's `lib-multisrc/keyoapp` (Apache-2.0, credited in `NOTICE`). It covers the three versions of the site software in use, chosen per site with `variant`:
+  - **classic** (8 sites):
+    - Popular shows the home page's featured titles first, then the rest of `/series/`. The home page has no "Popular" section any more, and `/series/` holds every title.
+    - Latest comes from `/latest/`.
+    - Search and filters run over the `/series/` list here, the way the site's own page does it (title, type, status, genres from each entry's `tags`). Genres come from the `initializeDropdownMenu` script.
+    - Pages are `#pages > img[uid]` filled into the page's `realUrl` template.
+  - **search** (the Livewire redesign; Art Lapsa, Rithar Scans):
+    - Popular and search come from `/search?sort=…&page=N`, and latest from `/latest?page=N`.
+    - Pages come from `immersiveReader({ pages: JSON.parse('…') })`, decoded as a JS string literal. Each page's width and height are passed on to Otavue.
+  - **v2** (Asmodeus Scans, Luna Toons, Siren Scans):
+    - Popular and search use `?_ajax=search` (`{ html, has_more }`, 20 per page), and latest uses `?_ajax=recent-chapters`.
+    - Chapters come from `?_chapters_html=1&series_slug=` (`data-ch-locked` marks locked rows). The slug is `data-series-slug`; `data-series-uid` is a different id.
+    - Pages come from `#strip-reader img.reader-page`.
+- **Rules applied:** coin chapters, "Upcoming" chapters and novels are left out. Novels are found by `data-type`, a "Novel" label, or "[Novel]" in the title, which is all the home carousel shows. V2 titles whose link is longer than 150 bytes are dropped, since there's no short id to fall back on.
+- **Shared code:** `lib/html.js` gained `:containsOwn()`. Because that changes every built Madara and MangaThemesia file, those templates went to 1.0.2 and 1.0.1. A change to `lib/` needs a version bump in every template that includes it (README says so).
+- **Sites:** 13 of Keiyoushi's 15 English Keyoapp sites that aren't adult-only. All pass the live check, with search results and filters (genres included) on each. Held back in `REMOVED.md`: MeiToon (Cloudflare) and Nyra Scans (not reachable). All 55 Madara, MangaThemesia and Keyoapp sites passed one more live check after the version bumps.
+- **Not checked on the device yet.**
+
 ## 2026-10-21: MangaThemesia (15 English sites)
 
 - **Template:** `themes/mangathemesia.js`, ported from Keiyoushi's `lib-multisrc/mangathemesia` (Apache-2.0, credited in `NOTICE`).

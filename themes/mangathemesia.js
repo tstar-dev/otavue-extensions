@@ -9,7 +9,7 @@
 //   adult         keep titles with an 18+ label (false)   selectors   overrides for SELECTORS below
 //
 // @theme mangathemesia
-// @version 1.0.0
+// @version 1.0.1
 // @type manga
 
 var BASE = String(SITE.baseUrl).replace(/\/+$/, '');
