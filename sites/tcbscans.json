@@ -1,0 +1,12 @@
+[
+  {
+    "id": "tcbscans.tcbscans",
+    "name": "TCB Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://tcbonepiecechapters.com"
+    }
+  }
+]
