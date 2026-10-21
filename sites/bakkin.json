@@ -1,0 +1,12 @@
+[
+  {
+    "id": "bakkin.bakkin",
+    "name": "Bakkin",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://bakkin.moe/reader/"
+    }
+  }
+]

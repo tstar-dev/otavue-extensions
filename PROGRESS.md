@@ -2,6 +2,15 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: Bakkin Reader X (1 source)
+
+- **New template** `themes/bakkin.js`, ported from Keiyoushi's `lib-multisrc/bakkin`: the whole library is `main.php` (series → volumes → chapters → page paths), compressed images as Keiyoushi's default. Reader links are `<site>#m=<series>&v=<volume>&c=<chapter>`. There's no Latest or next page.
+  - **Numbering:** chapter folders are `c012`; covers, bonus chapters (`zbt001`) and afterwords have other names. Otavue wants one chapter per number, so where a series' numbers don't repeat, extras take the number just after the chapter before them (12.01, 12.02, …) and nothing is lost (Yuru Yuri: all 277 entries). The "Misc" collection's numbers repeat (each anthology starts again), so it's numbered in reading order (69 entries). Keiyoushi numbers extras -1.
+  - The description is the latest release and, where given, where to buy the series.
+- **Site:** Bakkin. "Bakkin Self-hosted" (an address you'd set yourself) is left out.
+- **All six two-site templates are done:** FoOlSlide 5, MangaTaro 2, MangAdventure 2, EZManhwa 2, Monochrome 1, Bakkin 1 (13 sources).
+- 166 tests. Live check: 1 of 1 passed. 176 sources, 51 marked 18+.
+
 ## 2026-10-21: MonochromeCMS (1 source)
 
 - **New template** `themes/monochrome.js`, ported from Keiyoushi's `lib-multisrc/monochrome`: the API at `api.<site>`, `/manga?limit=10&offset=&title=` for lists and search, `/manga/<id>` and `/manga/<id>/chapters`. There's no Latest.
