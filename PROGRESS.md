@@ -2,6 +2,16 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: MangaBox (2 sources, both 18+)
+
+- **New template** `themes/mangabox.js`, ported from Keiyoushi's `lib-multisrc/mangabox`: hot and latest lists (`/manga-list/hot-manga`, `/latest-manga`), genre pages with the site's sort/status filter ids (`/genre/<slug>?filter=1…9`) and Keiyoushi's 170-genre list, title pages, chapters from `/api/manga/<slug>/chapters?limit=-1`, and pages from the reader's script (`cdns` + `chapterImages`, with the `<img>` list as a fallback).
+  - **Search:** `/search/story/<words>` is behind a Cloudflare check on every request on all three sites, so search uses the header's quick-search JSON, `/home/search/json?searchword=` (up to 20 titles, words written as the site's `change_alias()` does). Keiyoushi uses the challenged page.
+  - Page images and covers need the site as `Referer` (403 without). The image server is shared by all three domains.
+  - Left out: Keiyoushi's optional merging of split images and its CDN fallback (only one CDN is listed now).
+- **Sites:** Mangabat (www.mangabats.com) and Mangakakalot (www.mangakakalove.com), both 18+ (Keiyoushi marks them MIXED). They, and Manganato, are one aggregator with the same catalogue and ids. Keiyoushi's first Manganato and Mangakakalot domains challenge every request; these are the mirrors that don't.
+- **Held back:** Manganato (manganato.gg): everything works but search, whose JSON is challenged too. In `REMOVED.md`.
+- 137 tests. Live check: 2 of 2 passed (Manganato blocked on search). 163 sources, 50 marked 18+.
+
 ## 2026-10-21: Guya (6 sources, 2 18+)
 
 - **Which template next:** every site's `build.gradle.kts` in Keiyoushi was counted by `theme`, English and not NSFW. After the ones done, the largest left are Guya and MangaBox (3 each by that count), then foolslide, monochrome, mangataro, mangadventure, ezmanhwa and bakkin (2 each); 138 English sites are standalone sources with no template. Guya won the tie: its sites are groups' own readers, and it has a fourth site (Magical Translators) that sets its language in code, which the count missed.

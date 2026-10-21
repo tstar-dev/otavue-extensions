@@ -1,0 +1,22 @@
+[
+  {
+    "id": "mangabox.mangabat",
+    "name": "Mangabat",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://www.mangabats.com"
+    }
+  },
+  {
+    "id": "mangabox.mangakakalot",
+    "name": "Mangakakalot",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://www.mangakakalove.com"
+    }
+  }
+]
