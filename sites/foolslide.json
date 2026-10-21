@@ -1,0 +1,57 @@
+[
+  {
+    "id": "foolslide.deathtollscans",
+    "name": "Death Toll Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://reader.deathtollscans.net"
+    }
+  },
+  {
+    "id": "foolslide.mangatellers",
+    "name": "Mangatellers",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://reader.mangatellers.gr"
+    }
+  },
+  {
+    "id": "foolslide.menudofansub",
+    "name": "Menudo-Fansub",
+    "lang": "es",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://www.menudo-fansub.com",
+      "path": "/slide"
+    }
+  },
+  {
+    "id": "foolslide.nifteam",
+    "name": "NIFTeam",
+    "lang": "it",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://read-nifteam.info",
+      "path": "/slide"
+    }
+  },
+  {
+    "id": "foolslide.juinjutsuteamreader",
+    "name": "Juin Jutsu Team Reader",
+    "lang": "it",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://www.juinjutsureader.ovh",
+      "popular": "latest",
+      "search": "latest",
+      "skipBare": true
+    }
+  }
+]
