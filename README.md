@@ -33,6 +33,7 @@ Install a source from the list, then find it under the Search tab → **Sources*
 | Monochrome Scans | English | The group's own MonochromeCMS reader (a JSON API). |
 | Bakkin | English | The group's own Bakkin Reader X (Yuru Yuri and others): the whole library is one JSON file. Covers, bonus chapters and afterwords are kept. |
 | Goda | English | A re-host reader (GoDa, at manhuascans.org) of manga, manhwa and manhua from other sites. Marked 18+, as it carries some ecchi and mature series. Its own "read it at …" banner page is left out of chapters. |
+| Hiperdex | English | Hiperdex's own reader (a JSON API). Mostly adult manhwa, with about a quarter of its titles rated safe or suggestive; marked 18+. Search filters by content rating, type, status and genre. Novels and scheduled chapters are left out. |
 | Lua Scans | English | Lua Scans' own reader (HeanCMS, a JSON API). Free chapters only; paid and scheduled ones are left out. |
 | Read One Piece, Read Berserk, Read Kingdom and 8 more | English | Single-franchise reader sites on MangaCatalog: each lists its series and spin-offs (One Piece, Attack on Titan, Berserk, Fairy Tail, Jujutsu Kaisen, Kingdom, Seven Deadly Sins, One-Punch Man, Solo Leveling, Tokyo Ghoul, Tower of God), with no search of its own, so search filters that list. Novels are left out. |
 | Eris Scans, Siren Scans, Rithar Scans and 10 more | English | Scanlation groups on Keyoapp, in all three of its versions. Coin chapters, upcoming chapters and novels are left out. The 3 sites with adult series are marked 18+. |

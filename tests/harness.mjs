@@ -27,9 +27,9 @@ export function fakeFetch(routes) {
     const route = routes.find(([test]) => test(new URL(url)));
     if (!route) throw new Error(`No fixture for ${url}`);
     const answer = typeof route[1] === 'function' ? await route[1](new URL(url)) : route[1];
-    const { status = 200, body } = answer && typeof answer === 'object' && 'status' in answer ? answer : { body: answer };
+    const { status = 200, body, headers = {} } = answer && typeof answer === 'object' && 'status' in answer ? answer : { body: answer };
     const text = typeof body === 'string' ? body : JSON.stringify(body);
-    return { ok: status >= 200 && status < 300, status, body: text, text: async () => text, json: async () => JSON.parse(text) };
+    return { ok: status >= 200 && status < 300, status, headers, body: text, text: async () => text, json: async () => JSON.parse(text) };
   };
   return { fetchImpl, requests };
 }

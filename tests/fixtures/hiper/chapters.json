@@ -1,0 +1,80 @@
+[
+ {
+  "result": {
+   "data": {
+    "json": [
+     {
+      "id": 999003,
+      "seriesId": 8248,
+      "number": 202,
+      "title": "Side Story END",
+      "status": "published",
+      "isDeleted": false,
+      "releaseAt": "2099-01-01T00:00:00.000Z",
+      "createdAt": "2026-02-04T04:38:23.000Z"
+     },
+     {
+      "id": 999002,
+      "seriesId": 8248,
+      "number": 201,
+      "title": "Side Story END",
+      "status": "draft",
+      "isDeleted": false,
+      "releaseAt": null,
+      "createdAt": "2026-02-04T04:38:23.000Z"
+     },
+     {
+      "id": 316673,
+      "seriesId": 8248,
+      "number": 200,
+      "title": "Side Story END",
+      "status": "published",
+      "isDeleted": false,
+      "releaseAt": null,
+      "createdAt": "2026-02-04T04:38:23.000Z"
+     },
+     {
+      "id": 316672,
+      "seriesId": 8248,
+      "number": 199,
+      "title": null,
+      "status": "published",
+      "isDeleted": false,
+      "releaseAt": null,
+      "createdAt": "2026-02-04T04:38:21.000Z"
+     },
+     {
+      "id": 316482,
+      "seriesId": 8248,
+      "number": 1,
+      "title": null,
+      "status": "published",
+      "isDeleted": false,
+      "releaseAt": null,
+      "createdAt": "2026-02-04T04:31:13.000Z"
+     },
+     {
+      "id": 316481,
+      "seriesId": 8248,
+      "number": 0,
+      "title": null,
+      "status": "published",
+      "isDeleted": false,
+      "releaseAt": null,
+      "createdAt": "2026-02-04T04:31:12.000Z"
+     },
+     {
+      "id": 999001,
+      "seriesId": 8248,
+      "number": 200,
+      "title": "Side Story END",
+      "status": "published",
+      "isDeleted": false,
+      "releaseAt": null,
+      "createdAt": "2026-02-04T04:38:23.000Z"
+     }
+    ]
+   }
+  }
+ }
+]

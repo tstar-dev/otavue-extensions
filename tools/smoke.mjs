@@ -31,7 +31,10 @@ async function bridgeFetch(url, opts = {}) {
     throw new Error(REFUSED.has(code) ? `connection refused or reset (${code})` : `${error.message}${code ? ` (${code})` : ''}`);
   });
   const text = await res.text();
-  return { ok: res.ok, status: res.status, url: res.url, body: text, text: async () => text, json: async () => JSON.parse(text) };
+  // Otavue hands sources the response headers with lower-case names.
+  const headers = {};
+  res.headers.forEach((value, name) => { headers[name.toLowerCase()] = value; });
+  return { ok: res.ok, status: res.status, url: res.url, headers, body: text, text: async () => text, json: async () => JSON.parse(text) };
 }
 
 const itemsOf = (value) => (Array.isArray(value) ? value : (value?.items ?? []));
