@@ -1,9 +1,13 @@
 // Runs built sources against the live sites: popular → a title → its chapters → a chapter's pages,
 // plus latest, search and filters where the source has them. Network required.
 //
-//   node tools/smoke.mjs [sourceId ...]      (default: every source in dist/index.json)
+//   node tools/smoke.mjs [options] [sourceId ...]      (default: every source in dist/index.json)
+//
+//   --jobs N        check N sites at once (default 1); sources on the same site always run one after another
+//   --retry         check each failure once more before counting it (a slow moment shouldn't fail a site)
+//   --summary FILE  append a Markdown report (GitHub's $GITHUB_STEP_SUMMARY, for the daily health check)
 
-import { readFile } from 'node:fs/promises';
+import { appendFile, readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -20,11 +24,9 @@ async function bridgeFetch(url, opts = {}) {
 
 const itemsOf = (value) => (Array.isArray(value) ? value : (value?.items ?? []));
 
-async function check(entry) {
-  const code = await readFile(join(ROOT, 'dist', entry.file), 'utf8');
+async function check(entry, code, log) {
   const source = loadSource(code, bridgeFetch);
-  const report = (step, detail) => console.log(`  ${step.padEnd(9)} ${detail}`);
-  console.log(`${entry.name} (${entry.id} ${entry.version})`);
+  const report = (step, detail) => log(`  ${step.padEnd(9)} ${detail}`);
 
   const popular = itemsOf(await source.popular({ category: 'sub', dateRange: 7, page: 1 }));
   report('popular', `${popular.length} titles, first: ${popular[0]?.englishTitle ?? popular[0]?.title}`);
@@ -60,15 +62,71 @@ async function check(entry) {
   if (source.getFilters) report('filters', (await source.getFilters()).map((filter) => filter.key).join(', '));
 }
 
-const index = JSON.parse(await readFile(join(ROOT, 'dist', 'index.json'), 'utf8'));
-const wanted = process.argv.slice(2);
-let failed = 0;
-for (const entry of index.sources.filter((source) => wanted.length === 0 || wanted.includes(source.id))) {
-  try {
-    await check(entry);
-  } catch (error) {
-    failed++;
-    console.log(`  FAILED   ${error.message}`);
+/** One source checked, with its output kept together (sources run side by side with --jobs). */
+async function run(entry, code, retry) {
+  for (let attempt = 1; ; attempt++) {
+    const lines = [`${entry.name} (${entry.id} ${entry.version})${attempt > 1 ? ', second try' : ''}`];
+    try {
+      await check(entry, code, (line) => lines.push(line));
+      return { entry, ok: true, lines };
+    } catch (error) {
+      lines.push(`  FAILED   ${error.message}`);
+      if (!retry || attempt > 1) return { entry, ok: false, error: error.message, lines };
+      console.log(lines.join('\n'));
+    }
   }
 }
-process.exitCode = failed ? 1 : 0;
+
+/** The site a source talks to (its baseUrl), so sources on one site aren't checked at the same time. */
+const siteOf = (entry, code) => /"baseUrl":"([^"]+)"/.exec(code)?.[1] ?? entry.theme;
+
+const args = process.argv.slice(2);
+const option = (name) => {
+  const at = args.indexOf(name);
+  if (at < 0) return null;
+  const [, value] = args.splice(at, 2);
+  return value;
+};
+const retry = args.includes('--retry') ? (args.splice(args.indexOf('--retry'), 1), true) : false;
+const jobs = Math.max(1, Number(option('--jobs') ?? 1));
+const summary = option('--summary');
+const wanted = args;
+
+const index = JSON.parse(await readFile(join(ROOT, 'dist', 'index.json'), 'utf8'));
+const entries = index.sources.filter((source) => wanted.length === 0 || wanted.includes(source.id));
+const queues = new Map();
+for (const entry of entries) {
+  const code = await readFile(join(ROOT, 'dist', entry.file), 'utf8');
+  const site = siteOf(entry, code);
+  if (!queues.has(site)) queues.set(site, []);
+  queues.get(site).push({ entry, code });
+}
+
+const results = [];
+const sites = [...queues.values()];
+async function worker() {
+  for (let queue = sites.shift(); queue; queue = sites.shift()) {
+    for (const { entry, code } of queue) {
+      const result = await run(entry, code, retry);
+      console.log(result.lines.join('\n'));
+      results.push(result);
+    }
+  }
+}
+await Promise.all(Array.from({ length: jobs }, worker));
+
+const failures = results.filter((result) => !result.ok).sort((a, b) => a.entry.id.localeCompare(b.entry.id));
+console.log(`\n${results.length - failures.length}/${results.length} passed`);
+for (const failure of failures) console.log(`FAILED ${failure.entry.id}: ${failure.error}`);
+if (summary) {
+  const rows = failures.map((failure) => `| ${failure.entry.name} | \`${failure.entry.id}\` | ${failure.error.replace(/\|/g, '\\|')} |`);
+  await appendFile(summary, [
+    `## Source health: ${results.length - failures.length}/${results.length} passed`,
+    '',
+    ...(failures.length
+      ? ['| Source | Id | Failure |', '| --- | --- | --- |', ...rows, '', 'Check each by hand before removing it (sites go down for a day; Cloudflare checks come and go). Removed sites go in REMOVED.md.']
+      : ['Every source loaded a list, a title, a chapter and a page image.']),
+    '',
+  ].join('\n'));
+}
+process.exitCode = failures.length ? 1 : 0;

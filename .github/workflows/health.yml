@@ -1,0 +1,28 @@
+# Checks every published source against its live site once a day: a list, a title, a chapter, a page image,
+# search and filters (tools/smoke.mjs). It only reports: the run fails (GitHub emails the repository's owner)
+# and the run's summary lists what broke. Nothing is removed automatically; check each site by hand first.
+name: Health check
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: health
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm run build
+      - run: node tools/smoke.mjs --jobs 8 --retry --summary "$GITHUB_STEP_SUMMARY"

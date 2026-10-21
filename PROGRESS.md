@@ -2,6 +2,19 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: Daily health check
+
+- `.github/workflows/health.yml` runs every day at 06:17 UTC, and can also be started by hand from the Actions tab. It builds, then runs `tools/smoke.mjs --jobs 8 --retry --summary $GITHUB_STEP_SUMMARY`. It only reports: the run's summary lists what failed, the run fails (GitHub emails the owner), and nothing is removed.
+- `tools/smoke.mjs` gained three options:
+  - `--jobs N` checks N sites at once. Sources on the same site still run one after another, so the MangaDex languages don't hit its rate limit together.
+  - `--retry` checks each failure once more before counting it.
+  - `--summary FILE` writes a Markdown table of failures.
+- **First run (local, 2026-10-21):** 99 of 115 passed in about 1.5 minutes. The 16 failures were:
+  - all MangaDex sources: MangaDex was down for maintenance (503 on both the API and the website);
+  - Comici's Champion Cross and Young Champion: maintenance pages.
+
+  Re-check those before removing anything.
+
 ## 2026-10-21: Version check in CI
 
 - `tools/check-versions.mjs` (`npm run check-versions`; a step after the build in `publish.yml`) compares `dist/index.json` with the published index. It fails when a source's SHA-256 changed but its version didn't, or when a version went down. New and removed sources pass.
