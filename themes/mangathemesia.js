@@ -7,9 +7,14 @@
 //   mangaPath     where titles live ("manga")            dateFormat  e.g. "MMMM d, yyyy" (the default)
 //   randomSlug    the site adds a changing number to title links ("/manga/7395-name/"); kept out of ids
 //   adult         keep titles with an 18+ label (false)   selectors   overrides for SELECTORS below
+//   randomListPath the page listing every title's current link ("/<mangaPath>/list-mode/", the default)
+//   randomPrefix  the changing part's pattern ("^\\d+-", the default; Rizz Comic: "^r\\d+-")
+//   list          how lists and search work: "theme" (the theme's /manga/?title=… page, the default),
+//                 "asura" (Comic Asura's /advanced-search/) or "rizz" (Rizz Comic's /Index/filter_series JSON)
+//   genres        [[label, value], …] for sites whose genre list isn't on a page (Rizz Comic)
 //
 // @theme mangathemesia
-// @version 1.0.1
+// @version 1.0.2
 // @type manga
 
 var BASE = String(SITE.baseUrl).replace(/\/+$/, '');
@@ -17,7 +22,8 @@ var MANGA_PATH = '/' + String(SITE.mangaPath || 'manga').replace(/^\/+|\/+$/g, '
 var MAX_URL_BYTES = 150;
 var AGENT = 'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36';
 var COVER_HEADERS = { Referer: BASE + '/' };
-var RANDOM_SLUG = /^\d+-/;
+var RANDOM_SLUG = new RegExp(SITE.randomPrefix || '^\\d+-');
+var LIST = SITE.list || 'theme';
 
 /** "a:contains(x), b:contains(x)" for each word, like Keiyoushi's `selector()`. */
 function each(pattern, words) {
@@ -74,6 +80,8 @@ async function request(url, allow) {
 
 async function page(url, allow) {
   var res = await request(url, allow);
+  // A redirect off the site is an ad or a parked domain, never the page asked for.
+  if (res.url && hostOf(res.url) !== hostOf(BASE) && hostOf(url) === hostOf(BASE)) throw new Error(SITE.name + ' no longer has this.');
   var doc = parseHtml(await res.text());
   doc.url = res.url || url;
   doc.status = res.status;
@@ -134,24 +142,84 @@ function itemsOf(doc) {
     var link = block.tag === 'a' ? block : first(block, 'a');
     if (!link) return;
     var url = titleUrl(attr(link, 'href'));
-    var title = clean(attr(link, 'title')) || textOf(first(block, '.tt, .bigor .tt, h3 a')) || textOf(link);
+    var img = first(block, 'img');
+    var title = clean(attr(link, 'title')) || textOf(first(block, '.tt, .bigor .tt, h3 a')) || clean(attr(img, 'title')) || clean(attr(img, 'alt')) || textOf(link);
     if (!url || !title || seen[url]) return;
     if (!SITE.adult && isAdultCard(block)) return;
     seen[url] = true;
-    items.push({ title: title, url: url, cover: imageOf(first(block, 'img')), coverHeaders: COVER_HEADERS });
+    items.push({ title: title, url: url, cover: imageOf(img), coverHeaders: COVER_HEADERS });
   });
   return { items: items, hasNextPage: Boolean(first(doc, SELECTORS.next)) };
 }
 
 /* ── lists ────────────────────────────────────────────────────────────── */
 
-var ORDERS = [['', 'Default'], ['title', 'A–Z'], ['titlereverse', 'Z–A'], ['update', 'Latest update'], ['latest', 'Latest added'], ['popular', 'Popular']];
-var STATUSES = [['', 'All'], ['ongoing', 'Ongoing'], ['completed', 'Completed'], ['hiatus', 'Hiatus'], ['dropped', 'Dropped']];
-var TYPES = [['', 'All'], ['Manga', 'Manga'], ['Manhwa', 'Manhwa'], ['Manhua', 'Manhua'], ['Comic', 'Comic']];
+var ORDERS = {
+  theme: [['', 'Default'], ['title', 'A–Z'], ['titlereverse', 'Z–A'], ['update', 'Latest update'], ['latest', 'Latest added'], ['popular', 'Popular']],
+  // Comic Asura's A–Z sort errors on the site itself, so it's left out (as Keiyoushi does).
+  asura: [['', 'Default'], ['name_desc', 'Z–A'], ['latest', 'Latest update'], ['rating', 'Popular']],
+  rizz: [['all', 'Default'], ['title', 'A–Z'], ['titlereverse', 'Z–A'], ['update', 'Latest update'], ['latest', 'Latest added'], ['popular', 'Popular']],
+}[LIST];
+/** The order each list kind uses for Popular and Latest. */
+var FEEDS = { theme: ['popular', 'update'], asura: ['rating', 'latest'], rizz: ['popular', 'update'] }[LIST];
+var ALL = LIST === 'rizz' ? 'all' : '';
+var STATUSES = [[ALL, 'All'], ['ongoing', 'Ongoing'], ['completed', 'Completed'], ['hiatus', 'Hiatus']].concat(LIST === 'rizz' ? [] : [['dropped', 'Dropped']]);
+var TYPES = [[ALL, 'All'], ['Manga', 'Manga'], ['Manhwa', 'Manhwa'], ['Manhua', 'Manhua'], ['Comic', 'Comic']];
+
+/** Comic Asura: `/advanced-search/?name=…&page=N&sort=…&status=…&type=…&genres=a_b`. */
+async function asuraList(pageNumber, query, filters) {
+  var params = ['name=' + encodeURIComponent(query || ''), 'page=' + (pageNumber || 1)];
+  if (filters.order) params.push('sort=' + encodeURIComponent(filters.order));
+  if (filters.status) params.push('status=' + encodeURIComponent(filters.status));
+  if (filters.type) params.push('type=' + encodeURIComponent(String(filters.type).toLowerCase()));
+  var genres = [].concat(filters.genres || []).filter(Boolean);
+  if (genres.length) params.push('genres=' + encodeURIComponent(genres.join('_')));
+  return itemsOf(await page(BASE + '/advanced-search/?' + params.join('&')));
+}
+
+/** Rizz Comic's slug from a title, as the site builds its links (before the changing `r…-` part). */
+function rizzSlug(title) {
+  return String(title).trim().toLowerCase().replace(/-/g, ' ').replace(/'s/g, 's').replace(/'/g, '')
+    .replace(/[^a-z0-9]+/g, '-').replace(/-ll-/g, 'll-').replace(/^-+|-+$/g, '');
+}
+
+/** Rizz Comic's JSON list: `/Index/live_search` (text) or `/Index/filter_series` (filters). */
+async function rizzRows(query, filters) {
+  var fields = query
+    ? [['search_value', query]]
+    : [['StatusValue', filters.status || 'all'], ['TypeValue', String(filters.type || 'all').toLowerCase()], ['OrderValue', filters.order || 'all']]
+      .concat([].concat(filters.genres || []).filter(Boolean).map(function (genre) { return ['genres_checked[]', genre]; }));
+  var res = await fetch(BASE + (query ? '/Index/live_search' : '/Index/filter_series'), {
+    method: 'POST',
+    headers: { 'User-Agent': AGENT, Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8', 'X-Requested-With': 'XMLHttpRequest', Origin: BASE, Referer: BASE + '/' },
+    body: fields.map(function (pair) { return encodeURIComponent(pair[0]) + '=' + encodeURIComponent(pair[1]); }).join('&'),
+  });
+  if (!res.ok) throw new Error(SITE.name + ' answered ' + res.status + '.');
+  var rows = await res.json();
+  return Array.isArray(rows) ? rows : [];
+}
+
+/** Rizz Comic: the whole matching list at once. */
+async function rizzList(pageNumber, query, filters) {
+  if (pageNumber > 1) return { items: [], hasNextPage: false };
+  var rows = await rizzRows(query, filters);
+  var seen = {};
+  var items = [];
+  rows.forEach(function (comic) {
+    if (!comic || !comic.title || /novel/i.test(comic.type || '')) return;
+    var url = titleUrl(BASE + MANGA_PATH + '/' + rizzSlug(comic.title));
+    if (!url || seen[url]) return;
+    seen[url] = true;
+    items.push({ title: comic.title.trim(), url: url, cover: comic.image_url ? absolute('/assets/images/' + comic.image_url) : null, coverHeaders: COVER_HEADERS });
+  });
+  return { items: items, hasNextPage: false };
+}
 
 /** The theme's list page: `/manga/?title=…&page=N&order=…&status=…&type=…&genre[]=…`. */
 async function listPage(pageNumber, query, filters) {
   filters = filters || {};
+  if (LIST === 'asura') return asuraList(pageNumber, query, filters);
+  if (LIST === 'rizz') return rizzList(pageNumber, query, filters);
   var params = [];
   if (query) params.push('title=' + encodeURIComponent(query));
   params.push('page=' + (pageNumber || 1));
@@ -163,11 +231,11 @@ async function listPage(pageNumber, query, filters) {
 }
 
 async function popular(options) {
-  return listPage((options && options.page) || 1, '', { order: 'popular' });
+  return listPage((options && options.page) || 1, '', { order: FEEDS[0] });
 }
 
 async function latest(options) {
-  return listPage((options && options.page) || 1, '', { order: 'update' });
+  return listPage((options && options.page) || 1, '', { order: FEEDS[1] });
 }
 
 async function search(query, pageNumber, options) {
@@ -185,10 +253,11 @@ var genreCache = null;
 /** The genre checkboxes on the site's list page (`ul.genrez`). */
 async function genresOf() {
   if (genreCache) return genreCache;
-  var doc = await page(BASE + MANGA_PATH + '/');
+  if (SITE.genres) return (genreCache = SITE.genres.map(function (pair) { return { value: String(pair[1]), label: pair[0] }; }));
+  var doc = await page(BASE + (LIST === 'asura' ? '/advanced-search/' : MANGA_PATH + '/'));
   genreCache = all(doc, SELECTORS.genreList).map(function (li) {
     var input = first(li, 'input[type=checkbox]');
-    return { value: attr(input, 'value'), label: textOf(first(li, 'label')) };
+    return { value: attr(input, 'value'), label: textOf(first(li, 'label')) || textOf(first(li, 'span')) };
   }).filter(function (genre) { return genre.value && genre.label; });
   return genreCache;
 }
@@ -197,9 +266,9 @@ async function getFilters() {
   var genres = await genresOf().catch(function () { return []; });
   var options = function (pairs) { return pairs.map(function (pair) { return { value: pair[0], label: pair[1] }; }); };
   var out = [
-    { type: 'select', key: 'order', name: 'Order by', options: options(ORDERS), default: '' },
-    { type: 'select', key: 'status', name: 'Status', options: options(STATUSES), default: '' },
-    { type: 'select', key: 'type', name: 'Type', options: options(TYPES), default: '' },
+    { type: 'select', key: 'order', name: 'Order by', options: options(ORDERS), default: ORDERS[0][0] },
+    { type: 'select', key: 'status', name: 'Status', options: options(STATUSES), default: ALL },
+    { type: 'select', key: 'type', name: 'Type', options: options(TYPES), default: ALL },
   ];
   if (genres.length) out.push({ type: 'multi', key: 'genres', name: 'Genres', options: genres, default: [] });
   return out;
@@ -244,8 +313,12 @@ var slugCache = null;
 async function currentLink(url) {
   if (!slugCache) {
     slugCache = {};
-    var doc = await page(BASE + MANGA_PATH + '/list-mode/', [404]);
-    if (doc.status === 404) doc = await page(BASE + MANGA_PATH + '/');
+    var doc;
+    if (SITE.randomListPath) doc = await page(BASE + SITE.randomListPath);
+    else {
+      doc = await page(BASE + MANGA_PATH + '/list-mode/', [404]);
+      if (doc.status === 404) doc = await page(BASE + MANGA_PATH + '/');
+    }
     all(doc, SELECTORS.randomList).forEach(function (link) {
       var href = absolute(attr(link, 'href'));
       var slug = slugOf(href);
@@ -259,11 +332,12 @@ async function currentLink(url) {
 async function titlePage(url) {
   url = absolute(url);
   if (!SITE.randomSlug) return page(url);
-  var doc = await page(url, [404]);
-  if (doc.status !== 404) return doc;
+  // Look the current link up first: some sites (Rizz Comic) redirect an outdated one to an ad page rather than a 404.
   var current = await currentLink(url);
-  if (!current) throw new Error(SITE.name + ' no longer has this.');
-  return page(current);
+  if (current) return page(current);
+  var doc = await page(url, [404]);
+  if (doc.status === 404) throw new Error(SITE.name + ' no longer has this.');
+  return doc;
 }
 
 async function getDetail(url) {
@@ -274,6 +348,13 @@ async function getDetail(url) {
   var descriptionBox = first(box, SELECTORS.description);
   var paragraphs = all(descriptionBox, 'p').map(textOf).filter(Boolean);
   var description = paragraphs.length ? paragraphs.join('\n\n') : textOf(descriptionBox);
+  // Rizz Comic's page fills its synopsis in with a script; its search answers with it.
+  if (!description && LIST === 'rizz') {
+    var match = (await rizzRows(title, {}).catch(function () { return []; })).filter(function (comic) {
+      return comic && String(comic.title).trim().toLowerCase() === title.toLowerCase();
+    })[0];
+    description = clean(String((match && match.long_description) || '').replace(/<[^>]*>/g, ' '));
+  }
   var altBox = first(box, SELECTORS.alt);
   var alt = ownText(altBox) || textOf(altBox);
   if (alt && !isPlaceholder(alt)) description = (description ? description + '\n\n' : '') + 'Also known as: ' + alt;
@@ -313,7 +394,7 @@ function chaptersOf(doc) {
     // Early-access chapters often link out (Patreon, Ko-fi); only the site's own chapters can be read.
     if (hostOf(url) !== hostOf(BASE)) return;
     var name = textOf(first(li, SELECTORS.chapterName)) || textOf(link);
-    var number = parseFloat(attr(li, 'data-num'));
+    var number = parseFloat(attr(li, 'data-num') || attr(li, 'data-chapter-num'));
     if (!(number >= 0)) number = numberOf(name, url);
     entries.push({ url: url, title: name || null, number: number, date: dateOf(textOf(first(li, SELECTORS.chapterDate)), SITE.dateFormat) });
   });

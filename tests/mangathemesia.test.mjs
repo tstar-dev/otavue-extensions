@@ -5,14 +5,14 @@ import { join } from 'node:path';
 import { before, describe, it } from 'node:test';
 
 import { build } from '../build/build.mjs';
-import { fakeFetch, loadSource } from './harness.mjs';
+import { fakeFetch, fixture, loadSource } from './harness.mjs';
 
 const text = (path) => readFile(join(import.meta.dirname, 'fixtures', path), 'utf8');
 const sources = {};
 before(async () => {
   const out = join(tmpdir(), `otavue-extensions-mangathemesia-${process.pid}`);
   await build(out);
-  for (const id of ['mangathemesia.asterscans', 'mangathemesia.thunderscans', 'mangathemesia.violetscans']) {
+  for (const id of ['mangathemesia.asterscans', 'mangathemesia.thunderscans', 'mangathemesia.violetscans', 'mangathemesia.comicasura', 'mangathemesia.rizzcomic']) {
     sources[id] = await readFile(join(out, 'sources', `${id}.js`), 'utf8');
   }
 });
@@ -121,7 +121,7 @@ describe('MangaThemesia', () => {
     assert.deepEqual(pages.map((page) => page.url), ['https://asterscans.com/a/1.jpg', 'https://asterscans.com/a/2.jpg']);
   });
 
-  it('keeps changing numbers out of title links, and finds the current link when the old one is gone', async () => {
+  it('keeps changing numbers out of title links, and looks up the current link before loading a title', async () => {
     const list = (await text('mangathemesia/list.html')).replaceAll('https://asterscans.com/manga/', 'https://en-thunderscans.com/comics/7395-');
     const { fetchImpl, requests } = fakeFetch([
       [path('/comics/obsession/'), { status: 404, body: '' }],
@@ -134,6 +134,104 @@ describe('MangaThemesia', () => {
     assert.equal(page.items[1].url, 'https://en-thunderscans.com/comics/obsession/');
     const detail = await source.getDetail(page.items[1].url);
     assert.equal(detail.title, 'Obsession');
-    assert.deepEqual(requests.slice(1).map((request) => new URL(request.url).pathname), ['/comics/obsession/', '/comics/list-mode/', '/comics/8812-obsession/']);
+    assert.deepEqual(requests.slice(1).map((request) => new URL(request.url).pathname), ['/comics/list-mode/', '/comics/8812-obsession/']);
+  });
+});
+
+describe('MangaThemesia (Comic Asura)', () => {
+  const TITLE = 'https://comicasura.net/manga/the-travelling-informant';
+  const asura = async () => [
+    [(url) => url.pathname.startsWith('/advanced-search'), await text('mangathemesia/asura-list.html')],
+    [path('/manga/the-travelling-informant/chapter-1'), await text('mangathemesia/asura-chapter.html')],
+    [path('/manga/the-travelling-informant'), await text('mangathemesia/asura-detail.html')],
+  ];
+
+  it('lists from /advanced-search/, sorted by rating for Popular and by update for Latest', async () => {
+    const { fetchImpl, requests } = fakeFetch(await asura());
+    const source = loadSource(sources['mangathemesia.comicasura'], fetchImpl);
+    const page = await source.popular({ page: 1 });
+    await source.latest({ page: 2 });
+    assert.equal(requests[0].url, 'https://comicasura.net/advanced-search/?name=&page=1&sort=rating');
+    assert.equal(new URL(requests[1].url).searchParams.get('sort'), 'latest');
+    assert.equal(page.items.length, 2);
+    assert.deepEqual(page.items[1], {
+      title: 'The Travelling Informant',
+      url: TITLE,
+      cover: 'https://img-r1.2xstorage.com/thumb/the-travelling-informant.webp',
+      coverHeaders: { Referer: 'https://comicasura.net/' },
+    });
+    assert.equal(page.hasNextPage, true);
+  });
+
+  it('searches by name, with genres joined by "_"', async () => {
+    const { fetchImpl, requests } = fakeFetch(await asura());
+    await loadSource(sources['mangathemesia.comicasura'], fetchImpl).search('informant', 1, { filters: { type: 'Manhwa', genres: ['action', 'drama'] } });
+    const params = new URL(requests[0].url).searchParams;
+    assert.equal(params.get('name'), 'informant');
+    assert.equal(params.get('type'), 'manhwa');
+    assert.equal(params.get('genres'), 'action_drama');
+  });
+
+  it('reads its own title page layout, with dates like "October 21st 2026"', async () => {
+    const { fetchImpl } = fakeFetch(await asura());
+    const detail = await loadSource(sources['mangathemesia.comicasura'], fetchImpl).getDetail(TITLE);
+    assert.equal(detail.title, 'The Travelling Informant');
+    assert.equal(detail.status, 'ongoing');
+    assert.match(detail.description, /^Leti is a young noblewoman/);
+    assert.deepEqual(detail.chapters, [{ url: `${TITLE}/chapter-1`, title: 'Chapter 1: The Stolen Bride', number: 1, date: '2026-10-21T00:00:00.000Z' }]);
+  });
+
+  it('lists a chapter’s pages', async () => {
+    const { fetchImpl } = fakeFetch(await asura());
+    const pages = await loadSource(sources['mangathemesia.comicasura'], fetchImpl).getPages(`${TITLE}/chapter-1`);
+    assert.deepEqual(pages.map((page) => page.url), ['https://img-r1.2xstorage.com/the-travelling-informant/1/0.webp', 'https://img-r1.2xstorage.com/the-travelling-informant/1/1.webp']);
+  });
+});
+
+describe('MangaThemesia (Rizz Comic)', () => {
+  const rizz = async () => [
+    [(url) => url.pathname.startsWith('/Index/'), await fixture('mangathemesia/rizz-filter.json')],
+    [path('/series'), await text('mangathemesia/rizz-series.html')],
+    [(url) => url.pathname.startsWith('/series/r'), await text('mangathemesia/rizz-detail.html')],
+    [(url) => url.pathname.startsWith('/chapter/'), await text('mangathemesia/rizz-chapter.html')],
+  ];
+
+  it('lists from /Index/filter_series, with links built from titles and no changing prefix', async () => {
+    const { fetchImpl, requests } = fakeFetch(await rizz());
+    const page = await loadSource(sources['mangathemesia.rizzcomic'], fetchImpl).popular({ page: 1 });
+    assert.equal(requests[0].url, 'https://rizzfables.com/Index/filter_series');
+    assert.equal(new URLSearchParams(requests[0].body ?? '').get('OrderValue') ?? 'popular', 'popular');
+    assert.equal(requests[0].headers['X-Requested-With'], 'XMLHttpRequest');
+    assert.deepEqual(page.items[0], {
+      title: 'Solo Farming In The Tower',
+      url: 'https://rizzfables.com/series/solo-farming-in-the-tower/',
+      cover: 'https://rizzfables.com/assets/images/25__solofarming-20-06-2023_11_40_10_PM1.webp',
+      coverHeaders: { Referer: 'https://rizzfables.com/' },
+    });
+    assert.equal(page.hasNextPage, false);
+  });
+
+  it('searches through /Index/live_search', async () => {
+    const { fetchImpl, requests } = fakeFetch(await rizz());
+    await loadSource(sources['mangathemesia.rizzcomic'], fetchImpl).search('solo', 1, {});
+    assert.equal(requests[0].url, 'https://rizzfables.com/Index/live_search');
+  });
+
+  it('finds the current link first, and takes the synopsis the page leaves to a script from the search', async () => {
+    const { fetchImpl, requests } = fakeFetch(await rizz());
+    const detail = await loadSource(sources['mangathemesia.rizzcomic'], fetchImpl).getDetail('https://rizzfables.com/series/solo-farming-in-the-tower/');
+    const paths = requests.map((request) => new URL(request.url).pathname);
+    assert.deepEqual(paths.slice(0, 2), ['/series', '/series/r2311170-solo-farming-in-the-tower']);
+    assert.equal(detail.title, 'Solo Farming In The Tower');
+    assert.match(detail.description, /^One sunny day, a mysterious tower/);
+    assert.ok(detail.chapters.length >= 2);
+    assert.match(detail.chapters[0].url, /^https:\/\/rizzfables\.com\/chapter\/r2311170-solo-farming-in-the-tower-chapter-/);
+  });
+
+  it('lists a chapter’s pages', async () => {
+    const { fetchImpl } = fakeFetch(await rizz());
+    const pages = await loadSource(sources['mangathemesia.rizzcomic'], fetchImpl).getPages('https://rizzfables.com/chapter/r2311170-solo-farming-in-the-tower-chapter-1');
+    assert.equal(pages.length, 2);
+    assert.match(pages[0].url, /^https:\/\/cdn\.55779955\.xyz\//);
   });
 });

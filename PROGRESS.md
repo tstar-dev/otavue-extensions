@@ -2,6 +2,26 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: Lua Scans, three Madara mirrors, Comic Asura and Rizz Comic (6 sources)
+
+- **Lua Scans** (`themes/heancms.js`, new; ported from Keiyoushi's `lib-multisrc/heancms`):
+  - Keiyoushi moved Lua Scans off Keyoapp onto HeanCMS, a JSON API at `api.<site>`. Its only other HeanCMS site, Omega Scans, is adult-only.
+  - Lists come from `/query`, titles from `/series/<slug>`, chapters from `/chapter/query?series_id=` (paid and scheduled ones left out), and pages from `/chapter/<series>/<chapter>`.
+  - **The API's firewall answers 403 unless requests carry the site as `Origin` and `Referer`**, so every API call sends them.
+  - Lua's "latest" sort isn't by date in either direction, so its Latest uses `updated_at` (`latestSort`). Its tag list is empty, so it has no genre filter.
+- **Madara:** Zazamanga, Zinmanga.net and Kun Manga Online, all mirrors of one aggregator (same comic ids and CDN). Madara is now 1.0.3.
+  - Zazamanga only lists chapters as `div.wp-manga-chapter` (a selector override).
+  - Zinmanga.net and Kun Manga use a new `chapters: "api"` mode (`/api/comics/<slug>/chapters`, JSON, using its `chapter_num`). Both need `imageReferer: "site"`.
+  - Kun's latest list can run ahead of its title pages (404). `tools/smoke.mjs` now skips a title that's gone and tries the next, and fails only when nothing is readable.
+- **MangaThemesia** (1.0.2): two list modes. Both sites still use the theme's title, chapter and page code with selector overrides.
+  - **Comic Asura** (`list: "asura"`): `/advanced-search/?name=&sort=`, cards from `img` titles, and `data-chapter-num` for chapter numbers. Its genre list really does start with junk entries ("$h0ta", "3").
+  - **Rizz Comic** (`list: "rizz"`): `/Index/filter_series` and `/Index/live_search` return JSON, with links built from titles as the site builds them.
+    - Rizz sends any title link without its current `r2311170-` prefix to an **ad site** rather than a 404. So `randomSlug` sites now look the current link up first (`randomListPath: "/series"`, `randomPrefix: "^r\d+-"`).
+    - `page()` refuses any redirect off the site.
+    - Rizz fills its synopsis in with a script, so it's taken from the search JSON.
+- **Shared code:** `lib/html.js` reads ordinal dates ("October 21st 2026"). Keyoapp went to 1.0.1 for that.
+- **Checks:** 89 tests. Live check: 60 of 61 Madara, MangaThemesia, Keyoapp and HeanCMS sources passed. The 61st, Galaxy Degen Scans, timed out because its home page took 56 seconds even from curl; it passed earlier, so it stays listed. The version check passed (55 sources with new versions).
+
 ## 2026-10-21: Daily health check
 
 - `.github/workflows/health.yml` runs every day at 06:17 UTC, and can also be started by hand from the Actions tab. It builds, then runs `tools/smoke.mjs --jobs 8 --retry --summary $GITHUB_STEP_SUMMARY`. It only reports: the run's summary lists what failed, the run fails (GitHub emails the owner), and nothing is removed.

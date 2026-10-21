@@ -13,7 +13,7 @@ const sources = {};
 before(async () => {
   const out = join(tmpdir(), `otavue-extensions-madara-${process.pid}`);
   await build(out);
-  for (const id of ['madara.mangasushi', 'madara.anisascans', 'madara.lilymanga', 'madara.topmanhuafan']) {
+  for (const id of ['madara.mangasushi', 'madara.anisascans', 'madara.lilymanga', 'madara.topmanhuafan', 'madara.zinmanganet', 'madara.zazamanga']) {
     sources[id] = await readFile(join(out, 'sources', `${id}.js`), 'utf8');
   }
 });
@@ -234,5 +234,34 @@ describe('Madara', () => {
     const twoDaysAgo = Date.now() - 2 * 864e5;
     assert.ok(Math.abs(Date.parse(list.at(-1).date) - twoDaysAgo) < 60_000);
     assert.equal(list.at(-2).date, '2026-08-31T00:00:00.000Z');
+  });
+
+  it('reads chapters from /api/comics/<slug>/chapters on sites set to "api", page by page, with their numbers', async () => {
+    const title = '<html><head><link rel="canonical" href="https://www.zinmanga.net/manga/contract-marriage-rewritten"></head><body><div class="post-title"><h1>Contract Marriage: Rewritten</h1></div></body></html>';
+    const row = (n, name) => ({ chapter_num: n, chapter_name: name, chapter_slug: `chapter-${n}`, updated_at: '2026-10-21T15:30:19.000000Z' });
+    const { fetchImpl, requests } = recording([
+      [path('/manga/contract-marriage-rewritten'), title],
+      [(url) => url.pathname.endsWith('/chapters') && url.searchParams.get('page') === '1', { success: true, data: { chapters: [row(22, 'Chapter 22'), row(21.5, 'Side story')], last_page: 2 } }],
+      [(url) => url.pathname.endsWith('/chapters') && url.searchParams.get('page') === '2', { success: true, data: { chapters: [row(1, 'Chapter 1')], last_page: 2 } }],
+    ]);
+    const chapters = await loadSource(sources['madara.zinmanganet'], fetchImpl).getChapters('https://www.zinmanga.net/manga/contract-marriage-rewritten');
+    assert.equal(new URL(requests[1].url).pathname, '/api/comics/contract-marriage-rewritten/chapters');
+    assert.equal(requests[1].headers.Accept, 'application/json');
+    assert.deepEqual(chapters.map((chapter) => chapter.number), [1, 21.5, 22]);
+    assert.deepEqual(chapters[2], { url: 'https://www.zinmanga.net/manga/contract-marriage-rewritten/chapter-22', title: 'Chapter 22', number: 22, date: '2026-10-21T15:30:19.000000Z' });
+  });
+
+  it('reads chapters listed as <div class="wp-manga-chapter"> where a site says so', async () => {
+    const chapters = (await text('madara/chapters.html')).replaceAll('<li class="wp-manga-chapter', '<div class="wp-manga-chapter').replaceAll('</li>', '</div>')
+      .replaceAll('https://mangasushi.org/', 'https://www.zazamanga.com/');
+    const { fetchImpl } = recording([[() => true, `<html><body><div class="post-title"><h1>X</h1></div>${chapters}</body></html>`]]);
+    const list = await loadSource(sources['madara.zazamanga'], fetchImpl).getChapters('https://www.zazamanga.com/manga/x');
+    assert.deepEqual(list.map((chapter) => chapter.number), [82, 83, 84, 85, 86]);
+  });
+
+  it('won’t follow a redirect off the site', async () => {
+    const { fetchImpl } = recording([[() => true, '<html>ad</html>']]);
+    const offsite = async (url, opts) => ({ ...(await fetchImpl(url, opts)), url: 'https://ads.example.com/landing' });
+    await assert.rejects(loadSource(sources['madara.mangasushi'], offsite).getPages(CHAPTER), /only on ads\.example\.com/);
   });
 });

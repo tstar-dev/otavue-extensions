@@ -1,0 +1,10 @@
+[
+  {
+    "id": "heancms.luascans",
+    "name": "Lua Scans",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": { "baseUrl": "https://luacomic.org", "latestSort": "updated_at" }
+  }
+]

@@ -53,7 +53,15 @@ async function check(entry, code, log) {
 
   let read = false;
   for (const item of popular.slice(0, 6)) {
-    const detail = await source.getDetail(item.url, {});
+    // One title that's gone (a list can run ahead of its pages) isn't the source failing; nothing readable is.
+    const detail = await source.getDetail(item.url, {}).catch((error) => {
+      if (/no longer has this/.test(error.message)) return null;
+      throw error;
+    });
+    if (!detail) {
+      report('detail', `${item.title}: gone (404), trying the next title`);
+      continue;
+    }
     const chapters = detail.chapters?.length ? detail.chapters : await source.getChapters(item.url);
     report('detail', `${detail.englishTitle ?? detail.title}: ${chapters.length} chapters`);
     if (chapters.length === 0) continue;

@@ -105,6 +105,26 @@
     }
   },
   {
+    "id": "madara.kunmangaonline",
+    "name": "Kun Manga Online",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://www.kunmanga.online",
+      "browse": "archive",
+      "adult": true,
+      "chapters": "api",
+      "imageReferer": "site",
+      "selectors": {
+        "item": ".c-tabs-item__content, .page-item-detail",
+        "itemLink": ".post-title a, h3.h4 a, a[href*=\"/manga/\"]",
+        "itemTitle": ".post-title a, h3.h4 a",
+        "next": "a[aria-label=Next]"
+      }
+    }
+  },
+  {
     "id": "madara.lhtranslation",
     "name": "LHTranslation",
     "lang": "en",
@@ -324,6 +344,36 @@
     "config": {
       "baseUrl": "https://wuxiaworld.site",
       "mangaPath": "novel"
+    }
+  },
+  {
+    "id": "madara.zazamanga",
+    "name": "Zazamanga",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://www.zazamanga.com",
+      "browse": "archive",
+      "adult": true,
+      "imageReferer": "site",
+      "selectors": {
+        "chapter": "div.wp-manga-chapter"
+      }
+    }
+  },
+  {
+    "id": "madara.zinmanganet",
+    "name": "Zinmanga.net",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://www.zinmanga.net",
+      "browse": "archive",
+      "mangaOnly": false,
+      "chapters": "api",
+      "imageReferer": "site"
     }
   }
 ]
