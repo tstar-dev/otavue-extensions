@@ -2,6 +2,16 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: FoOlSlide (5 sources)
+
+- **New template** `themes/foolslide.js`, ported from Keiyoushi's `lib-multisrc/foolslide`: `/directory/N/` (Popular), `/latest/N/`, search as a form POST to `/search/`, title and chapter pages fetched with the `adult=true` form (as Keiyoushi does, to skip the content warning), and pages from the reader's `var pages = [...]`.
+  - Chapter numbers come from the reader link (`/read/<slug>/<lang>/<volume>/<chapter>/<sub>/`, so `/43/1/` is 43.1), else the name. Dates: "by Group, 2020.01.11", relative ones, and today/yesterday in English, Italian and Spanish.
+  - The title falls back to the page's `<title>` ("Name :: Site") where `h1.title` is empty (NIFTeam, Juin Jutsu).
+  - **Juin Jutsu** (Keiyoushi's override): its directory is empty, so Popular is the series in its latest pages (which also list chapter links, left out) and there's no separate Latest; volume entries named with a bare number are left out. Its search form answers nothing, so search looks through the first five latest pages.
+- **Sites (5):** Death Toll Scans and Mangatellers (English), Menudo-Fansub (Spanish) and NIFTeam (Italian; both under `/slide`), Juin Jutsu Team Reader (Italian). Keiyoushi's other FoolSlide sites are adult-only, or the "customizable" one with no address of its own.
+- **Order for the two-site templates** (live English sites): FoolSlide 2 (+3 other languages), MangaTaro 2, MangAdventure 2, EzManhwa 1 (EZmanga shows a Cloudflare block page), Monochrome 1, Bakkin 1. The "custom"/"self-hosted" entries have no real address and are skipped.
+- 143 tests. Live check: 5 of 5 passed. 168 sources, 50 marked 18+.
+
 ## 2026-10-21: MangaBox (2 sources, both 18+)
 
 - **New template** `themes/mangabox.js`, ported from Keiyoushi's `lib-multisrc/mangabox`: hot and latest lists (`/manga-list/hot-manga`, `/latest-manga`), genre pages with the site's sort/status filter ids (`/genre/<slug>?filter=1…9`) and Keiyoushi's 170-genre list, title pages, chapters from `/api/manga/<slug>/chapters?limit=-1`, and pages from the reader's script (`cdns` + `chapterImages`, with the `<img>` list as a fallback).
