@@ -2,6 +2,16 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: YiiManga (7 sources, all 18+)
+
+- **New template** `themes/yiimanga.js`, ported from Keiyoushi's `lib-multisrc/yiimanga`: HTML pages in three layouts (the `latest-item` and `list-item` lists; `main-info-list`, `post-content_item` and `manga-detail` title pages).
+  - Lists: latest from `/page/N/`; Popular from a catalog sorted with `?order=views` (`popularPath`), from the home page's featured row (ManhwaBuddy, `popular: "home"`), or else the latest list. In that last case there's no separate `latest`.
+  - **Search** (`/search/?s=` or `?q=`, per site) is a full-text search that needs every word: an apostrophe makes it answer 500, and short words and MySQL stopwords ("by", "the") never match. So queries are cleaned first (punctuation, words under 3 letters and stopwords dropped), and a multi-word search that finds nothing is tried once more with its longest word.
+  - **Genre pages** are numbered two ways: `/genre/<slug>/page/2/` or `/genre/<slug>/2/` (`genrePath: "bare"` for Manhwa18TX, ManhwaOnline and ToonGod; Keiyoushi only had it for ToonGod). Page 1 is always `/genre/<slug>/`. Genres come from the home page's menu, so some sites offer only a few.
+  - Dates: "06 Oct 2026", "12 Oct 26" or just "Oct 26" (read as the 1st). The newest chapter often shows a "NEW" badge instead of a date.
+- **Sites (7):** Manhwa18TX, ManhwaBuddy, Manhwaddict, ManhwaGalaxy, ManhwaOnline, ToonGod (toongod.cc) and YaoiScan (yaoiscan.me). Keiyoushi marks them all MIXED, so all are `nsfw: true`. They're re-hosts, not groups' own sites. Manhwa18TX and Manhwaddict serve the same catalog (same ids and image paths). The five adult-only YiiManga sites are in `REMOVED.md`.
+- 118 tests. Live check: 7 of 7 passed. 148 sources, 44 marked 18+.
+
 ## 2026-10-21: Iken (9 sources)
 
 - **New template** `themes/iken.js`, ported from Keiyoushi's `lib-multisrc/iken`: a JSON API at `api.<site>`, sent with the site as `Origin` and `Referer` as HeanCMS is.

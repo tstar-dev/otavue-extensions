@@ -4,6 +4,11 @@ Sites taken out of the repository, and why, so they aren't added back. Newest fi
 
 | Date | Source id | Reason |
 | --- | --- | --- |
+| 2026-10-21 | yiimanga.fourporncomic | Not added (4PornComic): adult-only (Keiyoushi marks it NSFW). |
+| 2026-10-21 | yiimanga.hentai20lol | Not added (Hentai20 (Unoriginal)): adult-only (Keiyoushi marks it NSFW). |
+| 2026-10-21 | yiimanga.myreadingcomic | Not added (MyReadingComic): adult-only (Keiyoushi marks it NSFW). |
+| 2026-10-21 | yiimanga.leermanhwas | Not added (LeerManhwas): adult-only (Keiyoushi marks it NSFW). |
+| 2026-10-21 | yiimanga.tmomanhwa | Not added (TmoManhwa): adult-only (Keiyoushi marks it NSFW). |
 | 2026-10-21 | iken.renascans | Not added yet (Renascans): Down (Cloudflare 522; api.renascans.net no longer resolves). |
 | 2026-10-21 | iken.vanillascans | Not added yet (Vanilla Scans): Down (Cloudflare 521, site and API). |
 | 2026-10-21 | mangahub.mangafox | Not added yet (MangaFox.fun): MangaHub template not written. Its API (api.mghcdn.com) answers every non-browser request with a Cloudflare challenge; needs a check on the device first. |
