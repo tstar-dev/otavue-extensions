@@ -2,6 +2,12 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-21: Luminare Translations held back (asks not to be read by programs)
+
+- Keiyoushi's `src/en/luminaretranslations` reads `/wp-json/yarnovel/v1/series` for lists and filters, the series page's Alpine `x-data` (`infoRows`, `chapters`) for details (its series API runs out of memory), and `img.reader-page[data-src]` on chapter pages.
+- **Lists and series pages still work** (18 comics; the API's slugs are cut at 80 characters and redirect to the full ones). **Chapter pages don't:** they answer 403 with "Open this chapter in the reader. Chapters open as a page in a browser tab. Requests made in the background by a downloader add-on, a script or another program are not served." That's a deliberate block by the group, not a firewall. It might be passable by sending browser-only headers, but that would go against what the group asks, so the site is in REMOVED.md instead.
+- No change to the published sources: 188, 58 marked 18+.
+
 ## 2026-10-21: Manga Demon (1 source)
 
 - **New source** `themes/mangademon.js`, ported from Keiyoushi's `src/en/mangademon`: `advanced.php?list=<n>` for Popular (`orderby=VIEWS DESC`) and filters (sort, status, `genre[]` ids), `lastupdates.php?list=<n>` for Latest, `search.php?manga=` (one page), the title page and `chaptered.php?manga=<id>&chapter=<n>` (which redirects to the reader).
@@ -48,7 +54,7 @@ Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION
   - **Latest is new here** (Keiyoushi has none): the home page's "Latest Chapters", each matched to its project by name, longest name first ("Black Clover Gaiden: Quartet Knights" isn't "Black Clover").
   - Chapter names are "Chapter <n>: <title>". All 19 projects' chapter names parse, with no repeats (One Piece: 1,200). Only the home page has dates, so chapters are undated. The site gives no genres, authors or status.
 - **Standalone English sources, ranked (2026-10-21).** Keiyoushi has 139 that aren't adult-only (83 safe, 56 mixed). Probed from here: 112 answer, 10 are behind a Cloudflare check (Vision Haze, Digital Comic Museum, ComicHubFree, XoManga, Team Shadowi, Kodansha, WebNovel, BatCave, Mangago, Toonkotsu), 12 are down or in maintenance, and 5 have no fixed address. Order to port, groups' own sites first (the owner's preference), then creators' own webcomic sites, then aggregators, with publishers' stores and novel sites last:
-  1. **Scanlation groups:** ~~TCB Scans~~ (done), ~~Asura Scans~~ (done), ~~Flame Comics~~ (done), ~~Dynasty Scans~~ (done, 18+), ~~Manga Demon~~ (done; an aggregator), Luminare Translations, Philia Scans, Hyakuro Translations (mixed), InfinityScans (mixed), Webdex Scans, Rinko Comics, StoneScape, SilentQuill (mixed), ScansGG (mixed), Kappa Beast (mixed), Nuvia Toon, Nux Scans.
+  1. **Scanlation groups:** ~~TCB Scans~~ (done), ~~Asura Scans~~ (done), ~~Flame Comics~~ (done), ~~Dynasty Scans~~ (done, 18+), ~~Manga Demon~~ (done; an aggregator), ~~Luminare Translations~~ (held back: refuses programmatic reading), Philia Scans, Hyakuro Translations (mixed), InfinityScans (mixed), Webdex Scans, Rinko Comics, StoneScape, SilentQuill (mixed), ScansGG (mixed), Kappa Beast (mixed), Nuvia Toon, Nux Scans.
   2. **Creators' own webcomics** (small, one site each): Gunnerkrigg Court, xkcd, Saturday Morning Breakfast Cereal, Questionable Content, Cyanide & Happiness, El Goonish Shive, Schlock Mercenary, Twokinds (keenspot), Kill Six Billion Demons, Aurora, Grrl Power, Dresden Codak, Existential Comics, Loading Artist, Megatokyo, Darths & Droids, Elan School, Swords, and about 15 more.
   3. **Aggregators:** Weeb Central, MangaPill, MangaKatana, MangaFox / Mangahere / Mangatown (one family), Comivex, MangaGeko, and about 25 more.
   4. **Last:** publishers' stores and apps (VIZ, K Manga, Manga UP!, Mangamo, BookWalker, INKR, Tapas, Omoi, Voyce.Me, Coolmic; mostly paid or sign-in), novel sites (J-Novel, LoLoBun), single-series re-host sites ("Read X Manga Online").
