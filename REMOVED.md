@@ -4,6 +4,7 @@ Sites taken out of the repository, and why, so they aren't added back. Newest fi
 
 | Date | Source id | Reason |
 | --- | --- | --- |
+| 2026-10-21 | luminaretranslations.luminaretranslations | Not added (Luminare Translations): the group refuses programmatic reading. Chapter pages answer 403 "Open this chapter in the reader … Requests made in the background by a downloader add-on, a script or another program are not served." Lists and series pages (and its API) answer, but working around the chapter block would go against the group's stated wish. Only 18 of its series are comics; the rest are novels. |
 | 2026-10-21 | wpcomics.xoxocomics | Not added yet (XOXO Comics, xoxocomic.com): broken images. Lists, title pages and issue lists work, but most issues' page images answer with the site's "404 Not Found" page (status 200, HTML), also in a real browser with the site's cookies: 3 of 18 sampled issues had images (older ones, such as Justice League: Darkseid War: Batman #1). WPComics template not written. |
 | 2026-10-21 | mmrcms.readcomicsonline | Not added yet (Read Comics Online, readcomicsonline.ru): Cloudflare browser check on every request; needs a check on the device first. MMRCMS template not written. |
 | 2026-10-21 | manhwaz.manhwahub | Not added yet (ManhwaHub, manhwahub.net): not reachable (the TLS connection is dropped). ManhwaZ template not written. |
