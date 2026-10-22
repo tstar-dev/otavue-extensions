@@ -1,0 +1,12 @@
+[
+  {
+    "id": "hyakuro.hyakuro",
+    "name": "Hyakuro Translations",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://hyakuro.net"
+    }
+  }
+]

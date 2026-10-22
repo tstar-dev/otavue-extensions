@@ -1,0 +1,74 @@
+{
+ "data": [
+  {
+   "id": 10,
+   "attributes": {
+    "Title": "Boku wa Kimitachi wo Shihai suru",
+    "Synopsis": "During a class reunion, the school became an enclosed dimension without warning. Yelling and screaming brought no response. 26-year-old unemployed Haruka Sato has to survive by cooperating with seven of his former classmates. Soon, the extreme conditions began to eat away at their sanity, and Haruka's hidden desires began to take hold. ",
+    "Author": "CHIDA Daisuke ",
+    "Artist": "CHIDA Daisuke ",
+    "Status": "Ongoing",
+    "slug": "boku-wa-kimitachi-wo-shihai-suru",
+    "Oneshot": false,
+    "Longstrip": false,
+    "Categories": [
+     "Adult",
+     "Drama",
+     "Harem",
+     "Psychological",
+     "Romance",
+     "School Life"
+    ],
+    "createdAt": "2024-03-24T19:06:16.700Z",
+    "updatedAt": "2026-07-26T15:09:48.125Z",
+    "publishedAt": "2024-04-21T09:09:52.331Z",
+    "Cover": {
+     "data": {
+      "id": 1641,
+      "attributes": {
+       "url": "/uploads/boku_wa_kimitachi_wo_shihai_suru_cover_0c3f6a33a2.png"
+      }
+     }
+    },
+    "Chapters": [
+     {
+      "id": 37,
+      "Title": null,
+      "Chapter": 1,
+      "TranslatedOn": "2022-07-19",
+      "Volume": 1
+     },
+     {
+      "id": 38,
+      "Title": null,
+      "Chapter": 2,
+      "TranslatedOn": "2022-08-18",
+      "Volume": 1
+     },
+     {
+      "id": 903,
+      "Title": null,
+      "Chapter": 67,
+      "TranslatedOn": "2026-07-26",
+      "Volume": null
+     },
+     {
+      "id": 99999,
+      "Title": null,
+      "Chapter": 67,
+      "TranslatedOn": "2026-07-26",
+      "Volume": null
+     }
+    ]
+   }
+  }
+ ],
+ "meta": {
+  "pagination": {
+   "page": 1,
+   "pageSize": 25,
+   "pageCount": 1,
+   "total": 1
+  }
+ }
+}
