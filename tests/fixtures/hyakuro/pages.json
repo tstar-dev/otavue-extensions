@@ -1,0 +1,55 @@
+{
+ "data": [
+  {
+   "id": 10,
+   "attributes": {
+    "slug": "boku-wa-kimitachi-wo-shihai-suru",
+    "Chapters": [
+     {
+      "id": 42,
+      "Title": null,
+      "Chapter": 6,
+      "TranslatedOn": "2022-09-26",
+      "Volume": 1,
+      "Pages": {
+       "data": [
+        {
+         "id": 972,
+         "attributes": {
+          "url": "/uploads/Boku_wa_Kimitachi_wo_Shihai_suru_Chapter_06_By_Hyakuro_Translations_Page_003_6270a75b99.png",
+          "width": 1125,
+          "height": 1600
+         }
+        },
+        {
+         "id": 978,
+         "attributes": {
+          "url": "/uploads/Boku_wa_Kimitachi_wo_Shihai_suru_Chapter_06_By_Hyakuro_Translations_Page_002_e015527338.png",
+          "width": 1125,
+          "height": 1600
+         }
+        },
+        {
+         "id": 975,
+         "attributes": {
+          "url": "/uploads/Boku_wa_Kimitachi_wo_Shihai_suru_Chapter_06_By_Hyakuro_Translations_Page_001_3472465571.png",
+          "width": 1125,
+          "height": 1600
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "meta": {
+  "pagination": {
+   "page": 1,
+   "pageSize": 25,
+   "pageCount": 1,
+   "total": 1
+  }
+ }
+}
