@@ -15,7 +15,7 @@
 //   imageReferer  "site" to send the site, not the chapter, as page images' Referer
 //
 // @theme madara
-// @version 1.0.4
+// @version 1.0.5
 // @type manga
 
 var BASE = String(SITE.baseUrl).replace(/\/+$/, '');
@@ -295,7 +295,8 @@ async function genresOf() {
   var seen = {};
   var out = [];
   if (SITE.genreInputs) {
-    all(doc, 'input[name="genre[]"]').forEach(function (input) {
+    all(doc, 'input[name]').forEach(function (input) {
+      if (attr(input, 'name') !== 'genre[]') return;
       var slug = attr(input, 'value').trim();
       var holder = input.parent || input;
       var name = textOf(holder).trim();

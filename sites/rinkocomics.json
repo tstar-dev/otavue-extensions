@@ -1,0 +1,12 @@
+[
+  {
+    "id": "rinkocomics.rinkocomics",
+    "name": "Rinko Comics",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://rinkocomics.com"
+    }
+  }
+]
