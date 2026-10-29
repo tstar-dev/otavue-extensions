@@ -1,0 +1,12 @@
+[
+  {
+    "id": "stonescape.stonescape",
+    "name": "StoneScape",
+    "lang": "en",
+    "nsfw": false,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://stonescape.xyz"
+    }
+  }
+]

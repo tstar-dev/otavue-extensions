@@ -2,6 +2,14 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-29: StoneScape (1 source)
+
+- **New source** `themes/stonescape.js`, ported from Keiyoushi's `src/en/stonescape`: `/api/series/popular` (weekly), `/api/series` (Latest/search), `/api/series/by-slug/<slug>` and `/chapters`, and `/api/chapters/<id>/pages`. Lists stay on `contentType=manhwa`; exact `page`/`totalPages` metadata drives paging.
+- **Search and filters:** status plus the API's 44 known genres. A query equal to a genre name/slug becomes a genre search (Keiyoushi behavior); otherwise it is sent as `search`. Multiple chosen genres are comma-separated.
+- **Chapters/pages:** free, published chapters only; coin, locked, scheduled and draft rows are left out. Links carry the chapter UUID after `#`. Pages use `pages`, falling back to the older `images` field, sort by `pageNumber`, and keep width/height for the native reader.
+- **Checks:** 5 fixture tests cover list paging, search/filters, details, inaccessible/duplicate chapters and both page shapes. Live smoke passed: 20 popular, 24 latest, 34 chapters, 13 pages in CH 34, image 200, search and filters.
+- 193 sources, 60 marked 18+.
+
 ## 2026-10-29: Rinko Comics (1 source)
 
 - **New source** `themes/rinkocomics.js`, ported from Keiyoushi's `src/en/rinkocomics`: pinned projects on the home page for Popular; `/comic/page/<n>/?sort=` for Latest; WordPress search with multiple `genres[]` and newest/oldest/A–Z/Z–A order; the custom title page; and `img.chapter-image` reader pages from `cdn.rinkocomics.com`.
@@ -102,7 +110,7 @@ Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION
   - **Latest is new here** (Keiyoushi has none): the home page's "Latest Chapters", each matched to its project by name, longest name first ("Black Clover Gaiden: Quartet Knights" isn't "Black Clover").
   - Chapter names are "Chapter <n>: <title>". All 19 projects' chapter names parse, with no repeats (One Piece: 1,200). Only the home page has dates, so chapters are undated. The site gives no genres, authors or status.
 - **Standalone English sources, ranked (2026-10-21).** Keiyoushi has 139 that aren't adult-only (83 safe, 56 mixed). Probed from here: 112 answer, 10 are behind a Cloudflare check (Vision Haze, Digital Comic Museum, ComicHubFree, XoManga, Team Shadowi, Kodansha, WebNovel, BatCave, Mangago, Toonkotsu), 12 are down or in maintenance, and 5 have no fixed address. Order to port, groups' own sites first (the owner's preference), then creators' own webcomic sites, then aggregators, with publishers' stores and novel sites last:
-  1. **Scanlation groups:** ~~TCB Scans~~ (done), ~~Asura Scans~~ (done), ~~Flame Comics~~ (done), ~~Dynasty Scans~~ (done, 18+), ~~Manga Demon~~ (done; an aggregator), ~~Luminare Translations~~ (held back: refuses programmatic reading), ~~Philia Scans~~ (held back: encrypted images), ~~Hyakuro Translations~~ (done, 18+), ~~InfinityScans~~ (held back: captcha session), ~~Webdex Scans~~ (done), ~~Rinko Comics~~ (done), StoneScape, SilentQuill (mixed), ScansGG (mixed), Kappa Beast (mixed), Nuvia Toon, Nux Scans.
+  1. **Scanlation groups:** ~~TCB Scans~~ (done), ~~Asura Scans~~ (done), ~~Flame Comics~~ (done), ~~Dynasty Scans~~ (done, 18+), ~~Manga Demon~~ (done; an aggregator), ~~Luminare Translations~~ (held back: refuses programmatic reading), ~~Philia Scans~~ (held back: encrypted images), ~~Hyakuro Translations~~ (done, 18+), ~~InfinityScans~~ (held back: captcha session), ~~Webdex Scans~~ (done), ~~Rinko Comics~~ (done), ~~StoneScape~~ (done), SilentQuill (mixed), ScansGG (mixed), Kappa Beast (mixed), Nuvia Toon, Nux Scans.
   2. **Creators' own webcomics** (small, one site each): Gunnerkrigg Court, xkcd, Saturday Morning Breakfast Cereal, Questionable Content, Cyanide & Happiness, El Goonish Shive, Schlock Mercenary, Twokinds (keenspot), Kill Six Billion Demons, Aurora, Grrl Power, Dresden Codak, Existential Comics, Loading Artist, Megatokyo, Darths & Droids, Elan School, Swords, and about 15 more.
   3. **Aggregators:** Weeb Central, MangaPill, MangaKatana, MangaFox / Mangahere / Mangatown (one family), Comivex, MangaGeko, and about 25 more.
   4. **Last:** publishers' stores and apps (VIZ, K Manga, Manga UP!, Mangamo, BookWalker, INKR, Tapas, Omoi, Voyce.Me, Coolmic; mostly paid or sign-in), novel sites (J-Novel, LoLoBun), single-series re-host sites ("Read X Manga Online").
