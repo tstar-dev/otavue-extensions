@@ -271,6 +271,23 @@
     }
   },
   {
+    "id": "madara.novelcrow",
+    "name": "NovelCrow",
+    "lang": "en",
+    "nsfw": true,
+    "version": 1,
+    "config": {
+      "baseUrl": "https://novelcrow.com",
+      "mangaPath": "comic",
+      "genrePath": "comic-genre",
+      "browse": "archive",
+      "archiveAtSearch": true,
+      "genreInputs": true,
+      "chapters": "ajax",
+      "adult": true
+    }
+  },
+  {
     "id": "madara.s2manga",
     "name": "S2Manga",
     "lang": "en",

@@ -2,6 +2,14 @@
 
 Work notes for this repository, newest first. Otavue's own docs (`docs/EXTENSION_REPOSITORY_PLAN.md` → "Progress", `docs/HANDOFF_EXTENSIONS.md` §3–4, `docs/PROGRESS.md` "Start here" item 6) haven't been updated for these entries yet; copy them across when that repository is next edited.
 
+## 2026-10-29: NovelCrow (1 source, 18+)
+
+- **New Madara site:** NovelCrow (`novelcrow.com`), added first at the owner's request. Keiyoushi marks it NSFW, so it is listed as 18+ and stays hidden unless the user enables 18+ sources.
+- **Site differences:** titles live under `/comic/`, but that archive answers 404. Popular, Latest and unfiltered browsing therefore use the WordPress search page (`/?s=&post_type=wp-manga&m_orderby=…`); ordinary searches use the same page, and genres come from its `input[name="genre[]"]` controls under `/comic-genre`. Chapters use the title's `ajax/chapters/` endpoint. The site puts its author in Madara's artist row, which Otavue already combines into `authors`.
+- **Madara 1.0.4:** adds opt-in `archiveAtSearch` and `genreInputs` settings. Existing Madara sites do not enable them. Fixture tests cover NovelCrow's list URL and genre form; the full test suite, build and version check pass.
+- **Live check:** this connection receives Cloudflare's managed browser challenge on every public page, so the smoke checker reports `BLOCKED` with Otavue's **Open site** instruction rather than treating the source as broken. A browser/device pass is still needed to verify a real title and chapter after the challenge.
+- 191 sources, 60 marked 18+.
+
 ## 2026-10-21: Webdex Scans (1 source)
 
 - **New source** `themes/webdexscans.js`, ported from Keiyoushi's `src/en/webdexscans`: Supabase's PostgREST at `nrqghtbdrdnoywxjkgkf.supabase.co/rest/v1` with the site's public anon key (the one its own pages use; in the site entry's config). `/series` (`order=view_count.desc` / `updated_at.desc` / `rating.desc` / `title.asc`, `title=ilike.*…*`, `type`, `status`, and a genre through `select=…,genres!inner(slug)&genres.slug=eq.…`), `/series?slug=eq.` for details, `/chapters?series_id=eq.`, `/pages?chapter_id=eq.&order=page_number.asc`, and `/genres` for the filter.

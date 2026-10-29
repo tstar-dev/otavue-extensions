@@ -6,14 +6,16 @@
 // Site options (all optional except baseUrl):
 //   mangaPath     where titles live ("manga")           genrePath   genre archive path ("manga-genre")
 //   browse        "ajax" (madara_load_more) or "archive" (plain list pages)
+//   archiveAtSearch use the WordPress search page when the normal manga archive is missing (false)
 //   ajaxTemplate  madara_load_more's template           mangaOnly   only list "manga"-type posts (true)
 //   chapters      "auto", "page", "ajax", "admin", "paged" or "api" (/api/comics/<slug>/chapters)
 //   dateFormat    e.g. "MMMM d, yyyy", "MM/dd/yyyy"     adult       keep titles the site marks 18+ (false)
 //   selectors     overrides for SELECTORS below         cookie      a Cookie header some sites need
+//   genreInputs   read genres from input[name="genre[]"] on the search page (false)
 //   imageReferer  "site" to send the site, not the chapter, as page images' Referer
 //
 // @theme madara
-// @version 1.0.3
+// @version 1.0.4
 // @type manga
 
 var BASE = String(SITE.baseUrl).replace(/\/+$/, '');
@@ -246,10 +248,11 @@ async function ajaxList(pageNumber, sort, query, filters) {
 
 /** A plain list page: `/<mangaPath>/page/N/?m_orderby=…`, a genre's page, or the site search. */
 async function archiveList(pageNumber, sort, path, query) {
-  var url = BASE + (path || '/' + MANGA_PATH + '/');
+  var searchArchive = SITE.archiveAtSearch && (!path || path === '/');
+  var url = BASE + (searchArchive ? '/' : (path || '/' + MANGA_PATH + '/'));
   if (pageNumber > 1) url += 'page/' + pageNumber + '/';
   var params = [];
-  if (query) params.push('s=' + encodeURIComponent(query), 'post_type=wp-manga');
+  if (query || searchArchive) params.push('s=' + encodeURIComponent(query || ''), 'post_type=wp-manga');
   if (sort) params.push('m_orderby=' + encodeURIComponent(sort));
   if (params.length) url += '?' + params.join('&');
   var doc = await page(url);
@@ -288,9 +291,21 @@ var genreCache = null;
 /** The genres listed on the site's own manga page (`div.genres`). */
 async function genresOf() {
   if (genreCache) return genreCache;
-  var doc = await page(BASE + '/' + MANGA_PATH + '/');
+  var doc = await page(SITE.genreInputs ? BASE + '/?s=&post_type=wp-manga' : BASE + '/' + MANGA_PATH + '/');
   var seen = {};
   var out = [];
+  if (SITE.genreInputs) {
+    all(doc, 'input[name="genre[]"]').forEach(function (input) {
+      var slug = attr(input, 'value').trim();
+      var holder = input.parent || input;
+      var name = textOf(holder).trim();
+      if (!slug || !name || seen[slug]) return;
+      seen[slug] = true;
+      out.push({ value: slug, label: name });
+    });
+    genreCache = out;
+    return out;
+  }
   all(doc, SELECTORS.genreList).forEach(function (box) {
     all(box, 'a[href*="/' + GENRE_PATH + '/"]').forEach(function (link) {
       var slug = /\/([^\/?#]+)\/?(?:[?#].*)?$/.exec(attr(link, 'href'));

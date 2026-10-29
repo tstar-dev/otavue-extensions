@@ -13,7 +13,7 @@ const sources = {};
 before(async () => {
   const out = join(tmpdir(), `otavue-extensions-madara-${process.pid}`);
   await build(out);
-  for (const id of ['madara.mangasushi', 'madara.anisascans', 'madara.lilymanga', 'madara.topmanhuafan', 'madara.zinmanganet', 'madara.zazamanga']) {
+  for (const id of ['madara.mangasushi', 'madara.anisascans', 'madara.lilymanga', 'madara.novelcrow', 'madara.topmanhuafan', 'madara.zinmanganet', 'madara.zazamanga']) {
     sources[id] = await readFile(join(out, 'sources', `${id}.js`), 'utf8');
   }
 });
@@ -220,6 +220,28 @@ describe('Madara', () => {
     const { fetchImpl, requests } = recording([[path('/'), await text('madara/archive.html')]]);
     await loadSource(sources['madara.lilymanga'], fetchImpl).search('mermaid', 1, {});
     assert.equal(requests[0].url, 'https://lilymanga.net/?s=mermaid&post_type=wp-manga');
+  });
+
+  it('uses NovelCrow’s search page when its /comic/ archive is missing', async () => {
+    const archive = (await text('madara/archive.html'))
+      .replaceAll('https://lilymanga.net/gl/', 'https://novelcrow.com/comic/')
+      .replaceAll('https://lilymanga.net/', 'https://novelcrow.com/');
+    const { fetchImpl, requests } = recording([[path('/page/2/'), archive]]);
+    const page = await loadSource(sources['madara.novelcrow'], fetchImpl).popular({ page: 2 });
+    assert.equal(requests[0].url, 'https://novelcrow.com/page/2/?s=&post_type=wp-manga&m_orderby=views');
+    assert.equal(page.items.length, 3);
+  });
+
+  it('reads NovelCrow’s genres from the search form inputs', async () => {
+    const html = '<form><label><input name="genre[]" value="action"> Action </label><label><input name="genre[]" value="adult"> Adult </label></form>';
+    const { fetchImpl, requests } = recording([[path('/'), html]]);
+    const filters = await loadSource(sources['madara.novelcrow'], fetchImpl).getFilters();
+    assert.equal(requests[0].url, 'https://novelcrow.com/?s=&post_type=wp-manga');
+    assert.deepEqual(filters.find((filter) => filter.key === 'genres').options, [
+      { value: '', label: 'All' },
+      { value: 'action', label: 'Action' },
+      { value: 'adult', label: 'Adult' },
+    ]);
   });
 
   it('reads relative dates and each site’s date format', async () => {
